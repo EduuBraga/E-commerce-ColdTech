@@ -14,6 +14,11 @@ export const Tittle = styled.div`
     font-weight: 500;
     font-size: 30px;
   }
+  p{
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 18px;
+  }
 `
 
 export const Suportes = styled.div`
@@ -43,7 +48,7 @@ export const Suportes = styled.div`
   }
 
   & img{
-    width: 45px;
+    width: 35px;
   }
 `
 

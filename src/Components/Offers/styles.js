@@ -7,16 +7,21 @@ export const Container = styled.section`
   gap: 60px;
   text-align: center;
 
+  & div p:first-child{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   * {
     padding-bottom: 13px;
   }
   h2{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 30px;
   }
 
   p{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 19px;
   }
 
@@ -26,8 +31,11 @@ export const Container = styled.section`
     color: var(--color-secondary);
     transition: all 0.2s;
 
-    &:hover, &:active, &:focus{
+    &:hover, &:focus{
       color: #1153cF;
+    }
+    &:active{
+      color: var(--color-secondary);
     }
   }
 
