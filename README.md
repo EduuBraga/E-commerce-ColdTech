@@ -1,3 +1,3 @@
 # Projeto pessoal - e-commerce ColdTech
 
-No momento estou desenvolvendo projeto, mas ao finalizar vou completar este README.
+No momento estou desenvolvendo o projeto, mas ao finalizar vou completar este README.

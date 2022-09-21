@@ -1,12 +1,13 @@
 import React from "react";
-import { Nav, Services, ContainerHeader, Description } from "./styles";
+import { Nav, Services, ContainerHeader, Description } from "./styles"
+import { ButtonGlobal } from "../Button/styles"
 
 import search from '../../assets/images/search.png'
 import profile from '../../assets/images/profile.png'
 import cart from '../../assets/images/cart.png'
 import logo from '../../assets/images/logo.png'
 import pcGamer from '../../assets/images/pc-gamer.png'
-import { ButtonGlobal } from "../Button/styles";
+
 
 export function Header() {
   return (
