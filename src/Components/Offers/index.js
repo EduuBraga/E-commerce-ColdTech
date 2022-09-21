@@ -27,11 +27,11 @@ export function Offers2({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/notebooks'>Confira agora</Link>
+        <Link to='/cpus'>Confira agora</Link>
       </div>
 
       <div>
-        <img src={src} alt="Computador" />
+        <img src={src} alt="CPU" />
       </div>
     </Container>
   )
@@ -44,11 +44,28 @@ export function Offers3({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/notebooks'>Confira agora</Link>
+        <Link to='/acessorios'>Confira agora</Link>
       </div>
 
       <div>
-        <img src={src} alt="Computador" />
+        <img src={src} alt="Acéssorios" />
+      </div>
+    </Container>
+  )
+} 
+
+export function Offers4({subTittle, msg, tittle, src }) {
+  return (
+    <Container>
+      <div>
+        <img src={src} alt="Monitor" />
+      </div>
+
+      <div>
+        <p>{subTittle}</p>
+        <h2> {tittle}</h2>
+        <p>{msg}</p>
+        <Link to='/Monitores'>Confira agora</Link>
       </div>
     </Container>
   )
