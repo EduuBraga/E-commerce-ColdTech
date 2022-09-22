@@ -8,6 +8,7 @@ export const Container = styled.footer`
   border-bottom: 2px solid #ccc;
   padding:0px 15px ;
   margin-bottom: 10px;
+  margin-top: 100px;
 
   & img{
     width: 50px;

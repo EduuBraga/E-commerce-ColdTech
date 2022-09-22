@@ -9,7 +9,7 @@ import logo from '../../assets/images/icons/logo.png'
 
 import { Container, Services } from "./styles";
 
-export function Nav() {
+export function NavShop() {
   return (
     <Container>
       <div>

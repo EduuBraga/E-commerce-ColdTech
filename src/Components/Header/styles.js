@@ -27,6 +27,10 @@ export const ContainerHeader = styled.div`
 
 export const Description = styled.div`
   margin-left:10px ;
+  
+  strong{
+    font-size: 18px;
+  }
 
   h1{
     font-size: 38px;

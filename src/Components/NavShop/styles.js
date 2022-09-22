@@ -6,6 +6,7 @@ export const Container = styled.section`
   align-items: center;
   padding: 17px 0px;
   background-color: white;
+  border-bottom: 1px solid #ccc;
 
 
   div{
@@ -18,7 +19,7 @@ export const Container = styled.section`
   }
 
   nav{
-    a:first-child{
+    a:nth-child(2){
       border-bottom: 2px solid var(--color-secondary);
       font-weight: 500;
     }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
   background-color: white;
   position: sticky;
-  top: -1px;
+  top: -2px;
   z-index: 10;
 `
 
@@ -12,15 +12,26 @@ export const Products = styled.div`
   justify-content: center;
   gap: 30px;
   overflow: auto;
-  border-bottom: 2px solid #ccc;
-  border-top: 1px solid #ccc;
-
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
   
   img{
-    width: 48px;
+    width: 35px;
     margin-bottom: 5px;
     @media screen and (max-width: 1024px){
       width: 35px;
+    }
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
+
+    &:active, &:focus{
+      color: black;
+    }
+    &:hover{
+      color: var(--color-secondary);
     }
   }
 `
@@ -31,13 +42,13 @@ export const Product = styled.div`
   cursor: pointer;
   transition: all 0.2s;
 
+
   h3{
-    font-weight: 500;
+    font-weight: 400;
   }
 
-  :hover{
-    background-color: #ddd;
-    color: var(--color-secondary);
+  &:hover{
+      background-color: #f1f1f1;
   }
 `
 

@@ -1,9 +1,9 @@
 import React from "react";
-import {Container, Suportes, Tittle} from './styles'
+import { Container, Suportes, Tittle } from './styles'
 
-import telefone from '../../assets/images/telephone.png'
-import contato from '../../assets/images/contato.png'
-import garantia from '../../assets/images/garantia.png'
+import telefone from '../../assets/images/icons/telephone.png'
+import contato from '../../assets/images/icons/contato.png'
+import garantia from '../../assets/images/icons/garantia.png'
 
 export function SuporteCold() {
   return (
