@@ -4,8 +4,6 @@ import { Data } from "../../Services/Data"
 import { Footer } from "../../Components/Footer"
 import { NavShop } from "../../Components/NavShop"
 import { CardCPU, Container } from "./styles"
-
-import CPUimgURL from '../../assets/images/CPUOffers.png'
 import { ButtonGlobal } from "../../Components/Button/styles"
 
 export function PageCPUs() {
@@ -17,9 +15,9 @@ export function PageCPUs() {
         {Data.cpus.map(cpu =>
           <CardCPU key={cpu.id}>
             <h4>{cpu.name}</h4>
-            <img src={CPUimgURL}/>
-            <h4>O melhor no quesito desempenho</h4>
-            <p>{cpu.valor}</p>
+            <img src={cpu.src} alt='CPU gamer'/>
+            <h4>{cpu.description.msg}</h4>
+            <p>A partir de R$ {cpu.valor}</p>
 
             <div key={cpu.id}>
               <li>{cpu.description.nota1}</li>

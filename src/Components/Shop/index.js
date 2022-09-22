@@ -15,28 +15,28 @@ export function Shop() {
       <Products>
         <Link to='/shop/notebooks'>
           <Product>
-            <img src={Notebook} alt="" />
+            <img src={Notebook} alt="Notebook gamer" />
             <h3>Notebooks</h3>
           </Product>
         </Link>
 
         <Link to='/shop/cpus'>
           <Product>
-            <img src={Compute} alt="" />
+            <img src={Compute} alt="CPUs games" />
             <h3>Computadores</h3>
           </Product>
         </Link>
 
         <Link to='/shop/monitores'>
           <Product>
-            <img src={Screen} alt="" />
+            <img src={Screen} alt="Monitores games" />
             <h3>Monitores</h3>
           </Product>
         </Link>
 
-        <Link to='/shop/acessorios'>
+        <Link to='/shop/accessories'>
           <Product>
-            <img src={Accessories} alt="" />
+            <img src={Accessories} alt="Acessórios games" />
             <h3>Acessórios</h3>
           </Product>
         </Link>

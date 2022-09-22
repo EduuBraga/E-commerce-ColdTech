@@ -17,7 +17,7 @@ export function PageAccessories(){
             <h4>{accessory.name}</h4>
             <img src={accessory.src} alt="HeadSet" />
             <h4>{accessory.description.msg}</h4>
-            <p>{accessory.valor}</p>
+            <p>A partir de R$ {accessory.valor}</p>
 
             <div key={accessory.id}>
               <li>{accessory.description.nota1}</li>

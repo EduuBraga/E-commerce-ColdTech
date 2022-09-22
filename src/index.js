@@ -9,6 +9,7 @@ import { PageNotebook } from './pages/PageNotebooks'
 import { PageShop } from './pages/PageShop'
 import { PageCPUs } from './pages/PageCPUs'
 import { PageAccessories } from './pages/PageAccessories';
+import { PageMonitores } from './pages/PageMonitores';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -19,8 +20,8 @@ root.render(
       <Route path='/shop/notebooks' element={<PageNotebook />} />
       <Route path='/shop/cpus' element={<PageCPUs />} />
       <Route path='/shop/accessories' element={<PageAccessories />} />
-      {/* <Route path='/shop/monitores' element={<PageMonitores />} /> */}
-      {/* <Route path='*' element={<PageError />} /> */}
+      <Route path='/shop/monitores' element={<PageMonitores />} />
+      <Route path='*' element={<PageError />} />
     </Routes>
     <GlobalStyles />
   </Router>

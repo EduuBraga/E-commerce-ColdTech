@@ -1,5 +1,4 @@
 import React from "react"
-import notebookURL from '../../assets/images/NotebookPage.png'
 import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer/index"
 
@@ -17,13 +16,14 @@ export function PageNotebook() {
         {Data.notebooks.map(notebook =>
           <CardNotebook key={notebook.id}>
             <h4>{notebook.name}</h4>
-            <img src={notebookURL} />
+            <img src={notebook.src} />
 
-            <h4>Perfeito para você jogar</h4>
-            <p>A partir de {notebook.valor}</p>
+            <h4>{notebook.description.msg}</h4>
+            <p>A partir de R$ {notebook.valor}</p>
             <div key={notebook.id}>
               <li>{notebook.description.nota1}</li>
               <li>{notebook.description.nota2}</li>
+              <li>{notebook.description.nota3}</li>
             </div>
             <ButtonGlobal>Comprar</ButtonGlobal>
           </CardNotebook>
