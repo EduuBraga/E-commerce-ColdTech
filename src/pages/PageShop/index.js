@@ -18,13 +18,13 @@ export function PageShop() {
           </ContainerNotebook>
         </Link>
 
-        <Link to='/shop/cpu'>
+        <Link to='/shop/cpus'>
           <ContainerCPU>
             <h2>CPU</h2>
           </ContainerCPU>
         </Link>
 
-        <Link to='/shop/acessorios'>
+        <Link to='/shop/accessories'>
           <ContainerAcessorios>
             <h2>Acessórios</h2>
           </ContainerAcessorios >

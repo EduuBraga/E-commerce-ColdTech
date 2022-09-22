@@ -12,7 +12,7 @@ import { SuporteCold } from '../../Components/SupportCold/index'
 import { Offers1, Offers2, Offers3, Offers4 } from '../../Components/Offers/index'
 import { Footer } from '../../Components/Footer/index'
 
-export function PageMain() {
+export function PageHome() {
   return (
     <>
       <Header></Header>

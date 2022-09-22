@@ -44,7 +44,7 @@ export function Offers3({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/shop/acessorios'>Confira agora</Link>
+        <Link to='/shop/accessories'>Confira agora</Link>
       </div>
 
       <div>
