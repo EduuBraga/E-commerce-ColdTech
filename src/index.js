@@ -5,11 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { GlobalStyles } from './styles/GlobalStyles'
 import { PageHome } from './pages/PageHome'
-import { PageNotebook } from './pages/PageNotebooks'
 import { PageShop } from './pages/PageShop'
+import { PageNotebook } from './pages/PageNotebooks'
 import { PageCPUs } from './pages/PageCPUs'
-import { PageAccessories } from './pages/PageAccessories';
-import { PageMonitores } from './pages/PageMonitores';
+import { PageAccessories } from './pages/PageAccessories'
+import { PageMonitores } from './pages/PageMonitores'
+import { PageError } from './pages/PageError'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
