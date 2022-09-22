@@ -15,13 +15,13 @@ export function PageCPUs() {
 
       <Container>
         {Data.cpus.map(cpu =>
-          <CardCPU>
+          <CardCPU key={cpu.id}>
             <h4>{cpu.name}</h4>
             <img src={CPUimgURL}/>
             <h4>O melhor no quesito desempenho</h4>
             <p>{cpu.valor}</p>
 
-            <div>
+            <div key={cpu.id}>
               <li>{cpu.description.nota1}</li>
               <li>{cpu.description.nota2}</li>
               <li>{cpu.description.nota3}</li>

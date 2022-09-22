@@ -1,5 +1,9 @@
+///=== Imagens dos acessórios ===
+import ImgHeadsetURL from '../assets/images/accessories/headset.png'
+import ImgKeyboardURL from '../assets/images/accessories/keyboard-gamer.png'
+import ImgMouseURL from '../assets/images/accessories/mouse-gamer.png'
+
 export const Data = {
-  // === NOTEBOOKS ===
   notebooks: [
     {
       id: 1,
@@ -275,6 +279,149 @@ export const Data = {
   ],
   // === ACESSÓRIOS ===
   acessorios: [
-
+    {
+      id: 1,
+      name: 'Headset Gamer ',
+      valor: 'R$ 999,00',
+      description: {
+        msg: 'Escute como nunca',
+        nota1: 'Sem fio',
+        nota2: 'Microfone removível',
+        nota3: 'Estrutura pensada em cancelamento de ruído',
+      },
+      src: ImgHeadsetURL,
+    },
+    {
+      id: 2,
+      name: 'Headset Gamer ',
+      valor: 'R$ 999,00',
+      description: {
+        msg: 'Escute como nunca',
+        nota1: 'Sem fio',
+        nota2: 'Microfone removível',
+        nota3: 'Estrutura pensada em cancelamento de ruído',
+      },
+      src: ImgHeadsetURL,
+    },
+    {
+      id: 3,
+      name: 'Headset Gamer ',
+      valor: 'R$ 999,00',
+      description: {
+        msg: 'Escute como nunca',
+        nota1: 'Sem fio',
+        nota2: 'Microfone removível',
+        nota3: 'Estrutura pensada em cancelamento de ruído',
+      },
+      src: ImgHeadsetURL,
+    },
+    {
+      id: 4,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
+    {
+      id: 5,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
+    {
+      id: 6,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
+    {
+      id: 7,
+      name: 'Mouse Gamer ',
+      valor: 'R$ 500,00',
+      description: {
+        msg: 'Máxima liberdade para jogar',
+        nota1: 'Botões extras',
+        nota2: 'Design ergonômico',
+        nota3: '10000DPI',
+      },
+      src: ImgMouseURL,
+    },
+    {
+      id: 8,
+      name: 'Mouse Gamer ',
+      valor: 'R$ 500,00',
+      description: {
+        msg: 'Máxima liberdade para jogar',
+        nota1: 'Botões extras',
+        nota2: 'Design ergonômico',
+        nota3: '10000DPI',
+      },
+      src: ImgMouseURL,
+    },
+    {
+      id: 9,
+      name: 'Mouse Gamer ',
+      valor: 'R$ 500,00',
+      description: {
+        msg: 'Máxima liberdade para jogar',
+        nota1: 'Botões extras',
+        nota2: 'Design ergonômico',
+        nota3: '10000DPI',
+      },
+      src: ImgMouseURL,
+    },
+    {
+      id: 10,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
+    {
+      id: 11,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
+    {
+      id: 12,
+      name: 'Teclado Gamer ColdTech CT-15',
+      valor: 'R$ 150,00',
+      description: {
+        msg: 'Digitação leve e rápida',
+        nota1: 'Mecânico',
+        nota2: 'Teclas Souble Shot Injection',
+        nota3: 'Switch blue',
+      },
+      src: ImgKeyboardURL,
+    },
   ]
 }
