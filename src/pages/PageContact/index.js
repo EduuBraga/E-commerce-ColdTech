@@ -12,7 +12,6 @@ import ImgSmartphoneURL from '../../assets/images/icons/smartphone.png'
 import { ContainerHelp, Tittle, ContainerContent, CardContent, WrapperButtons } from "./styles";
 
 export function PageContact() {
-    // console.log(document.documentElement.scrollTop)
   const [visibleHelp, setVisibleHeap] = useState(false)
 
   const toggleVisible = () => {
@@ -24,10 +23,6 @@ export function PageContact() {
       setVisibleHeap(false)
     }
   }
-
-  useEffect(()=>{
-    console.log(document.documentElement.scrollTop)
-  }, [visibleHelp])
 
   window.addEventListener('scroll', toggleVisible)
 
