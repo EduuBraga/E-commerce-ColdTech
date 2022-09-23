@@ -28,7 +28,7 @@ export function Footer() {
           </CardColdTech>
           <CardLinks>
             <h4>Atendimento ao cliente</h4>
-            <Link to="/Contato">Ajuda & Contanto</Link>
+            <Link to="/contact">Ajuda & Contanto</Link>
             <Link to="/shop">Loja online</Link>
             <Link to='/'>Home</Link>
           </CardLinks>

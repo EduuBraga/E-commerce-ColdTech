@@ -35,7 +35,7 @@ export function Nav() {
       <NavBar borderIsOn={borderBottom}>
         <Link to='/'>Home</Link>
         <Link to='/shop'>Shop</Link>
-        <Link to='/contanto'>Contact</Link>
+        <Link to='/contact'>Contact</Link>
       </NavBar>
 
       <Services>
