@@ -15,7 +15,6 @@ export function Nav() {
 
   useEffect(() => {
     setUrl(JSON.stringify(window.location.href))
-    console.log(url.includes('/shop'))
 
     if (url.includes('/contact')) {
       setBorderBottom('contact')
