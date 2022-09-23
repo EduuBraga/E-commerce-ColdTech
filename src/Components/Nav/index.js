@@ -18,10 +18,13 @@ export function Nav() {
 
     if (url.includes('/contact')) {
       setBorderBottom('contact')
+      document.title = 'ColdTech | Fale Conosco'
     } else if (url.includes('shop')) {
+      document.title = 'ColdTech | Shop'
       setBorderBottom('shop')
     } else {
       setBorderBottom('home')
+      document.title = 'ColdTech'
     }
   })
 
