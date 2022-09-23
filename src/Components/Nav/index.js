@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -7,20 +7,36 @@ import profile from '../../assets/images/icons/profile.png'
 import cart from '../../assets/images/icons/cart.png'
 import logo from '../../assets/images/icons/logo.png'
 
-import { Container, Services } from "./styles";
+import { Container, NavBar, Services } from "./styles";
 
 export function Nav() {
+  const [borderBottom, setBorderBottom] = useState('')
+  const [url, setUrl] = useState('')
+
+  useEffect(() => {
+    setUrl(JSON.stringify(window.location.href))
+    console.log(url.includes('/shop'))
+
+    if (url.includes('/contact')) {
+      setBorderBottom('contact')
+    } else if (url.includes('shop')) {
+      setBorderBottom('shop')
+    } else {
+      setBorderBottom('home')
+    }
+  })
+
   return (
-    <Container>
+    <Container >
       <div>
         <Link to='/'><img src={logo} alt="Logo da cold tech" ></img></Link>
       </div>
 
-      <nav>
+      <NavBar borderIsOn={borderBottom}>
         <Link to='/'>Home</Link>
         <Link to='/shop'>Shop</Link>
         <Link to='/contanto'>Contact</Link>
-      </nav>
+      </NavBar>
 
       <Services>
         <div>

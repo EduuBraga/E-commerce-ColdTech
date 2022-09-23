@@ -2,14 +2,14 @@ import React from "react"
 import { Data } from "../../Services/Data"
 
 import { Footer } from "../../Components/Footer"
-import { NavShop } from "../../Components/NavShop"
+import { Nav } from "../../Components/Nav"
 import { CardCPU, Container } from "./styles"
 import { ButtonGlobal } from "../../Components/Button/styles"
 
 export function PageCPUs() {
   return (
     <>
-      <NavShop />
+      <Nav />
 
       <Container>
         {Data.cpus.map(cpu =>

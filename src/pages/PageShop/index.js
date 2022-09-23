@@ -1,6 +1,6 @@
 import React from "react"
 import { Footer } from "../../Components/Footer/index"
-import { NavShop } from "../../Components/NavShop/index"
+import { Nav } from "../../Components/Nav/index"
 
 import { Link } from "react-router-dom"
 
@@ -9,7 +9,7 @@ import { Container, ContainerNotebook, ContainerAcessorios, ContainerCPU, Contai
 export function PageShop() {
   return (
     <>
-      <NavShop />
+      <Nav/>
       <Container>
 
         <Link to='/shop/notebooks'>

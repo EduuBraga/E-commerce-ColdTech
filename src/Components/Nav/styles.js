@@ -16,11 +16,20 @@ export const Container = styled.header`
       cursor: pointer;
     }
   }
+`
 
-  nav{
-    a:first-child{
-      border-bottom: 2px solid var(--color-secondary);
-      font-weight: 500;
+export const NavBar = styled.nav`
+    a:nth-child(1){
+      border-bottom: ${(props)=> props.borderIsOn === 'home' ? '2px solid var(--color-secondary)' : 'none' };
+      font-weight: ${(props)=> props.borderIsOn === 'home' ? '500' : '400' };
+    }
+    a:nth-child(2){
+      border-bottom: ${(props)=> props.borderIsOn === 'shop' ? '2px solid var(--color-secondary)' : 'none' };
+      font-weight: ${(props)=> props.borderIsOn === 'shop' ? '500' : '400' };
+    }
+    a:nth-child(3){
+      border-bottom: ${(props)=> props.borderIsOn === 'contact' ? '2px solid var(--color-secondary)' : 'none' };
+      font-weight: ${(props)=> props.borderIsOn === 'contact' ? '500' : '400' };
     }
 
     a{
@@ -28,6 +37,7 @@ export const Container = styled.header`
       cursor: pointer;
       text-decoration: none;
       color: black;
+      transition: font 2s ;
 
       &:active, &:focus{
         color: black;
@@ -38,7 +48,6 @@ export const Container = styled.header`
         font-weight: 500;
       }
     }
-  }
 `
 
 export const Services = styled.div`

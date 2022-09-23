@@ -1,7 +1,7 @@
 import React from "react";
 import { Data } from "../../Services/Data";
 
-import { NavShop } from "../../Components/NavShop";
+import { Nav } from "../../Components/Nav";
 import { Footer } from "../../Components/Footer";
 import { Container, CardAccessories } from "./styles";
 import { ButtonGlobal } from "../../Components/Button/styles";
@@ -9,7 +9,7 @@ import { ButtonGlobal } from "../../Components/Button/styles";
 export function PageAccessories(){
   return(
     <>
-      <NavShop/>
+      <Nav/>
 
       <Container>
         {Data.acessorios.map(accessory=>

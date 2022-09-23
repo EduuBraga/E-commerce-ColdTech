@@ -2,7 +2,7 @@ import React from "react"
 import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer/index"
 
-import { NavShop } from "../../Components/NavShop/index"
+import { Nav } from "../../Components/Nav/index"
 import { Data } from "../../Services/Data"
 
 import { Container, CardNotebook } from "./styles"
@@ -10,7 +10,7 @@ import { Container, CardNotebook } from "./styles"
 export function PageNotebook() {
   return (
     <>
-      <NavShop />
+      <Nav />
 
       <Container>
         {Data.notebooks.map(notebook =>
