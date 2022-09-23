@@ -13,6 +13,7 @@ export const Container = styled.section`
     p{
       font-size: 24px;
       font-weight: 500;
+      margin-bottom: 10px;
     }
     a{
       text-decoration: none;

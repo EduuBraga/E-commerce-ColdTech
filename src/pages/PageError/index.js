@@ -9,7 +9,8 @@ export function PageError() {
   return (
     <Container>
       <div>
-        <p>Página não encontrada, clique no botão para voltar a página principal</p>
+        <p>Página não encontrada </p>
+        <p>Clique no botão para voltar a página principal</p>
         <Link to='/'>
           <ButtonGlobal>Voltar</ButtonGlobal>
         </Link>
