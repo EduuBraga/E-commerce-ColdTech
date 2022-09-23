@@ -12,7 +12,7 @@ export const Products = styled.div`
   justify-content: center;
   gap: 30px;
   overflow: auto;
-  border-top: 2px solid #ccc;
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   
   img{
