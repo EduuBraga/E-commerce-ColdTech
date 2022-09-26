@@ -29,7 +29,7 @@ export function PageMonitores() {
               <li>{monitor.description.nota3}</li>
               <li>{monitor.description.nota4}</li>
             </div>
-            <ButtonGlobal onClick={()=>{AddProductCart(monitor.id)}}>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(monitor.id)}}>Adicionar no Carrinho</ButtonGlobal>
           </CardMonitor>
         )}
       </Container>

@@ -30,7 +30,7 @@ export function PageCPUs() {
               <li>{cpu.description.nota3}</li>
               <li>{cpu.description.nota4}</li>
             </div>
-            <ButtonGlobal onClick={()=>{AddProductCart(cpu.id)}}>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(cpu.id)}}>Adicionar no Carrinho</ButtonGlobal>
           </CardCPU>
         )}
       </Container>

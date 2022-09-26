@@ -29,7 +29,7 @@ export function PageAccessories(){
               <li>{accessory.description.nota2}</li>
               <li>{accessory.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={()=>{AddProductCart(accessory.id)}}>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(accessory.id)}}>Adicionar no Carrinho</ButtonGlobal>
           </CardAccessories>
         )}
         

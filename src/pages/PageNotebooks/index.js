@@ -29,7 +29,7 @@ export function PageNotebook() {
               <li>{notebook.description.nota2}</li>
               <li>{notebook.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}>Adicionar no Carrinho</ButtonGlobal>
           </CardNotebook>
         )}
       </Container>
