@@ -2,11 +2,9 @@ import styled, { keyframes } from "styled-components"
 
 const Scale = keyframes`
   0%{
-    /* transform: translateX(100px); */
     width: 0px;
     height: 0vh;
   }100%{
-    /* transform: translateX(0px); */
     width: 400px;
     height: 100vh;
   }
@@ -17,7 +15,7 @@ export const Container = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-   width: 400px;
+  width: 440px;
   height: 100vh; 
   background-color: #262626;
   z-index: 100;
@@ -28,21 +26,25 @@ export const Container = styled.div`
   *{
     color: white;
   }
+  h2{
+    margin-bottom: 25px;
+
+    img{
+      width: 40px;
+      margin-right: 5px;
+      transform: translateY(10px);
+    }
+  }
 `
 
 export const ContainerClose = styled.div`
   text-align: end;
-  padding: 5px;
+  padding: 10px;
 
   img{
     cursor: pointer;
     width: 22px;
   }
-`
-
-
-export const ProductsCart = styled.div`
-
 `
 
 export const WrapperButton = styled.div`
@@ -55,9 +57,8 @@ export const WrapperButton = styled.div`
   button{
     display: flex;
     align-items: center;
-    background-color: white;
-    color: black;
-
+    gap: 10px;
+    
     img{
       width: 25px;
     }

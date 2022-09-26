@@ -1,27 +1,27 @@
-import React from "react";
+import React from "react"
 
-import { Container, ContainerClose, ProductsCart, WrapperButton } from "./styles"
+import { ProductsCart } from "../ProductsCart"
 import { ButtonGlobal } from "../../Components/Button/styles"
 
-import close from '../../assets/images/icons/close.png'
-import cart from '../../assets/images/icons/cart.png'
+import ImgCloseURL from '../../assets/images/icons/close.png'
+import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png'
+
+import { Container, ContainerClose, WrapperButton} from "./styles"
 
 export function ModalCart({ setVisibleModal }) {
+
   return (
     <Container>
       <ContainerClose>
-        <img onClick={() => { setVisibleModal(false) }} src={close} alt="Fechar" />
+        <img onClick={() => { setVisibleModal(false) }} src={ImgCloseURL} alt="Fechar" />
       </ContainerClose>
 
-      <h2>Carrinho</h2>
+      <h2> <img src={ImgCartWhiteURL} alt='Carrinho' /> Carrinho</h2>
 
-
-      <ProductsCart>
-    
-      </ProductsCart>
+      <ProductsCart></ProductsCart>
 
       <WrapperButton>
-        <ButtonGlobal><img src={cart} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
+        <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
       </WrapperButton>
     </Container>
   )
