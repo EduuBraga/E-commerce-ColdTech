@@ -3,7 +3,7 @@ import { Data } from "../../Services/Data"
 
 export const CartContext = createContext()
 
-export function CartProvider({ children }) {
+export function ProductsCartProvider({ children }) {
   const [productsCart, setProductsCart] = useState([])
 
   function AddAProductToCart(id) {

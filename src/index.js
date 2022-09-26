@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { CartProvider } from './Provider/StatesProvider'
+import { ProductsCartProvider } from './Provider/ProductsCartProvider'
 
 import { GlobalStyles } from './styles/GlobalStyles'
 import { PageHome } from './pages/PageHome'
@@ -16,7 +16,7 @@ import { PageError } from './pages/PageError'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <CartProvider>
+  <ProductsCartProvider>
     <Router>
       <Routes>
         <Route path='/' element={<PageHome />} />
@@ -30,5 +30,5 @@ root.render(
       </Routes>
       <GlobalStyles />
     </Router>
-  </CartProvider>
+  </ProductsCartProvider>
 )
