@@ -26,8 +26,8 @@ export const NavBar = styled.nav`
       font-weight: ${(props)=> props.borderIsOn === 'home' ? '500' : '400' };
     }
     a:nth-child(2){
-      border-bottom: ${(props)=> props.borderIsOn === 'shop' ? '2px solid var(--color-secondary)' : 'none' };
-      font-weight: ${(props)=> props.borderIsOn === 'shop' ? '500' : '400' };
+      border-bottom: ${(props)=> props.borderIsOn === 'explorar' ? '2px solid var(--color-secondary)' : 'none' };
+      font-weight: ${(props)=> props.borderIsOn === 'explorar' ? '500' : '400' };
     }
     a:nth-child(3){
       border-bottom: ${(props)=> props.borderIsOn === 'contact' ? '2px solid var(--color-secondary)' : 'none' };

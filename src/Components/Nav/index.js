@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
 
 import profile from '../../assets/images/icons/profile.png'
@@ -7,6 +6,7 @@ import cart from '../../assets/images/icons/cart.png'
 import logo from '../../assets/images/icons/logo.png'
 
 import { ModalCart } from "../ModalCart"
+
 import { Container, NavBar, Logo,Services, } from "./styles"
 
 export function Nav() {
@@ -21,9 +21,9 @@ export function Nav() {
     if (url.includes('/contact')) {
       setBorderBottom('contact')
       document.title = 'ColdTech | Fale Conosco'
-    } else if (url.includes('shop')) {
-      document.title = 'ColdTech | Shop'
-      setBorderBottom('shop')
+    } else if (url.includes('/explorar')) {
+      document.title = 'ColdTech | Explorar'
+      setBorderBottom('explorar')
     } else {
       setBorderBottom('home')
       document.title = 'ColdTech'
@@ -38,8 +38,8 @@ export function Nav() {
 
       <NavBar borderIsOn={borderBottom}>
         <Link to='/'>Home</Link>
-        <Link to='/shop'>Shop</Link>
-        <Link to='/contact'>Contact</Link>
+        <Link to='/explorar'>Explorar</Link>
+        <Link to='/contact'>Contato</Link>
       </NavBar>
 
       <Services>

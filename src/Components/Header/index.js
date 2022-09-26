@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ContainerHeader, Description } from "./styles"
+import { Nav } from '../Nav/index'
+import { ExplorarNavBar } from "../ExplorarNavBar/index"
 import { ButtonGlobal } from "../Button/styles"
 
 import pcGamer from '../../assets/images/pc-gamer.png'
 
-import { Nav } from '../Nav/index'
-import { Shop } from "../Shop/index";
+import { ContainerHeader, Description } from "./styles"
 
 export function Header() {
   return (
     <>
       <Nav />
-      <Shop></Shop>
+      <ExplorarNavBar />
       <header>
         <ContainerHeader>
           <Description>

@@ -14,7 +14,7 @@ export function Offers1({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/shop/notebooks'>Confira agora</Link>
+        <Link to='/explorar/notebooks'>Confira agora</Link>
       </div>
     </Container>
   )
@@ -27,7 +27,7 @@ export function Offers2({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/shop/cpus'>Confira agora</Link>
+        <Link to='/explorar/cpus'>Confira agora</Link>
       </div>
 
       <div>
@@ -44,7 +44,7 @@ export function Offers3({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/shop/accessories'>Confira agora</Link>
+        <Link to='/explorar/accessories'>Confira agora</Link>
       </div>
 
       <div>
@@ -65,7 +65,7 @@ export function Offers4({subTittle, msg, tittle, src }) {
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
         <p>{msg}</p>
-        <Link to='/shop/monitores'>Confira agora</Link>
+        <Link to='/explorar/monitores'>Confira agora</Link>
       </div>
     </Container>
   )

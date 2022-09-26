@@ -1,40 +1,39 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
-import { Container, Product, Products } from './styles'
 
 import Compute from '../../assets/images/icons/Compute.png'
 import Notebook from '../../assets/images/icons/notebook.png'
 import Accessories from '../../assets/images/icons/keyboard-mouse.png'
 import Screen from '../../assets/images/icons/screen.png'
 
-export function Shop() {
+import { Container, Product, Products } from './styles'
+
+export function ExplorarNavBar() {
   return (
     <Container>
       <Products>
-        <Link to='/shop/notebooks'>
+        <Link to='/explorar/notebooks'>
           <Product>
             <img src={Notebook} alt="Notebook gamer" />
             <h3>Notebooks</h3>
           </Product>
         </Link>
 
-        <Link to='/shop/cpus'>
+        <Link to='/explorar/cpus'>
           <Product>
             <img src={Compute} alt="CPUs games" />
             <h3>Computadores</h3>
           </Product>
         </Link>
 
-        <Link to='/shop/monitores'>
+        <Link to='/explorar/monitores'>
           <Product>
             <img src={Screen} alt="Monitores games" />
             <h3>Monitores</h3>
           </Product>
         </Link>
 
-        <Link to='/shop/accessories'>
+        <Link to='/explorar/accessories'>
           <Product>
             <img src={Accessories} alt="Acessórios games" />
             <h3>Acessórios</h3>
