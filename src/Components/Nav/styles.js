@@ -1,20 +1,22 @@
 import styled from "styled-components"
 
 export const Container = styled.header`
+  position: relative;
   display: flex;
-  justify-content :space-around;
+  justify-content :space-between;
   align-items: center;
   padding: 17px 0px;
   background-color: white;
   border-bottom: 1px solid #ccc;
+`
 
-  div{
-    img{
-      width: 50px;
-    }
-    a{
-      cursor: pointer;
-    }
+export const Logo = styled.div`
+  margin-left: 30px;
+  img{
+    width: 50px;
+  }
+  a{
+    cursor: pointer;
   }
 `
 
@@ -54,22 +56,39 @@ export const Services = styled.div`
   display: flex;
   gap: 15px;
   
+  div:nth-child(1){
+    gap: 5px;
+  }
+
+  div:nth-child(2){
+    margin-right: 30px;
+    cursor: pointer;
+
+    :hover{
+      border-bottom: 2px solid var(--color-secondary);
+      font-weight: 600;
+    }
+  }
+
   div{
     display: flex;
     align-items: center;
-    gap: 2px;
     padding-bottom: 5px;
-    cursor: pointer;
-    
-    :hover{
-      border-bottom: 2px solid var(--color-secondary);
-      padding-bottom: 3px;
-      font-weight: 500;
-    }
 
     p{
+      font-size: 14px;
+
       @media screen and (max-width: 768px){
         display: none;
+      }
+    }
+
+    span{
+      font-weight: 600;
+      transition: all 0.2s;
+      cursor: pointer;
+      :hover{
+        text-decoration: underline;
       }
     }
 

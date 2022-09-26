@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import search from '../../assets/images/icons/search.png'
 import profile from '../../assets/images/icons/profile.png'
 import cart from '../../assets/images/icons/cart.png'
 import logo from '../../assets/images/icons/logo.png'
 
-import { Container, NavBar, Services } from "./styles";
+import { ModalCart } from "../ModalCart"
+import { Container, NavBar, Logo,Services, } from "./styles"
 
 export function Nav() {
+  const [visibleModal, setVisibleModal] = useState(false)
+
   const [borderBottom, setBorderBottom] = useState('')
   const [url, setUrl] = useState('')
 
@@ -30,9 +32,9 @@ export function Nav() {
 
   return (
     <Container >
-      <div>
+      <Logo>
         <Link to='/'><img src={logo} alt="Logo da cold tech" ></img></Link>
-      </div>
+      </Logo>
 
       <NavBar borderIsOn={borderBottom}>
         <Link to='/'>Home</Link>
@@ -42,18 +44,17 @@ export function Nav() {
 
       <Services>
         <div>
-          <img src={search} alt="Search" />
-          <p>Pesquisar</p>
+          <img src={profile} alt="Search" />
+          <p><span>Entrar</span> ou <br/>se <span>Cadastrar</span></p>
         </div>
-        <div>
+
+        <div onClick={()=>{setVisibleModal(true)}}>
           <img src={cart} alt="Search" />
           <p>Carrinho</p>
         </div>
-        <div>
-          <img src={profile} alt="Search" />
-          <p>Perfil</p>
-        </div>
       </Services>
+
+      {visibleModal && <ModalCart setVisibleModal={setVisibleModal}/>}
     </Container>
   )
 }
