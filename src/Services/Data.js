@@ -15,604 +15,697 @@ import ImgHeadsetURL from '../assets/images/PageAccessories/headset.png'
 import ImgKeyboardURL from '../assets/images/PageAccessories/keyboard-gamer.png'
 import ImgMouseURL from '../assets/images/PageAccessories/mouse-gamer.png'
 
-export const Data = {
-  notebooks: [
-    {
-      id: 1,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+export const Data = [
+  {
+    tittle: 'notebooks',
+    id: 1,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 2,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 2,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 3,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 3,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 4,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 4,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-    {
-      id: 5,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 5,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-    {
-      id: 6,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 6,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-    {
-      id: 7,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 7,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 8,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 8,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 9,
-      name: 'Notebook gamer CT-77',
-      valor: 4.999,
-      description: {
-        msg: 'Perfeito para você jogar', 
-        nota1: 'Windows 10',
-        nota2: 'SSD 254 GB',
-        nota3: '8 GB de Memória Ram',
-      },
-      src: ImgNotebook1URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 9,
+    name: 'Notebook gamer CT-77',
+    valor: 4.999,
+    description: {
+      msg: 'Perfeito para você jogar',
+      nota1: 'Windows 10',
+      nota2: 'SSD 254 GB',
+      nota3: '8 GB de Memória Ram',
     },
-    {
-      id: 10,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 10,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-    {
-      id: 11,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 11,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-    {
-      id: 12,
-      name: 'Notebook gamer CT-88',
-      valor: 7.999,
-      description: {
-        msg: 'O melhor do mercado', 
-        nota1: 'windows 11 pro',
-        nota2: '16 GB de Memória RAM',
-        nota3: 'SSD 512 GB',
-      },
-      src: ImgNotebook2URL
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'notebooks',
+    id: 12,
+    name: 'Notebook gamer CT-88',
+    valor: 7.999,
+    description: {
+      msg: 'O melhor do mercado',
+      nota1: 'windows 11 pro',
+      nota2: '16 GB de Memória RAM',
+      nota3: 'SSD 512 GB',
     },
-  ],
+    src: ImgNotebook2URL,
+    qty: 1,
+  },
+
   // === CPUS ===
-  cpus: [
-    {
-      id: 1,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+
+  {
+    tittle: 'cpus',
+    id: 13,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 2,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 14,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 3,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 15,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 4,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 16,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 5,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 17,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 6,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 18,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 7,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+    src: ImgCPU2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 19,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 8,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 20,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 9,
-      name: 'Computador gamer CT-55',
-      valor: 19.999,
-      description: {
-        msg: 'O melhor no quesito desempenho', 
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU1URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 21,
+    name: 'Computador gamer CT-55',
+    valor: 19.999,
+    description: {
+      msg: 'O melhor no quesito desempenho',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 10,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU1URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 22,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 11,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU2URL,
+    qty: 1,
+  },
+  {
+    tittle: 'cpus',
+    id: 23,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-    {
-      id: 12,
-      name: 'Computador gamer CT-99',
-      valor: 14.999,
-      description: {
-        msg:'Trabalhe a todo vapor',
-        nota1: '12ª geração Intel Core i5',
-        nota2: 'Windows 11 Pro',
-        nota3: 'SSD de 256GB',
-        nota4: '16 GB de Memória RAM',
-      },
-      src: ImgCPU2URL
+    src: ImgCPU2URL,
+    qty: 1
+  },
+  {
+    tittle: 'cpus',
+    id: 24,
+    name: 'Computador gamer CT-99',
+    valor: 14.999,
+    description: {
+      msg: 'Trabalhe a todo vapor',
+      nota1: '12ª geração Intel Core i5',
+      nota2: 'Windows 11 Pro',
+      nota3: 'SSD de 256GB',
+      nota4: '16 GB de Memória RAM',
     },
-  ],
+    src: ImgCPU2URL,
+    qty: 1
+  },
+
   // === MONITORES ===
-  monitores: [
-    {
-      id: 1,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+  {
+    tittle: 'monitores',
+    id: 25,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 2,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 26,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 3,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 27,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 4,
-      name: 'Monitor Gamer CT-33',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 28,
+    name: 'Monitor Gamer CT-33',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 5,
-      name: 'Monitor Gamer CT-33',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 29,
+    name: 'Monitor Gamer CT-33',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 6,
-      name: 'Monitor Gamer CT-33',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 30,
+    name: 'Monitor Gamer CT-33',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 7,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 31,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 8,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 32,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 9,
-      name: 'Monitor Gamer CT-33',
-      valor: 3.999,
-      description: {
-        msg: 'Cores vibrantes e detalhes',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor1URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 33,
+    name: 'Monitor Gamer CT-33',
+    valor: 3.999,
+    description: {
+      msg: 'Cores vibrantes e detalhes',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 10,
-      name: 'Monitor Gamer CT-22',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor1URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 34,
+    name: 'Monitor Gamer CT-22',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 11,
-      name: 'Monitor Gamer CT-22',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 35,
+    name: 'Monitor Gamer CT-22',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-    {
-      id: 12,
-      name: 'Monitor Gamer CT-22',
-      valor: 5.999,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Full HD',
-        nota2: 'Entradas HDMI',
-        nota3: '60Hz',
-      },
-      src: ImgMonitor2URL,
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+  {
+    tittle: 'monitores',
+    id: 36,
+    name: 'Monitor Gamer CT-22',
+    valor: 5.999,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Full HD',
+      nota2: 'Entradas HDMI',
+      nota3: '60Hz',
     },
-  ],
+    src: ImgMonitor2URL,
+    qty: 1
+  },
+
   // === ACESSÓRIOS ===
-  acessorios: [
-    {
-      id: 1,
-      name: 'Headset Gamer CT-66',
-      valor: 599.99,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Sem fio',
-        nota2: 'Microfone removível',
-        nota3: 'Estrutura pensada em cancelamento de ruído',
-      },
-      src: ImgHeadsetURL,
+
+  {
+    tittle: 'acessorios',
+    id: 37,
+    name: 'Headset Gamer CT-66',
+    valor: 599.99,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Sem fio',
+      nota2: 'Microfone removível',
+      nota3: 'Estrutura pensada em cancelamento de ruído',
     },
-    {
-      id: 2,
-      name: 'Headset Gamer CT-66',
-      valor: 599.99,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Sem fio',
-        nota2: 'Microfone removível',
-        nota3: 'Estrutura pensada em cancelamento de ruído',
-      },
-      src: ImgHeadsetURL,
+    src: ImgHeadsetURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 38,
+    name: 'Headset Gamer CT-66',
+    valor: 599.99,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Sem fio',
+      nota2: 'Microfone removível',
+      nota3: 'Estrutura pensada em cancelamento de ruído',
     },
-    {
-      id: 3,
-      name: 'Headset Gamer CT-66',
-      valor: 599.99,
-      description: {
-        msg: 'Escute como nunca',
-        nota1: 'Sem fio',
-        nota2: 'Microfone removível',
-        nota3: 'Estrutura pensada em cancelamento de ruído',
-      },
-      src: ImgHeadsetURL,
+    src: ImgHeadsetURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 39,
+    name: 'Headset Gamer CT-66',
+    valor: 599.99,
+    description: {
+      msg: 'Escute como nunca',
+      nota1: 'Sem fio',
+      nota2: 'Microfone removível',
+      nota3: 'Estrutura pensada em cancelamento de ruído',
     },
-    {
-      id: 4,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgHeadsetURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 40,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-    {
-      id: 5,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 41,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-    {
-      id: 6,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 42,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-    {
-      id: 7,
-      name: 'Mouse Gamer CT-M24',
-      valor: 499.99,
-      description: {
-        msg: 'Máxima liberdade para jogar',
-        nota1: 'Botões extras',
-        nota2: 'Design ergonômico',
-        nota3: '10000DPI',
-      },
-      src: ImgMouseURL,
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 43,
+    name: 'Mouse Gamer CT-M24',
+    valor: 499.99,
+    description: {
+      msg: 'Máxima liberdade para jogar',
+      nota1: 'Botões extras',
+      nota2: 'Design ergonômico',
+      nota3: '10000DPI',
     },
-    {
-      id: 8,
-      name: 'Mouse Gamer CT-M24',
-      valor: 499.99,
-      description: {
-        msg: 'Máxima liberdade para jogar',
-        nota1: 'Botões extras',
-        nota2: 'Design ergonômico',
-        nota3: '10000DPI',
-      },
-      src: ImgMouseURL,
+    src: ImgMouseURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 44,
+    name: 'Mouse Gamer CT-M24',
+    valor: 499.99,
+    description: {
+      msg: 'Máxima liberdade para jogar',
+      nota1: 'Botões extras',
+      nota2: 'Design ergonômico',
+      nota3: '10000DPI',
     },
-    {
-      id: 9,
-      name: 'Mouse Gamer CT-M24',
-      valor: 499.99,
-      description: {
-        msg: 'Máxima liberdade para jogar',
-        nota1: 'Botões extras',
-        nota2: 'Design ergonômico',
-        nota3: '10000DPI',
-      },
-      src: ImgMouseURL,
+    src: ImgMouseURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 45,
+    name: 'Mouse Gamer CT-M24',
+    valor: 499.99,
+    description: {
+      msg: 'Máxima liberdade para jogar',
+      nota1: 'Botões extras',
+      nota2: 'Design ergonômico',
+      nota3: '10000DPI',
     },
-    {
-      id: 10,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgMouseURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 46,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-    {
-      id: 11,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 47,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-    {
-      id: 12,
-      name: 'Teclado Gamer ColdTech CT-15',
-      valor: 149.99,
-      description: {
-        msg: 'Digitação leve e rápida',
-        nota1: 'Mecânico',
-        nota2: 'Teclas Souble Shot Injection',
-        nota3: 'Switch blue',
-      },
-      src: ImgKeyboardURL,
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+  {
+    tittle: 'acessorios',
+    id: 48,
+    name: 'Teclado Gamer ColdTech CT-15',
+    valor: 149.99,
+    description: {
+      msg: 'Digitação leve e rápida',
+      nota1: 'Mecânico',
+      nota2: 'Teclas Souble Shot Injection',
+      nota3: 'Switch blue',
     },
-  ]
-}
+    src: ImgKeyboardURL,
+    qty: 1
+  },
+]
