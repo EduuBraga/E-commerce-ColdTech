@@ -1,18 +1,23 @@
-import React from "react";
-import { Data } from "../../Services/Data";
+import React, { useContext } from "react"
+import { CartContext } from "../../Provider/StatesProvider"
+import { Data } from "../../Services/Data"
 
-import { Nav } from "../../Components/Nav";
-import { Footer } from "../../Components/Footer";
-import { Container, CardAccessories } from "./styles";
-import { ButtonGlobal } from "../../Components/Button/styles";
+import { Nav } from "../../Components/Nav"
+import { ButtonGlobal } from "../../Components/Button/styles"
+import { Footer } from "../../Components/Footer"
+
+import { Container, CardAccessories } from "./styles"
 
 export function PageAccessories(){
+  const acessories = Data.filter((product) => product.tittle === 'acessorios')
+  const { AddProductCart} = useContext(CartContext)
+
   return(
     <>
       <Nav/>
 
       <Container>
-        {Data.acessorios.map(accessory=>
+        {acessories.map(accessory=>
           <CardAccessories key={accessory.id}>
             <h4>{accessory.name}</h4>
             <img src={accessory.src} alt="HeadSet" />
@@ -24,7 +29,7 @@ export function PageAccessories(){
               <li>{accessory.description.nota2}</li>
               <li>{accessory.description.nota3}</li>
             </div>
-            <ButtonGlobal>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(accessory.id)}}>Comprar</ButtonGlobal>
           </CardAccessories>
         )}
         

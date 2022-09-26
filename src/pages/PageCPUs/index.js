@@ -1,18 +1,23 @@
-import React from "react"
+import React, { useContext } from "react"
+import { CartContext } from "../../Provider/StatesProvider"
 import { Data } from "../../Services/Data"
 
-import { Footer } from "../../Components/Footer"
 import { Nav } from "../../Components/Nav"
-import { CardCPU, Container } from "./styles"
 import { ButtonGlobal } from "../../Components/Button/styles"
+import { Footer } from "../../Components/Footer"
+
+import { CardCPU, Container } from "./styles"
 
 export function PageCPUs() {
+  const cpus = Data.filter((product) => product.tittle === 'cpus')
+  const { AddProductCart} = useContext(CartContext)
+
   return (
     <>
       <Nav />
 
       <Container>
-        {Data.cpus.map(cpu =>
+        {cpus.map(cpu =>
           <CardCPU key={cpu.id}>
             <h4>{cpu.name}</h4>
             <img src={cpu.src} alt='CPU gamer'/>
@@ -25,7 +30,7 @@ export function PageCPUs() {
               <li>{cpu.description.nota3}</li>
               <li>{cpu.description.nota4}</li>
             </div>
-            <ButtonGlobal>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(cpu.id)}}>Comprar</ButtonGlobal>
           </CardCPU>
         )}
       </Container>

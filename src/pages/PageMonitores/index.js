@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { CartContext } from "../../Provider/StatesProvider"
 import { Data } from "../../Services/Data"
 
 import { Footer } from "../../Components/Footer"
@@ -7,12 +8,15 @@ import { CardMonitor, Container } from "./styles"
 import { ButtonGlobal } from "../../Components/Button/styles"
 
 export function PageMonitores() {
+  const monitores = Data.filter((product) => product.tittle === 'monitores')
+  const { AddProductCart} = useContext(CartContext)
+
   return (
     <>
       <Nav />
 
       <Container>
-        {Data.monitores.map(monitor =>
+        {monitores.map(monitor =>
           <CardMonitor key={monitor.id}>
             <h4>{monitor.name}</h4>
             <img src={monitor.src} alt='Monitor gamer'/>
@@ -25,7 +29,7 @@ export function PageMonitores() {
               <li>{monitor.description.nota3}</li>
               <li>{monitor.description.nota4}</li>
             </div>
-            <ButtonGlobal>Comprar</ButtonGlobal>
+            <ButtonGlobal onClick={()=>{AddProductCart(monitor.id)}}>Comprar</ButtonGlobal>
           </CardMonitor>
         )}
       </Container>
