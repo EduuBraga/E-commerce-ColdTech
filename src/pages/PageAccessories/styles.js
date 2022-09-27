@@ -21,6 +21,12 @@ export const CardAccessories = styled.div`
   img{
     width: 180px;
     align-self: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    :hover{
+      transform: scale(1.05);
+    }
   }
 
   h4:first-child{

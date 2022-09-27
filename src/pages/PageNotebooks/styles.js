@@ -17,10 +17,17 @@ export const CardNotebook = styled.div`
   width: 250px;
   gap: 15px;
   background-color: #f3f4f6;
+  border-radius: 15px ;
 
   img{
     width: 180px;
     align-self: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    :hover{
+      transform: scale(1.05);
+    }
   }
 
   h4:first-child{
