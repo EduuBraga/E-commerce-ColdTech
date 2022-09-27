@@ -1,11 +1,17 @@
 import React, { useContext } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
+import { Link } from "react-router-dom"
+
 import { Data } from "../../Services/Data"
 
 import { Footer } from "../../Components/Footer"
 import { Nav } from "../../Components/Nav"
-import { CardMonitor, Container } from "./styles"
 import { ButtonGlobal } from "../../Components/Button/styles"
+
+import HomeURLImg from '../../assets/images/icons/home.png'
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+
+import { CardMonitor, Container, Breadcrumb } from "./styles"
 
 export function PageMonitores() {
   const monitores = Data.filter((product) => product.tittle === 'monitores')
@@ -14,7 +20,14 @@ export function PageMonitores() {
   return (
     <>
       <Nav />
-
+      <Breadcrumb>
+        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+        <Link to="/">Home</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <Link to="/explorar">Explorar</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <p>Monitores</p>
+      </Breadcrumb>
       <Container>
         {monitores.map(monitor =>
           <CardMonitor key={monitor.id}>

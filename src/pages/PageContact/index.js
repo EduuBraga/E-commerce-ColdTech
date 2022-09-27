@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { ButtonGlobalNoBG } from "../../Components/Button/styles";
+import React, {  useState } from "react";
+import { ButtonGlobalNoBG } from "../../Components/Button/styles"
+import { Link } from "react-router-dom";
 
-import { Footer } from "../../Components/Footer";
-import { Nav } from "../../Components/Nav";
+import { Footer } from "../../Components/Footer"
+import { Nav } from "../../Components/Nav"
 
 import ImgChatURL from '../../assets/images/icons/chat.png'
 import ImgCartShoppingURL from '../../assets/images/icons/cart-shopping.png'
 import ImgToolURL from '../../assets/images/icons/tool.png'
 import ImgSmartphoneURL from '../../assets/images/icons/smartphone.png'
+import HomeURLImg from '../../assets/images/icons/home.png'
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
-import { ContainerHelp, Tittle, ContainerContent, CardContent, WrapperButtons } from "./styles";
+import { ContainerHelp, Tittle, ContainerContent, CardContent, WrapperButtons, Breadcrumb } from "./styles";
 
 export function PageContact() {
   const [visibleHelp, setVisibleHeap] = useState(false)
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop
-    if (scrolled > 350){
+    if (scrolled > 360){
       setVisibleHeap(true)
     } 
-    else if (scrolled <= 350){
+    else if (scrolled <= 360){
       setVisibleHeap(false)
     }
   }
@@ -29,6 +32,14 @@ export function PageContact() {
   return (
     <>
       <Nav />
+
+      <Breadcrumb>
+        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+        <Link to="/">Home</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <p>Contato</p>
+      </Breadcrumb>
+
       <Tittle>
         <h2>Fale conosco</h2>
       </Tittle>

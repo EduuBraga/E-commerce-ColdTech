@@ -1,15 +1,24 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import HomeURLImg from '../../assets/images/icons/home.png'
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+
 import { Nav } from "../../Components/Nav/index"
 import { Footer } from "../../Components/Footer/index"
 
-import { Container, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores } from "./styles"
+import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores } from "./styles"
 
 export function PageExplorar() {
   return (
     <>
-      <Nav/>
+      <Nav />
+      <Breadcrumb>
+        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+        <Link to="/">Home</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <p>Explorar</p>
+      </Breadcrumb>
       <Container>
 
         <Link to='/explorar/notebooks'>
@@ -20,7 +29,7 @@ export function PageExplorar() {
 
         <Link to='/explorar/cpus'>
           <ContainerCPU>
-            <h2>CPU</h2>
+            <h2>Computadores</h2>
           </ContainerCPU>
         </Link>
 

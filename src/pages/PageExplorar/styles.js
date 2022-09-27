@@ -8,13 +8,10 @@ import AcessoriosImgURL from '../../assets/images/PageAccessories/keyboard-gamer
 
 export const Container = styled.section`
   margin: 0 auto;
-  padding-top: 50px;
   max-width: 1024px;
   display: grid;
-  grid-template-areas:"notebook notebook acessory monitor"
-                      "notebook notebook acessory monitor"
-                      "cpu cpu acessory monitor"
-                      "cpu cpu acessory monitor";
+  grid-template-areas:"acessory notebook notebook monitor"
+                      "acessory cpu cpu monitor";
   gap: 20px;
   
   h2{
@@ -47,6 +44,43 @@ export const Container = styled.section`
   }
   a:nth-child(4){
     grid-area: monitor; 
+  }
+`
+
+export const Breadcrumb = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: center;
+  padding: 20px 10px;
+  
+  img:nth-child(1){
+    width: 25px;
+    margin-right: 5px;
+    transform: translateY(-2px);
+  }
+
+  img{
+    width: 15px;
+  }
+
+  a{
+    color:black;
+    text-decoration: none;
+
+    :active, :focus{
+      text-decoration: none;
+      color: black;
+    }
+
+    :hover{
+      text-decoration: underline;
+    }
+  }
+  p{
+    cursor: default;
   }
 `
 

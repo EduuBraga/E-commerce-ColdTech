@@ -1,12 +1,17 @@
 import React, { useContext } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
+import { Link } from "react-router-dom"
+
 import { Data } from "../../Services/Data"
 
 import { Nav } from "../../Components/Nav"
 import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer"
 
-import { Container, CardAccessories } from "./styles"
+import HomeURLImg from '../../assets/images/icons/home.png'
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+
+import { Breadcrumb, Container, CardAccessories } from "./styles"
 
 export function PageAccessories() {
   const acessories = Data.filter((product) => product.tittle === 'acessorios')
@@ -15,7 +20,14 @@ export function PageAccessories() {
   return (
     <>
       <Nav />
-
+      <Breadcrumb>
+        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+        <Link to="/">Home</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <Link to="/explorar">Explorar</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <p>Acessórios</p>
+      </Breadcrumb>
       <Container>
         {acessories.map(accessory =>
           <CardAccessories key={accessory.id}>

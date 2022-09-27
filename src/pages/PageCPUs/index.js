@@ -1,12 +1,17 @@
 import React, { useContext } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
+import { Link } from "react-router-dom"
+
 import { Data } from "../../Services/Data"
 
 import { Nav } from "../../Components/Nav"
 import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer"
 
-import { CardCPU, Container } from "./styles"
+import HomeURLImg from '../../assets/images/icons/home.png'
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+
+import { CardCPU, Container, Breadcrumb } from "./styles"
 
 export function PageCPUs() {
   const cpus = Data.filter((product) => product.tittle === 'cpus')
@@ -15,7 +20,14 @@ export function PageCPUs() {
   return (
     <>
       <Nav />
-
+      <Breadcrumb>
+        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+        <Link to="/">Home</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <Link to="/explorar">Explorar</Link>
+        <img src={ArrowURLImg} alt="Seta" />
+        <p>Computadores</p>
+      </Breadcrumb>
       <Container>
         {cpus.map(cpu =>
           <CardCPU key={cpu.id}>
