@@ -23,8 +23,8 @@ export function PageHome() {
         <Offers3 tittle="Dê um upgrade no seu espaço" subTittle='Acessórios' msg="Deixe seu setup mais bonito e aumente sua produtividade com acessórios incríveis" src={AcessoriosURL} ></Offers3>
         
         <Offers4 tittle='Os melhores dos mercado' subTittle='Monitores' msg='Aprecie cores vibrantes e detalhes impressionantes com monitores feitos para você' src={monitorURL}></Offers4>
-        <Footer></Footer>
       </Container>
+      <Footer></Footer>
     </>
   )
 }
