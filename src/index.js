@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ProductsCartProvider } from './Provider/ProductsCartProvider'
 
+import { ScrollToTop } from './Components/ScrollToTop'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { PageHome } from './pages/PageHome'
 import { PageExplorar } from './pages/PageExplorar'
@@ -18,6 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <ProductsCartProvider>
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<PageHome />} />
         <Route path='/explorar' element={<PageExplorar />} />
