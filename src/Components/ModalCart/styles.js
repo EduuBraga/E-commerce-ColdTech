@@ -26,26 +26,33 @@ export const Container = styled.div`
   *{
     color: white;
   }
-  h2{
-    margin-bottom: 25px;
+`
+
+export const ContainerTop = styled.div`
+  position: relative;
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+
+  div{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
 
     img{
-      width: 40px;
-      margin-right: 5px;
-      transform: translateY(10px);
+      width: 38px;
+      transform: translateY(-6px);
     }
   }
 `
 
-export const ContainerClose = styled.div`
-  text-align: end;
-  padding: 10px;
-
-  img{
-    cursor: pointer;
-    width: 22px;
-  }
+export const ImgClose = styled.img`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 18px;
 `
+
 
 export const ContainerNoItem = styled.div`
   margin-top: 28vh;
@@ -59,15 +66,18 @@ export const ContainerNoItem = styled.div`
 `
 
 export const WrapperButton = styled.div`
+  background-color: #262626;
   position: absolute;
-  bottom :10px;
-  transform: translateX(50%);
+  bottom:10px;
+  transform: translateX(5%);
   display: flex;
   justify-content: center;
 
   button{
+    width: 400px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     
     img{

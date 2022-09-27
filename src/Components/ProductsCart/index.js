@@ -3,7 +3,7 @@ import { CartContext } from "../../Provider/ProductsCartProvider"
 
 import ImgCloseURL from '../../assets/images/icons/close.png'
 
-import { CartItem, Container, WrapperTrash, WrapperProduct, ContainerTotal } from "./styles"
+import { CartItem, Container, ContainerDeleteItem, WrapperProduct, ContainerTotal } from "./styles"
 
 export function ProductsCart() {
   const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice } = useContext(CartContext)
@@ -35,9 +35,9 @@ export function ProductsCart() {
               </div>
             </div>
           </WrapperProduct>
-          <WrapperTrash>
+          <ContainerDeleteItem>
             <img onClick={() => { removeProductCart(product.id) }} src={ImgCloseURL} alt="Remover produto" />
-          </WrapperTrash>
+          </ContainerDeleteItem>
         </CartItem>
       )}
       <ContainerTotal>

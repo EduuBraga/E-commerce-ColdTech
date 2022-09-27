@@ -8,7 +8,7 @@ import { ButtonGlobal } from "../../Components/Button/styles"
 import ImgCloseURL from '../../assets/images/icons/close.png'
 import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png'
 
-import { Container, ContainerClose, ContainerNoItem, WrapperButton } from "./styles"
+import { Container, ContainerTop, ContainerNoItem, WrapperButton, ImgClose } from "./styles"
 
 
 export function ModalCart({ setVisibleModal }) {
@@ -16,11 +16,14 @@ export function ModalCart({ setVisibleModal }) {
 
   return (
     <Container>
-      <ContainerClose>
-        <img onClick={() => { setVisibleModal(false) }} src={ImgCloseURL} alt="Fechar" />
-      </ContainerClose>
 
-      <h2> <img src={ImgCartWhiteURL} alt='Carrinho' /> Carrinho</h2>
+      <ContainerTop>
+        <ImgClose onClick={() => { setVisibleModal(false) }} src={ImgCloseURL} alt="Fechar carrinho" />
+        <div>
+          <img src={ImgCartWhiteURL} alt='Carrinho' />
+          <h2>  Carrinho</h2>
+        </div>
+      </ContainerTop>
 
       {productsCart.length ? (
         <ProductsCart />
@@ -30,8 +33,7 @@ export function ModalCart({ setVisibleModal }) {
           <p>Dê uma olhada nos nossos produtos<br /> clicando no botão abaixo</p>
           <Link to='/explorar'><ButtonGlobal>Clique Aqui</ButtonGlobal></Link>
         </ContainerNoItem>
-      )
-      }
+      )}
 
       <WrapperButton>
         <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>

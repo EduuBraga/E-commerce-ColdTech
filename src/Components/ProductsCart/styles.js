@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.section`
   overflow: auto;
-  height: 70vh;
+  height: 75vh;
 `
 
 export const CartItem = styled.div`
@@ -49,6 +49,7 @@ export const WrapperProduct = styled.div`
 `
 
 export const ContainerTotal = styled.div`
+  background-color: #262626;
   position: absolute;
   bottom: 45px;
   text-align: left;
@@ -57,7 +58,7 @@ export const ContainerTotal = styled.div`
   transform: translateY(-15px);
 `
 
-export const WrapperTrash = styled.div`
+export const ContainerDeleteItem = styled.div`
   align-self: center;
 
   img{
