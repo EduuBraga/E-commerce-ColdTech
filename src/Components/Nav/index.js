@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"
 import { Link } from "react-router-dom";
 
 import profile from '../../assets/images/icons/profile.png'
@@ -7,21 +8,18 @@ import logo from '../../assets/images/icons/logo.png'
 
 import { ModalCart } from "../ModalCart"
 
-import { Container, NavBar, Logo,Services, } from "./styles"
+import { Container, NavBar, Logo, Services, } from "./styles"
 
 export function Nav() {
   const [visibleModal, setVisibleModal] = useState(false)
-
   const [borderBottom, setBorderBottom] = useState('')
-  const [url, setUrl] = useState('')
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    setUrl(JSON.stringify(window.location.href))
-
-    if (url.includes('/contact')) {
+    if (pathname.includes('/contact')) {
       setBorderBottom('contact')
       document.title = 'ColdTech | Fale Conosco'
-    } else if (url.includes('/explorar')) {
+    } else if (pathname.includes('/explorar')) {
       document.title = 'ColdTech | Explorar'
       setBorderBottom('explorar')
     } else {
@@ -45,16 +43,16 @@ export function Nav() {
       <Services>
         <div>
           <img src={profile} alt="Search" />
-          <p><span>Entrar</span> ou <br/>se <span>Cadastrar</span></p>
+          <p><span>Entrar</span> ou <br />se <span>Cadastrar</span></p>
         </div>
 
-        <div onClick={()=>{setVisibleModal(true)}}>
+        <div onClick={() => { setVisibleModal(true) }}>
           <img src={cart} alt="Search" />
           <p>Carrinho</p>
         </div>
       </Services>
 
-      {visibleModal && <ModalCart setVisibleModal={setVisibleModal}/>}
+      {visibleModal && <ModalCart setVisibleModal={setVisibleModal} />}
     </Container>
   )
 }
