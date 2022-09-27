@@ -29,7 +29,7 @@ export function Footer() {
           <CardLinks>
             <h4>Atendimento ao cliente</h4>
             <Link to="/contact">Ajuda & Contanto</Link>
-            <Link to="/shop">Loja online</Link>
+            <Link to="/explorar">Loja online</Link>
             <Link to='/'>Home</Link>
           </CardLinks>
         </Container>
