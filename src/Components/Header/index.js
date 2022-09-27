@@ -20,11 +20,11 @@ export function Header() {
             <strong>Ofertas todos os dias</strong>
             <h1>Os melhores produtos do mundo tech é aqui!</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nam fugit quod ex nostrum velit?</p>
-            <Link to='/shop' ><ButtonGlobal>Saiba mais</ButtonGlobal></Link>
+            <Link to='/explorar' ><ButtonGlobal>Veja Mais</ButtonGlobal></Link>
           </Description>
 
           <div>
-            <img src={pcGamer} alt="" />
+            <img src={pcGamer} alt="PC gamer e acessórios" />
           </div>
         </ContainerHeader>
       </header>
