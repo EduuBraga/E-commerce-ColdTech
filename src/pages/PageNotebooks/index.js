@@ -10,7 +10,7 @@ import { Container, CardNotebook } from "./styles"
 
 export function PageNotebook() {
   const Notebooks = Data.filter((product) => product.tittle === 'notebooks')
-  const { AddProductCart} = useContext(CartContext)
+  const { AddProductCart, brokenNumber } = useContext(CartContext)
 
   return (
     <>
@@ -22,14 +22,14 @@ export function PageNotebook() {
             <h4>{notebook.name}</h4>
             <img src={notebook.src} />
             <h4>{notebook.description.msg}</h4>
-            <p>A partir de R$ {notebook.valor}</p>
+            <p>A partir de R$ {brokenNumber(notebook.valor)}</p>
 
             <div key={notebook.id}>
               <li>{notebook.description.nota1}</li>
               <li>{notebook.description.nota2}</li>
               <li>{notebook.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}>Adicionar no Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}>Adicionar ao Carrinho</ButtonGlobal>
           </CardNotebook>
         )}
       </Container>

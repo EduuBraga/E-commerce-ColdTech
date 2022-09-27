@@ -51,8 +51,22 @@ export function ProductsCartProvider({ children }) {
     setProductsCart(arrayFiltered)
   }
 
+  function brokenNumber(number) {
+    return number.toLocaleString('pt-BR')
+  }
+
   return (
-    <CartContext.Provider value={{allPrice, setAllPrice, productsCart, setProductsCart, AddAProductToCart, removeAProductToCart, removeProductCart, AddProductCart }} >
+    <CartContext.Provider value={{
+      allPrice,
+      setAllPrice,
+      productsCart,
+      setProductsCart,
+      AddAProductToCart,
+      removeAProductToCart,
+      removeProductCart,
+      AddProductCart,
+      brokenNumber
+    }} >
       {children}
     </CartContext.Provider >
   )

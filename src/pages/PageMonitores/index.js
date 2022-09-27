@@ -9,7 +9,7 @@ import { ButtonGlobal } from "../../Components/Button/styles"
 
 export function PageMonitores() {
   const monitores = Data.filter((product) => product.tittle === 'monitores')
-  const { AddProductCart} = useContext(CartContext)
+  const { AddProductCart, brokenNumber } = useContext(CartContext)
 
   return (
     <>
@@ -19,9 +19,9 @@ export function PageMonitores() {
         {monitores.map(monitor =>
           <CardMonitor key={monitor.id}>
             <h4>{monitor.name}</h4>
-            <img src={monitor.src} alt='Monitor gamer'/>
+            <img src={monitor.src} alt='Monitor gamer' />
             <h4>{monitor.description.msg}</h4>
-            <p>A partir de R$ {monitor.valor}</p>
+            <p>A partir de R$ {brokenNumber(monitor.valor)}</p>
 
             <div key={monitor.id}>
               <li>{monitor.description.nota1}</li>
@@ -29,12 +29,12 @@ export function PageMonitores() {
               <li>{monitor.description.nota3}</li>
               <li>{monitor.description.nota4}</li>
             </div>
-            <ButtonGlobal onClick={()=>{AddProductCart(monitor.id)}}>Adicionar no Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(monitor.id) }}>Adicionar ao Carrinho</ButtonGlobal>
           </CardMonitor>
         )}
       </Container>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }

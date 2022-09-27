@@ -8,34 +8,34 @@ import { Footer } from "../../Components/Footer"
 
 import { Container, CardAccessories } from "./styles"
 
-export function PageAccessories(){
+export function PageAccessories() {
   const acessories = Data.filter((product) => product.tittle === 'acessorios')
-  const { AddProductCart} = useContext(CartContext)
+  const { AddProductCart, brokenNumber } = useContext(CartContext)
 
-  return(
+  return (
     <>
-      <Nav/>
+      <Nav />
 
       <Container>
-        {acessories.map(accessory=>
+        {acessories.map(accessory =>
           <CardAccessories key={accessory.id}>
             <h4>{accessory.name}</h4>
             <img src={accessory.src} alt="HeadSet" />
             <h4>{accessory.description.msg}</h4>
-            <p>A partir de R$ {accessory.valor}</p>
+            <p>A partir de R$ {brokenNumber(accessory.valor)}</p>
 
             <div key={accessory.id}>
               <li>{accessory.description.nota1}</li>
               <li>{accessory.description.nota2}</li>
               <li>{accessory.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={()=>{AddProductCart(accessory.id)}}>Adicionar no Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(accessory.id) }}>Adicionar ao Carrinho</ButtonGlobal>
           </CardAccessories>
         )}
-        
+
       </Container>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }

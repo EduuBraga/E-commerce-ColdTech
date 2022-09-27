@@ -6,7 +6,7 @@ import ImgCloseURL from '../../assets/images/icons/close.png'
 import { CartItem, Container, ContainerDeleteItem, WrapperProduct, ContainerTotal } from "./styles"
 
 export function ProductsCart() {
-  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice } = useContext(CartContext)
+  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice, brokenNumber } = useContext(CartContext)
 
   useEffect(() => {
     function getTotal(total, product) {
@@ -27,7 +27,7 @@ export function ProductsCart() {
             </div>
             <div>
               <h4>{product.name}</h4>
-              <p>R$ {product.valor} </p>
+              <p>R$ {brokenNumber(product.valor)} </p>
               <div>
                 <button onClick={() => { removeAProductToCart(product.id) }}>-</button>
                 {product.qty}
