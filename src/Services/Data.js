@@ -20,7 +20,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 1,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -34,7 +34,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 2,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -48,7 +48,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 3,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -62,7 +62,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 4,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -76,7 +76,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 5,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -90,7 +90,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 6,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -104,7 +104,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 7,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -118,7 +118,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 8,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -132,7 +132,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 9,
     name: 'Notebook gamer CT-77',
-    valor: 4.999,
+    valor: 4999,
     description: {
       msg: 'Perfeito para você jogar',
       nota1: 'Windows 10',
@@ -146,7 +146,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 10,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -160,7 +160,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 11,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -174,7 +174,7 @@ export const Data = [
     tittle: 'notebooks',
     id: 12,
     name: 'Notebook gamer CT-88',
-    valor: 7.999,
+    valor: 7999,
     description: {
       msg: 'O melhor do mercado',
       nota1: 'windows 11 pro',
@@ -191,7 +191,7 @@ export const Data = [
     tittle: 'cpus',
     id: 13,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -206,7 +206,7 @@ export const Data = [
     tittle: 'cpus',
     id: 14,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -221,7 +221,7 @@ export const Data = [
     tittle: 'cpus',
     id: 15,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -236,7 +236,7 @@ export const Data = [
     tittle: 'cpus',
     id: 16,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -251,7 +251,7 @@ export const Data = [
     tittle: 'cpus',
     id: 17,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -266,7 +266,7 @@ export const Data = [
     tittle: 'cpus',
     id: 18,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -281,7 +281,7 @@ export const Data = [
     tittle: 'cpus',
     id: 19,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -296,7 +296,7 @@ export const Data = [
     tittle: 'cpus',
     id: 20,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -311,7 +311,7 @@ export const Data = [
     tittle: 'cpus',
     id: 21,
     name: 'Computador gamer CT-55',
-    valor: 19.999,
+    valor: 19999,
     description: {
       msg: 'O melhor no quesito desempenho',
       nota1: '12ª geração Intel Core i5',
@@ -326,7 +326,7 @@ export const Data = [
     tittle: 'cpus',
     id: 22,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -341,7 +341,7 @@ export const Data = [
     tittle: 'cpus',
     id: 23,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -356,7 +356,7 @@ export const Data = [
     tittle: 'cpus',
     id: 24,
     name: 'Computador gamer CT-99',
-    valor: 14.999,
+    valor: 14999,
     description: {
       msg: 'Trabalhe a todo vapor',
       nota1: '12ª geração Intel Core i5',
@@ -373,7 +373,7 @@ export const Data = [
     tittle: 'monitores',
     id: 25,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -387,7 +387,7 @@ export const Data = [
     tittle: 'monitores',
     id: 26,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -401,7 +401,7 @@ export const Data = [
     tittle: 'monitores',
     id: 27,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -415,7 +415,7 @@ export const Data = [
     tittle: 'monitores',
     id: 28,
     name: 'Monitor Gamer CT-33',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -429,7 +429,7 @@ export const Data = [
     tittle: 'monitores',
     id: 29,
     name: 'Monitor Gamer CT-33',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -443,7 +443,7 @@ export const Data = [
     tittle: 'monitores',
     id: 30,
     name: 'Monitor Gamer CT-33',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -457,7 +457,7 @@ export const Data = [
     tittle: 'monitores',
     id: 31,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -471,7 +471,7 @@ export const Data = [
     tittle: 'monitores',
     id: 32,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -485,7 +485,7 @@ export const Data = [
     tittle: 'monitores',
     id: 33,
     name: 'Monitor Gamer CT-33',
-    valor: 3.999,
+    valor: 3999,
     description: {
       msg: 'Cores vibrantes e detalhes',
       nota1: 'Full HD',
@@ -499,7 +499,7 @@ export const Data = [
     tittle: 'monitores',
     id: 34,
     name: 'Monitor Gamer CT-22',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -513,7 +513,7 @@ export const Data = [
     tittle: 'monitores',
     id: 35,
     name: 'Monitor Gamer CT-22',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -527,7 +527,7 @@ export const Data = [
     tittle: 'monitores',
     id: 36,
     name: 'Monitor Gamer CT-22',
-    valor: 5.999,
+    valor: 5999,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Full HD',
@@ -544,7 +544,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 37,
     name: 'Headset Gamer CT-66',
-    valor: 599.99,
+    valor: 599,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Sem fio',
@@ -558,7 +558,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 38,
     name: 'Headset Gamer CT-66',
-    valor: 599.99,
+    valor: 599,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Sem fio',
@@ -572,7 +572,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 39,
     name: 'Headset Gamer CT-66',
-    valor: 599.99,
+    valor: 599,
     description: {
       msg: 'Escute como nunca',
       nota1: 'Sem fio',
@@ -586,7 +586,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 40,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
@@ -600,7 +600,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 41,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
@@ -614,7 +614,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 42,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
@@ -628,7 +628,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 43,
     name: 'Mouse Gamer CT-M24',
-    valor: 499.99,
+    valor: 499,
     description: {
       msg: 'Máxima liberdade para jogar',
       nota1: 'Botões extras',
@@ -642,7 +642,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 44,
     name: 'Mouse Gamer CT-M24',
-    valor: 499.99,
+    valor: 499,
     description: {
       msg: 'Máxima liberdade para jogar',
       nota1: 'Botões extras',
@@ -656,7 +656,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 45,
     name: 'Mouse Gamer CT-M24',
-    valor: 499.99,
+    valor: 499,
     description: {
       msg: 'Máxima liberdade para jogar',
       nota1: 'Botões extras',
@@ -670,7 +670,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 46,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
@@ -684,7 +684,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 47,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
@@ -698,7 +698,7 @@ export const Data = [
     tittle: 'acessorios',
     id: 48,
     name: 'Teclado Gamer ColdTech CT-15',
-    valor: 149.99,
+    valor: 149,
     description: {
       msg: 'Digitação leve e rápida',
       nota1: 'Mecânico',
