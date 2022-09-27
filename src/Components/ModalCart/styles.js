@@ -47,6 +47,17 @@ export const ContainerClose = styled.div`
   }
 `
 
+export const ContainerNoItem = styled.div`
+  margin-top: 28vh;
+
+  h3{
+    margin-bottom: 8px;
+  }
+  p{
+    margin-bottom: 8px;
+  }
+`
+
 export const WrapperButton = styled.div`
   position: absolute;
   bottom :10px;
