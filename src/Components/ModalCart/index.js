@@ -36,7 +36,9 @@ export function ModalCart({ setVisibleModal }) {
       )}
 
       <WrapperButton>
-        <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
+        <Link to="/checkout">
+          <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
+        </Link>
       </WrapperButton>
     </Container>
   )

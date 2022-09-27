@@ -73,6 +73,12 @@ export const WrapperButton = styled.div`
   display: flex;
   justify-content: center;
 
+  a{
+    text-decoration: none;
+    &:hover, &:active, &:focus{
+      color: white;
+    }
+  }
   button{
     width: 400px;
     display: flex;

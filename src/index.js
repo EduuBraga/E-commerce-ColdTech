@@ -14,16 +14,18 @@ import { PageCPUs } from './pages/PageCPUs'
 import { PageAccessories } from './pages/PageAccessories'
 import { PageMonitores } from './pages/PageMonitores'
 import { PageError } from './pages/PageError'
+import { PageCheckout } from './pages/PageCheckout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <ProductsCartProvider>
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<PageHome />} />
         <Route path='/explorar' element={<PageExplorar />} />
-        <Route path='/contact' element={<PageContact></PageContact>} />
+        <Route path='/contact' element={<PageContact />} />
+        <Route path='/checkout' element={<PageCheckout />} />
         <Route path='/explorar/notebooks' element={<PageNotebook />} />
         <Route path='/explorar/cpus' element={<PageCPUs />} />
         <Route path='/explorar/accessories' element={<PageAccessories />} />
