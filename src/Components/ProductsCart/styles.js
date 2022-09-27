@@ -48,6 +48,15 @@ export const WrapperProduct = styled.div`
   }
 `
 
+export const ContainerTotal = styled.div`
+  position: absolute;
+  bottom: 45px;
+  text-align: left;
+  font-weight: 500;
+  margin-left: 20px;
+  transform: translateY(-15px);
+`
+
 export const WrapperTrash = styled.div`
   align-self: center;
 

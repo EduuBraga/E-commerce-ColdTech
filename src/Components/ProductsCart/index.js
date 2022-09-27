@@ -1,12 +1,21 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
 
 import ImgCloseURL from '../../assets/images/icons/close.png'
 
-import { CartItem, Container, WrapperTrash, WrapperProduct } from "./styles"
+import { CartItem, Container, WrapperTrash, WrapperProduct, ContainerTotal } from "./styles"
 
 export function ProductsCart() {
-  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart } = useContext(CartContext)
+  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice } = useContext(CartContext)
+
+  useEffect(() => {
+    function getTotal(total, product) {
+      return total + (product.qty  * product.valor)
+    }
+    const totalAllPrices = productsCart.reduce(getTotal, 0).toLocaleString('pt-BR')
+    
+    setAllPrice(totalAllPrices)
+  }, [productsCart])
 
   return (
     <Container>
@@ -31,6 +40,9 @@ export function ProductsCart() {
           </WrapperTrash>
         </CartItem>
       )}
+      <ContainerTotal>
+        <span>Total: R$ {allPrice}</span>
+      </ContainerTotal>
     </Container>
   )
 }
