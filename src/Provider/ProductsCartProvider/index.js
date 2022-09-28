@@ -49,6 +49,9 @@ export function ProductsCartProvider({ children }) {
 
   function removeProductCart(id) {
     const arrayFiltered = productsCart.filter((product) => product.id !== id)
+    const itemRemoved = productsCart.find((product) => product.id === id)
+
+    itemRemoved.qty = 1
     setProductsCart(arrayFiltered)
   }
 
