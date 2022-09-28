@@ -61,14 +61,22 @@ export function ProductsCartProvider({ children }) {
   }
 
   useEffect(()=>{
-    function getTotal(total, product) {
+    //Total de produtos no carrinho
+    function getTotalProducts(total, product) {
       return total + product.qty  
     }
-    const TotalProducts = productsCart.reduce(getTotal, 0)
+    const TotalProducts = productsCart.reduce(getTotalProducts, 0)
 
     setTotalProductsCart(TotalProducts)
-  }, [productsCart])
 
+    //Total dos preços
+    function getTotalPrice(total, product) {
+      return total + (product.qty  * product.valor)
+    }
+    const totalAllPrices = productsCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
+    
+    setAllPrice(totalAllPrices)
+  }, [productsCart])
 
   return (
     <CartContext.Provider value={{

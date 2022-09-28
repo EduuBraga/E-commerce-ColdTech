@@ -6,16 +6,7 @@ import ImgCloseURL from '../../assets/images/icons/close.png'
 import { CartItem, Container, ContainerDeleteItem, WrapperProduct, ContainerTotal } from "./styles"
 
 export function ProductsCart() {
-  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice, brokenNumber } = useContext(CartContext)
-
-  useEffect(() => {
-    function getTotal(total, product) {
-      return total + (product.qty  * product.valor)
-    }
-    const totalAllPrices = productsCart.reduce(getTotal, 0).toLocaleString('pt-BR')
-    
-    setAllPrice(totalAllPrices)
-  }, [productsCart])
+  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, allPrice, brokenNumber } = useContext(CartContext)
 
   return (
     <Container>

@@ -15,15 +15,6 @@ export function PageCheckout() {
   const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice, brokenNumber } = useContext(CartContext)
   const [visibleModalCheckout, setVisibleModalCheckout] = useState(false)
 
-  useEffect(() => {
-    function getTotal(total, product) {
-      return total + (product.qty * product.valor)
-    }
-    const totalAllPrices = productsCart.reduce(getTotal, 0).toLocaleString('pt-BR')
-
-    setAllPrice(totalAllPrices)
-  }, [productsCart])
-
   return (
     <>
       <NavBar/>
