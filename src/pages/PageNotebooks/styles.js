@@ -82,4 +82,14 @@ export const CardNotebook = styled.div`
       font-weight: 500;
     }
   }
+  button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    
+    img{
+      width: 28px;
+    }
+  }
 `

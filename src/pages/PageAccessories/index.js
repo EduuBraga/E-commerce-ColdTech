@@ -9,6 +9,7 @@ import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer"
 
 import HomeURLImg from '../../assets/images/icons/home.png'
+import cartURLImg from '../../assets/images/icons/cart-white.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
 import { Breadcrumb, Container, CardAccessories } from "./styles"
@@ -41,7 +42,7 @@ export function PageAccessories() {
               <li>{accessory.description.nota2}</li>
               <li>{accessory.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(accessory.id) }}>Adicionar ao Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(accessory.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
           </CardAccessories>
         )}
 

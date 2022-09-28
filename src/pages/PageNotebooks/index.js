@@ -9,9 +9,10 @@ import { ButtonGlobal } from "../../Components/Button/styles"
 import { Footer } from "../../Components/Footer/index"
 
 import HomeURLImg from '../../assets/images/icons/home.png'
+import cartURLImg from '../../assets/images/icons/cart-white.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
-import { Container, CardNotebook, Breadcrumb } from "./styles"
+import { Container, CardNotebook, Breadcrumb, WrapperButton } from "./styles"
 
 export function PageNotebook() {
   const Notebooks = Data.filter((product) => product.tittle === 'notebooks')
@@ -41,7 +42,7 @@ export function PageNotebook() {
               <li>{notebook.description.nota2}</li>
               <li>{notebook.description.nota3}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}>Adicionar ao Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(notebook.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
           </CardNotebook>
         )}
       </Container>

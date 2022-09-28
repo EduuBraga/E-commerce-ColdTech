@@ -10,6 +10,7 @@ import { Footer } from "../../Components/Footer"
 
 import HomeURLImg from '../../assets/images/icons/home.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+import cartURLImg from '../../assets/images/icons/cart-white.png'
 
 import { CardCPU, Container, Breadcrumb } from "./styles"
 
@@ -42,7 +43,7 @@ export function PageCPUs() {
               <li>{cpu.description.nota3}</li>
               <li>{cpu.description.nota4}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(cpu.id) }}>Adicionar ao Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(cpu.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
           </CardCPU>
         )}
       </Container>

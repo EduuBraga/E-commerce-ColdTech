@@ -8,6 +8,7 @@ import { Footer } from "../../Components/Footer"
 import { Nav } from "../../Components/Nav"
 import { ButtonGlobal } from "../../Components/Button/styles"
 
+import cartURLImg from '../../assets/images/icons/cart-white.png'
 import HomeURLImg from '../../assets/images/icons/home.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
@@ -42,7 +43,7 @@ export function PageMonitores() {
               <li>{monitor.description.nota3}</li>
               <li>{monitor.description.nota4}</li>
             </div>
-            <ButtonGlobal onClick={() => { AddProductCart(monitor.id) }}>Adicionar ao Carrinho</ButtonGlobal>
+            <ButtonGlobal onClick={() => { AddProductCart(monitor.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
           </CardMonitor>
         )}
       </Container>
