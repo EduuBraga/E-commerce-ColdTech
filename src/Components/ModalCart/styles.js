@@ -91,3 +91,19 @@ export const WrapperButton = styled.div`
     }
   }
 `
+
+export const ButtonNoItem = styled.button`
+  cursor: not-allowed;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s;
+
+  &:hover{
+    background-color: var(--text-secondary);
+  }
+`
