@@ -18,7 +18,7 @@ export function Nav() {
   const [display, setDisplay] = useState(false)
   const { pathname } = useLocation()
 
-  const {totalProductsCart, setTotalProductsCart, productsCart} = useContext(CartContext)
+  const {totalProductsCart} = useContext(CartContext)
 
   useEffect(() => {
     if (pathname.includes('/contact')) {
@@ -54,15 +54,6 @@ export function Nav() {
       setDisplay(true)
     }
   })
-
-  useEffect(()=>{
-    function getTotal(total, product) {
-      return total + product.qty  
-    }
-    const TotalProducts = productsCart.reduce(getTotal, 0)
-
-    setTotalProductsCart(TotalProducts)
-  }, [productsCart])
 
   return (
     <Container >

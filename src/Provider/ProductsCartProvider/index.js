@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useState, useEffect } from "react"
 import { Data } from "../../Services/Data"
 
 export const CartContext = createContext()
@@ -59,6 +59,15 @@ export function ProductsCartProvider({ children }) {
   function RemoveAllProducts(){
     setProductsCart([])
   }
+
+  useEffect(()=>{
+    function getTotal(total, product) {
+      return total + product.qty  
+    }
+    const TotalProducts = productsCart.reduce(getTotal, 0)
+
+    setTotalProductsCart(TotalProducts)
+  }, [productsCart])
 
 
   return (
