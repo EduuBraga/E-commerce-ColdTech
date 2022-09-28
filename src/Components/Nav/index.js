@@ -45,6 +45,10 @@ export function Nav() {
       document.title = 'ColdTech | Explorar'
       setDisplay(false)
     }
+    else if (pathname.includes('/checkout')) {
+      document.title = 'ColdTech | Checkout'
+      setDisplay(false)
+    }
     else {
       document.title = 'ColdTech'
       setDisplay(true)

@@ -7,6 +7,7 @@ import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 import HomeURLImg from '../../assets/images/icons/home.png'
 import { ButtonGlobal } from '../../Components/Button/styles'
 import { ModalCheckout } from "../../Components/ModalCheckout"
+import { Nav as NavBar } from "../../Components/Nav"
 
 import { Nav, Container, CartItem, WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
 
@@ -25,7 +26,8 @@ export function PageCheckout() {
 
   return (
     <>
-
+      <NavBar/>
+      
       <Container>
         <Nav>
           <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
