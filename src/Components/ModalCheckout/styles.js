@@ -3,18 +3,15 @@ import styled from "styled-components"
 export const Container = styled.div`
   background-color: #26262677;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50% 0px;
-
-  position: absolute;
+  display: grid;
+  place-items: center;
+  
+  position: fixed;
   top: 0px;
-  bottom: 0px;
   left: 0px;
-  right: 0px; 
+
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `
 
 export const CardModal = styled.div`
@@ -34,6 +31,9 @@ export const CardModal = styled.div`
 
   img{
     width: 24px;
+  }
+  a{
+    text-decoration: none;
   }
 `
 

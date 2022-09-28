@@ -1,4 +1,5 @@
 import React,{ useContext }from "react"
+import {Link} from 'react-router-dom'
 import { CartContext } from "../../Provider/ProductsCartProvider"
 
 import homeImgURL from '../../assets/images/icons/home-white.png'
@@ -20,7 +21,9 @@ export function ModalCheckout({setVisibleModalCheckout}) {
         <h2>Compra realizada com sucesso!</h2>
 
         <WrapperButton>
-          <ButtonGlobal onClick={handleClick}><img src={homeImgURL} alt="Home" /> Voltar a home</ButtonGlobal>
+          <Link to='/'>
+            <ButtonGlobal onClick={handleClick}><img src={homeImgURL} alt="Home" /> Voltar a home</ButtonGlobal>
+          </Link>
         </WrapperButton>
       </CardModal>
     </Container>
