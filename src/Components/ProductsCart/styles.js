@@ -11,6 +11,20 @@ const AnimationBlur = keyframes`
 export const Container = styled.section`
   overflow: auto;
   height: 75vh;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #525252;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid #525252;
+  }
 `
 
 export const CartItem = styled.div`

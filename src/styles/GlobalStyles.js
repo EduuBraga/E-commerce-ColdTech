@@ -18,6 +18,20 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    
+  }
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #525252;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid #525252;
   }
 
 `
