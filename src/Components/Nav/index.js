@@ -1,56 +1,88 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react"
 import { useLocation } from "react-router-dom"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { CartContext } from "../../Provider/ProductsCartProvider"
 
-import profile from '../../assets/images/icons/profile.png'
-import cart from '../../assets/images/icons/cart.png'
-import logo from '../../assets/images/icons/logo.png'
+import profileImgURL from '../../assets/images/icons/profile-white.png'
+import exploreImgURL from '../../assets/images/icons/explore-white.png'
+import contactImgURL from '../../assets/images/icons/contact-white.png'
+import cartImgURL from '../../assets/images/icons/cart-white.png'
+import logoImgURL from '../../assets/images/icons/logo.png'
 
 import { ModalCart } from "../ModalCart"
 
-import { Container, NavBar, Logo, Services, } from "./styles"
+import { Container, NavBar, ContainerLogo, } from "./styles"
 
 export function Nav() {
   const [visibleModal, setVisibleModal] = useState(false)
-  const [borderBottom, setBorderBottom] = useState('')
+  const [display, setDisplay] = useState(false)
   const { pathname } = useLocation()
+
+  const {totalProductsCart, setTotalProductsCart, productsCart} = useContext(CartContext)
 
   useEffect(() => {
     if (pathname.includes('/contact')) {
-      setBorderBottom('contact')
       document.title = 'ColdTech | Fale Conosco'
-    } else if (pathname.includes('/explorar')) {
+      setDisplay(true)
+    }
+    else if (pathname.includes('/notebooks')) {
+      document.title = 'ColdTech | Explorar - Notebooks'
+      setDisplay(false)
+    }
+    else if (pathname.includes('/cpus')) {
+      document.title = 'ColdTech | Explorar - CPUs'
+      setDisplay(false)
+    }
+    else if (pathname.includes('/monitores')) {
+      document.title = 'ColdTech | Explorar - Monitores'
+      setDisplay(false)
+    }
+    else if (pathname.includes('/accessories')) {
+      document.title = 'ColdTech | Explorar - Acessórios'
+      setDisplay(false)
+    }
+    else if (pathname.includes('/explorar')) {
       document.title = 'ColdTech | Explorar'
-      setBorderBottom('explorar')
-    } else {
-      setBorderBottom('home')
+      setDisplay(false)
+    }
+    else {
       document.title = 'ColdTech'
+      setDisplay(true)
     }
   })
 
+  useEffect(()=>{
+    function getTotal(total, product) {
+      return total + product.qty  
+    }
+    const TotalProducts = productsCart.reduce(getTotal, 0)
+
+    setTotalProductsCart(TotalProducts)
+  }, [productsCart])
+
   return (
     <Container >
-      <Logo>
-        <Link to='/'><img src={logo} alt="Logo da cold tech" ></img></Link>
-      </Logo>
+      <ContainerLogo>
+        <Link to='/'><img src={logoImgURL} alt="Logo da cold tech" /><span>ColdTech</span></Link>
+      </ContainerLogo>
 
-      <NavBar borderIsOn={borderBottom}>
-        <Link to='/'>Home</Link>
-        <Link to='/explorar'>Explorar</Link>
-        <Link to='/contact'>Contato</Link>
-      </NavBar>
-
-      <Services>
+      <NavBar displayIsOn={display}>
         <div>
-          <img src={profile} alt="Search" />
+          <Link to='/explorar'><img src={exploreImgURL} alt="Shop" />Explorar</Link>
+        </div>
+        <div>
+          <Link to='/contact'><img src={contactImgURL} alt="Contato" />Fale Conosco</Link>
+        </div>
+        <div>
+          <img src={profileImgURL} alt="Search" />
           <p><span>Entrar</span> ou <br />se <span>Cadastrar</span></p>
         </div>
 
         <div onClick={() => { setVisibleModal(true) }}>
-          <img src={cart} alt="Search" />
-          <p>Carrinho</p>
+          <img src={cartImgURL} alt="Search" />
+          <span>{totalProductsCart}</span>
         </div>
-      </Services>
+      </NavBar>
 
       {visibleModal && <ModalCart setVisibleModal={setVisibleModal} />}
     </Container>
