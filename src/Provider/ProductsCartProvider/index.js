@@ -55,6 +55,10 @@ export function ProductsCartProvider({ children }) {
     return number.toLocaleString('pt-BR')
   }
 
+  function RemoveAllProducts(){
+    setProductsCart([])
+  }
+
   return (
     <CartContext.Provider value={{
       allPrice,
@@ -65,7 +69,8 @@ export function ProductsCartProvider({ children }) {
       removeAProductToCart,
       removeProductCart,
       AddProductCart,
-      brokenNumber
+      brokenNumber,
+      RemoveAllProducts
     }} >
       {children}
     </CartContext.Provider >

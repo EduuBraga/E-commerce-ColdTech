@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
 import { Link } from "react-router-dom"
 
@@ -6,11 +6,13 @@ import CloseURLImg from '../../assets/images/icons/close-black.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 import HomeURLImg from '../../assets/images/icons/home.png'
 import { ButtonGlobal } from '../../Components/Button/styles'
+import { ModalCheckout } from "../../Components/ModalCheckout"
 
-import {  Nav,Container, CartItem,WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
+import { Nav, Container, CartItem, WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
 
 export function PageCheckout() {
   const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice, brokenNumber } = useContext(CartContext)
+  const [visibleModalCheckout, setVisibleModalCheckout] = useState(false)
 
   useEffect(() => {
     function getTotal(total, product) {
@@ -23,16 +25,16 @@ export function PageCheckout() {
 
   return (
     <>
-      
+
       <Container>
-      <Nav>
-        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
-        <Link to="/">Home</Link>
-        <img src={ArrowURLImg} alt="Seta" />
-        <Link to="/explorar">Explorar</Link>
-        <img src={ArrowURLImg} alt="Seta" />
-        <p>Checkout</p>
-      </Nav>
+        <Nav>
+          <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
+          <Link to="/">Home</Link>
+          <img src={ArrowURLImg} alt="Seta" />
+          <Link to="/explorar">Explorar</Link>
+          <img src={ArrowURLImg} alt="Seta" />
+          <p>Checkout</p>
+        </Nav>
         {productsCart.map((product) =>
           <CartItem key={product.id}>
             <WrapperProduct>
@@ -56,8 +58,9 @@ export function PageCheckout() {
         )}
         <ContainerBottom>
           <p>Total: R$ <span>{allPrice}</span></p>
-          <ButtonGlobal onClick={() => { }}>Comprar</ButtonGlobal>
+          <ButtonGlobal onClick={() => { setVisibleModalCheckout(true)}}>Comprar</ButtonGlobal>
         </ContainerBottom>
+        {visibleModalCheckout && <ModalCheckout visibleModalCheckout={visibleModalCheckout} setVisibleModalCheckout={setVisibleModalCheckout}/>}
       </Container>
     </>
   )
