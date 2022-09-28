@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const Container = styled.section`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 20px;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  background-color: #262626;
   padding:0px 15px ;
-  margin-bottom: 10px;
   margin-top: 100px;
+  color: white;
 
   & img{
     width: 50px;
@@ -20,25 +20,28 @@ export const Container = styled.section`
     padding-bottom: 15px;
     cursor: pointer;
     text-decoration: none;
-    color: var(--text-secondary);
+    color: #909090;
     transition: all 0.2s;
 
-    &:hover, &:focus{
-      color: var(--color-secondary);
-    }
-    &:active{
-      color: var(--color-secondary);
+    &:hover, &:focus,&:active{
+      color:  var(--color-secondary);
     }
   }
+`
+
+export const ContainerCards = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 `
 
 export const CardColdTech = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 5px;
   width: 250px;
   height: 200px;
-  background-color: #f3f4f6;
 
   & div{
     display: flex;
@@ -49,12 +52,6 @@ export const CardColdTech = styled.div`
       color: var(--color-secondary);
       padding-bottom: 8px;
     }
-  }
-  
-  p{
-    color: var(--text-secondary);
-    font: 10px;
-    padding-bottom: 15px;
   }
 `
 
