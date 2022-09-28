@@ -1,4 +1,12 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
+
+const AnimationBlur = keyframes`
+  0%{
+    opacity: 0.1;
+  }100%{
+    opacity: 1;
+  }
+`
 
 export const Container = styled.section`
   overflow: auto;
@@ -6,6 +14,7 @@ export const Container = styled.section`
 `
 
 export const CartItem = styled.div`
+  animation: ${AnimationBlur} 0.8s ease;
   margin: 10px 0px;
   display: flex;
   justify-content: space-around;
@@ -49,6 +58,7 @@ export const WrapperProduct = styled.div`
 `
 
 export const ContainerTotal = styled.div`
+  animation: ${AnimationBlur} 1s ease;
   background-color: #262626;
   position: absolute;
   bottom: 45px;
