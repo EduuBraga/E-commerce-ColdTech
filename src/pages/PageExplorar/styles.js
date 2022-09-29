@@ -9,13 +9,36 @@ import AcessoriosImgURL from '../../assets/images/PageAccessories/keyboard-gamer
 export const Container = styled.section`
   margin: 0 auto;
   max-width: 1024px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   display: grid;
-  grid-template-areas:"acessory notebook notebook monitor"
-                      "acessory cpu cpu monitor";
   gap: 20px;
+  place-content: center;
+  grid-template-areas:
+  "acessory notebook notebook monitor"
+  "acessory cpu cpu monitor";
+
+  @media screen and (max-width: 1040px){
+    grid-template-areas:"cpu notebook "
+    "cpu notebook "
+    "acessory monitor"
+    "acessory monitor";
+  }
+  @media screen and (max-width: 765px){
+    gap: 10px;
+    place-items: center;
+    grid-template-areas:"notebook notebook "
+    "cpu cpu "
+    "monitor monitor"
+    "acessory acessory";
+  }
   
   h2{
     z-index: 5;
+    @media screen and (max-width: 768px){
+      font-size: 20px;
+    }
   }
 
   a{
@@ -24,7 +47,7 @@ export const Container = styled.section`
     transition: all 0.2s;
 
     &:active, &:focus{
-      color: black;
+      color: white;
     }
     &:hover{
       color: var(--color-tertiary);
@@ -89,10 +112,24 @@ export const ContainerNotebook = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
+
+  width: 36rem;
   height: 200px;
   background-color: #262626;
   border-bottom: 15px solid var(--color-secondary);
   border-radius: 10px;
+  
+
+  @media screen and (max-width: 1040px){
+    width: 22rem;
+    height: 200px;
+  }
+  @media screen and (max-width: 765px){
+    width: 29rem;
+  }
+  @media screen and (max-width: 490px){
+    width: 19rem;
+  }
 
   ::before{
     content: ' ';
@@ -116,14 +153,23 @@ export const ContainerCPU = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
+
+  width: 36rem;
   height: 200px;
   background-color: #262626;
   border-bottom: 15px solid var(--color-secondary);
   border-radius: 10px;
 
-  /* :hover{
-    border-bottom: 15px solid var(--color-tertiary);
-  } */
+  @media screen and (max-width: 1040px){
+    width: 22rem;
+    height: 200px;
+  }
+  @media screen and (max-width: 765px){
+    width: 29rem;
+  }
+  @media screen and (max-width: 490px){
+    width: 19rem;
+  }
 
   ::before{
     content: ' ';
@@ -147,10 +193,23 @@ export const ContainerAcessorios = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
+
+  width: 12rem;
   height: 420px;
   background-color: #262626;
   border-bottom: 15px solid var(--color-secondary);
   border-radius: 10px;
+
+  @media screen and (max-width: 1040px){
+    width: 22rem;
+    height: 200px;
+  }
+  @media screen and (max-width: 765px){
+    width: 29rem;
+  }
+  @media screen and (max-width: 490px){
+    width: 19rem;
+  }
 
   ::before{
     content: ' ';
@@ -174,10 +233,24 @@ export const ContainerMonitores = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
+
+  
+  width: 12rem;
   height: 420px;
   background-color: #262626;
   border-bottom: 15px solid var(--color-secondary);
   border-radius: 10px;
+
+  @media screen and (max-width: 1040px){
+    width: 22rem;
+    height: 200px;
+  }
+  @media screen and (max-width: 765px){
+    width: 29rem;
+  }
+  @media screen and (max-width: 490px){
+    width: 19rem;
+  }
 
   ::before{
     content: ' ';
