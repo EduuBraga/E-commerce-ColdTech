@@ -5,11 +5,12 @@ import { Link } from "react-router-dom"
 import CloseURLImg from '../../assets/images/icons/close-black.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 import HomeURLImg from '../../assets/images/icons/home.png'
+import checkURLImg from '../../assets/images/icons/check.png'
 import { ButtonGlobal } from '../../Components/Button/styles'
 import { ModalCheckout } from "../../Components/ModalCheckout"
 import { Nav as NavBar } from "../../Components/Nav"
 
-import { Nav, Container, CartItem, WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
+import { Breadchumb, Container, CartItem, WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
 
 export function PageCheckout() {
   const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, allPrice, brokenNumber } = useContext(CartContext)
@@ -20,14 +21,14 @@ export function PageCheckout() {
       <NavBar/>
       
       <Container>
-        <Nav>
+        <Breadchumb>
           <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
           <Link to="/">Home</Link>
           <img src={ArrowURLImg} alt="Seta" />
           <Link to="/explorar">Explorar</Link>
           <img src={ArrowURLImg} alt="Seta" />
           <p>Checkout</p>
-        </Nav>
+        </Breadchumb>
         {productsCart.map((product) =>
           <CartItem key={product.id}>
             <WrapperProduct>
@@ -38,20 +39,20 @@ export function PageCheckout() {
                 <h4>{product.name}</h4>
                 <p>R$ {brokenNumber(product.valor)} </p>
                 <div>
-                  <button onClick={() => { removeAProductToCart(product.id) }}>-</button>
+                  <button title="Remover uma unidade do produto" onClick={() => { removeAProductToCart(product.id) }}>-</button>
                   {product.qty}
-                  <button onClick={() => { AddAProductToCart(product.id) }}>+</button>
+                  <button title="adicionar uma unidade do produto" onClick={() => { AddAProductToCart(product.id) }}>+</button>
                 </div>
               </div>
             </WrapperProduct>
             <WrapperRemoveItem>
-              <img onClick={() => { removeProductCart(product.id) }} src={CloseURLImg} alt="Remover produto" />
+              <img title="Remover produto do carrinho" onClick={() => { removeProductCart(product.id) }} src={CloseURLImg} alt="Remover produto" />
             </WrapperRemoveItem>
           </CartItem>
         )}
         <ContainerBottom>
           <p>Total: R$ <span>{allPrice}</span></p>
-          <ButtonGlobal onClick={() => { setVisibleModalCheckout(true)}}>Comprar</ButtonGlobal>
+          <ButtonGlobal onClick={() => { setVisibleModalCheckout(true)}}><img src={checkURLImg} alt="Finalizar compra"/> Finalizar compra</ButtonGlobal>
         </ContainerBottom>
         {visibleModalCheckout && <ModalCheckout visibleModalCheckout={visibleModalCheckout} setVisibleModalCheckout={setVisibleModalCheckout}/>}
       </Container>

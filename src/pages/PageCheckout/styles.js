@@ -5,9 +5,10 @@ export const Container = styled.section`
   margin: 0 auto;  
 `
 
-export const Nav = styled.div`
+export const Breadchumb = styled.div`
   display: flex;
   justify-content: flex-start;
+  overflow: auto;
   gap: 5px;
   align-items: center;
   padding: 20px 10px;
@@ -41,7 +42,7 @@ export const Nav = styled.div`
 `
 
 export const CartItem = styled.div`
-  margin: 10px 0px;
+  margin: 10px 10px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
@@ -83,6 +84,10 @@ export const WrapperProduct = styled.div`
 
   img{
     width:150px;
+
+    @media screen and (max-width: 490px){
+      width: 100px;
+    }
   }
 `
 
@@ -107,5 +112,16 @@ export const ContainerBottom = styled.div`
 
   span{
     font-weight: 600;
+  }
+
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    img{
+      width: 25px;
+    }
   }
 `
