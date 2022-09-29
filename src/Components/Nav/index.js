@@ -53,7 +53,7 @@ export function Nav() {
       document.title = 'ColdTech'
       setDisplay(true)
     }
-  })
+  }, [pathname])
 
   return (
     <Container >

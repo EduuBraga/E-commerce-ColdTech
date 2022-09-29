@@ -12,7 +12,7 @@ import { Nav as NavBar } from "../../Components/Nav"
 import { Nav, Container, CartItem, WrapperRemoveItem, WrapperProduct, ContainerBottom } from "./styles"
 
 export function PageCheckout() {
-  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, setAllPrice, allPrice, brokenNumber } = useContext(CartContext)
+  const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, allPrice, brokenNumber } = useContext(CartContext)
   const [visibleModalCheckout, setVisibleModalCheckout] = useState(false)
 
   return (
