@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {Container} from './styles'
+import {Container, ContainerReverse} from './styles'
 
 export function Offers1({subTittle, msg, tittle, src }) {
   return (
@@ -22,7 +22,7 @@ export function Offers1({subTittle, msg, tittle, src }) {
 
 export function Offers2({subTittle, msg, tittle, src }) {
   return (
-    <Container>
+    <ContainerReverse>
       <div>
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
@@ -33,13 +33,13 @@ export function Offers2({subTittle, msg, tittle, src }) {
       <div>
         <img src={src} alt="CPU" />
       </div>
-    </Container>
+    </ContainerReverse>
   )
 } 
 
 export function Offers3({subTittle, msg, tittle, src }) {
   return (
-    <Container>
+    <ContainerReverse>
       <div>
         <p>{subTittle}</p>
         <h2> {tittle}</h2>
@@ -50,7 +50,7 @@ export function Offers3({subTittle, msg, tittle, src }) {
       <div>
         <img src={src} alt="Acéssorios" />
       </div>
-    </Container>
+    </ContainerReverse>
   )
 } 
 

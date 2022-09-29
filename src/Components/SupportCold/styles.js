@@ -5,6 +5,19 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   gap: 100px;
+
+  @media screen and (max-width: 490px){
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+    :active, :focus,:hover{
+      color: black;
+    }
+  }
 `
 
 export const Tittle = styled.div`
@@ -27,6 +40,10 @@ export const Suportes = styled.div`
   text-align: left;
   margin: 20px 0px;
   border-bottom: 1px solid #666;
+  
+  @media screen and (max-width: 490px){
+    margin: 10px 0px;
+  }
 
   :nth-last-child(1){
     border: none;

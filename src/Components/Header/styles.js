@@ -8,6 +8,10 @@ export const ContainerHeader = styled.div`
   align-items: center;
   max-width: 1024px;
 
+  @media screen and (max-width: 490px){
+    flex-direction: column-reverse;
+  }
+
   div{
     margin-right:10px ;
 
@@ -15,11 +19,11 @@ export const ContainerHeader = styled.div`
       width: 500px;
 
       @media screen and (max-width: 768px){
-        width: 300px;
+        width: 250px;
       }
 
       @media screen and (max-width: 425px){
-        width: 20px;
+        /* width: 20px; */
       }
     }
   }

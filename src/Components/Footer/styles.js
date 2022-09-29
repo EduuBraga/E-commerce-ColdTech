@@ -33,6 +33,11 @@ export const ContainerCards = styled.div`
   display: flex;
   justify-content: center;
   gap: 30px;
+
+  @media screen and (max-width: 490px){
+    gap:10px;
+    flex-direction: column;
+  }
 `
 
 export const CardColdTech = styled.div`
@@ -42,6 +47,11 @@ export const CardColdTech = styled.div`
   padding: 5px;
   width: 250px;
   height: 200px;
+
+  @media screen and (max-width: 490px){
+    align-items: center;
+    width: 90vw;
+  }
 
   & div{
     display: flex;
@@ -59,6 +69,13 @@ export const CardLinks = styled.div`
   width: 250px;
   height: 200px;
   padding: 5px;
+
+  @media screen and (max-width: 490px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+  }
 
   h4{
     font-size: 18px;

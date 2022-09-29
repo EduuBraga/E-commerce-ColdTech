@@ -66,7 +66,7 @@ export function Nav() {
           <Link to='/explorar'><img src={exploreImgURL} alt="Shop" />Explorar</Link>
         </div>
         <div>
-          <Link to='/contact'><img src={contactImgURL} alt="Contato" />Fale Conosco</Link>
+          <Link to='/contact'><img src={contactImgURL} alt="Contato" /><p>Fale Conosco</p></Link>
         </div>
         <div>
           <img src={profileImgURL} alt="Search" />

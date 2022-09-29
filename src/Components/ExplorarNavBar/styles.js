@@ -11,15 +11,27 @@ export const Products = styled.div`
   display: flex;
   justify-content: center;
   gap: 30px;
-  overflow: auto;
+  overflow-x: auto;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+
+  @media screen and (max-width: 768px){
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 490px){
+    gap: 5px;
+    justify-content: flex-start;
+  }
   
   img{
     width: 35px;
-    margin-bottom: 5px;
-    @media screen and (max-width: 1024px){
-      width: 35px;
+    margin-bottom: 2px;
+    @media screen and (max-width: 768px){
+      width: 28px;
+    }
+    @media screen and (max-width: 490px){
+      width: 25px;
     }
   }
 
@@ -45,6 +57,13 @@ export const Product = styled.div`
 
   h3{
     font-weight: 400;
+
+    @media screen and (max-width: 768px){
+      font-size: 15px;
+    }
+    @media screen and (max-width: 490px){
+      font-size: 14px;
+    }
   }
 
   &:hover{

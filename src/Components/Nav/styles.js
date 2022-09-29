@@ -8,6 +8,7 @@ export const Container = styled.header`
   padding: 10px 0px;
   background-color: #262626 ;
   color: white;
+  font-size: 14px;
 `
 
 export const ContainerLogo = styled.div`
@@ -54,6 +55,12 @@ export const NavBar = styled.nav`
 
   div:nth-child(1){
     display: ${({ displayIsOn }) => displayIsOn === false ? 'none' : 'flex'};
+  }
+
+  div:nth-child(2){
+    @media screen and (max-width: 425px){
+      display: none;
+    }
   }
 
   div{
