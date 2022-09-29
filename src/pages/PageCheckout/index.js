@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
-import { Link, redirect, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import CloseURLImg from '../../assets/images/icons/close-black.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'

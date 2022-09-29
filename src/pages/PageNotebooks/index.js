@@ -12,7 +12,7 @@ import HomeURLImg from '../../assets/images/icons/home.png'
 import cartURLImg from '../../assets/images/icons/cart-white.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
-import { Container, CardNotebook, Breadcrumb, WrapperButton } from "./styles"
+import { Container, CardNotebook, Breadcrumb } from "./styles"
 
 export function PageNotebook() {
   const Notebooks = Data.filter((product) => product.tittle === 'notebooks')
