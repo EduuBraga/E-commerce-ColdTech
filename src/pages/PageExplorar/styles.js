@@ -11,7 +11,10 @@ export const WrapperPage = styled.section`
 
   footer{
     @media screen and (min-height: 840px){
-      bottom: -20px;
+      bottom: -600px;
+    }
+    @media screen and (min-height: 1024px){
+      bottom: -100px;
     }
   }
 `
