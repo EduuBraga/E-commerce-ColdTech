@@ -1,6 +1,6 @@
-import React, { useContext,  useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
-import { Link } from "react-router-dom"
+import { Link, redirect, useNavigate } from "react-router-dom"
 
 import CloseURLImg from '../../assets/images/icons/close-black.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
@@ -16,10 +16,19 @@ export function PageCheckout() {
   const { productsCart, AddAProductToCart, removeAProductToCart, removeProductCart, allPrice, brokenNumber } = useContext(CartContext)
   const [visibleModalCheckout, setVisibleModalCheckout] = useState(false)
 
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    console.log(productsCart.length)
+    if (productsCart.length === 0) {
+      navigate('/explorar')
+    }
+  }, [productsCart])
+
   return (
     <>
-      <NavBar/>
-      
+      <NavBar />
+
       <Container>
         <Breadchumb>
           <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
@@ -52,9 +61,9 @@ export function PageCheckout() {
         )}
         <ContainerBottom>
           <p>Total: R$ <span>{allPrice}</span></p>
-          <ButtonGlobal onClick={() => { setVisibleModalCheckout(true)}}><img src={checkURLImg} alt="Finalizar compra"/> Finalizar compra</ButtonGlobal>
+          <ButtonGlobal onClick={() => { setVisibleModalCheckout(true) }}><img src={checkURLImg} alt="Finalizar compra" /> Finalizar compra</ButtonGlobal>
         </ContainerBottom>
-        {visibleModalCheckout && <ModalCheckout visibleModalCheckout={visibleModalCheckout} setVisibleModalCheckout={setVisibleModalCheckout}/>}
+        {visibleModalCheckout && <ModalCheckout visibleModalCheckout={visibleModalCheckout} setVisibleModalCheckout={setVisibleModalCheckout} />}
       </Container>
     </>
   )
