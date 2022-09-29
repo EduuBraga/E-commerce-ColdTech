@@ -35,7 +35,7 @@ export const ContainerCards = styled.div`
   gap: 30px;
 
   @media screen and (max-width: 490px){
-    gap:10px;
+    gap:0px;
     flex-direction: column;
   }
 `
@@ -90,8 +90,17 @@ export const Media = styled.div`
   gap: 15px;
 
   & img{
+    padding: 4px;
+    box-sizing: content-box;
+    background-color: #404040;
+    border: 1px solid #505050;
+    border-radius: 5px;
     width: 27px;
     cursor: pointer;
+    
+    :hover{
+      background-color: #535353;
+    }
   }
 `
 
