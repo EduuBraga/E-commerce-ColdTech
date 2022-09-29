@@ -36,4 +36,10 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  footer{
+    position: absolute;
+    bottom: -100;
+    left:0;
+    right: 0;
+  }
 `

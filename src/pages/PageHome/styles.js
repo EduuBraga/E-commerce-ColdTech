@@ -6,3 +6,7 @@ export const Container = styled.main`
   padding-left:10px ;
   padding-right: 10px;
 `
+
+export const WrapperPage = styled.section`
+  position: relative;
+`

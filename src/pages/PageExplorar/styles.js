@@ -5,6 +5,17 @@ import CPUImgURL from '../../assets/images/PageCPU/CPU2.png'
 import MonitorImgURL from '../../assets/images/PageMonitores/Monitor1.png'
 import AcessoriosImgURL from '../../assets/images/PageAccessories/keyboard-gamer.png'
 
+export const WrapperPage = styled.section`
+  position: relative;
+  height: 100vh;
+
+  footer{
+    @media screen and (min-height: 840px){
+      bottom: -20px;
+    }
+  }
+`
+
 
 export const Container = styled.section`
   margin: 0 auto;

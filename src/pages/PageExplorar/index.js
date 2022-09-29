@@ -7,11 +7,11 @@ import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 import { Nav } from "../../Components/Nav/index"
 import { Footer } from "../../Components/Footer/index"
 
-import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores } from "./styles"
+import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores, WrapperPage } from "./styles"
 
 export function PageExplorar() {
   return (
-    <>
+    <WrapperPage>
       <Nav />
       <Breadcrumb>
         <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
@@ -47,6 +47,6 @@ export function PageExplorar() {
 
       </Container>
       <Footer />
-    </>
+    </WrapperPage>
   )
 }
