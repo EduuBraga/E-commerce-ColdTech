@@ -20,14 +20,14 @@ export function ProductsCart() {
               <h4>{product.name}</h4>
               <p>R$ {brokenNumber(product.valor)} </p>
               <div>
-                <button onClick={() => { removeAProductToCart(product.id) }}>-</button>
+                <button title="Remover uma unidade do produto" onClick={() => { removeAProductToCart(product.id) }}>-</button>
                 {product.qty}
-                <button onClick={() => { AddAProductToCart(product.id) }}>+</button>
+                <button title="Adicionar uma unidade do produto" onClick={() => { AddAProductToCart(product.id) }}>+</button>
               </div>
             </div>
           </WrapperProduct>
           <ContainerDeleteItem>
-            <img onClick={() => { removeProductCart(product.id) }} src={ImgCloseURL} alt="Remover produto" />
+            <img title="Remover produto do carrinho" onClick={() => { removeProductCart(product.id) }} src={ImgCloseURL} alt="Remover produto" />
           </ContainerDeleteItem>
         </CartItem>
       )}

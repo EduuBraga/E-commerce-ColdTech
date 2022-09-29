@@ -9,6 +9,15 @@ const Scale = keyframes`
     height: 100vh;
   }
 `
+const ScalePhone = keyframes`
+  0%{
+    width: 0px;
+    height: 0vh;
+  }100%{
+    width: 280px;
+    height: 100vh;
+  }
+`
 
 export const Container = styled.div`
   text-align: center;
@@ -22,6 +31,16 @@ export const Container = styled.div`
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   animation: ${Scale} 0.5s ease-in;
+
+  @media screen and (max-width: 490px){
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    animation: ${ScalePhone} 0.5s ease-in;
+  }
 
   *{
     color: white;
@@ -68,10 +87,13 @@ export const ContainerNoItem = styled.div`
 export const WrapperButton = styled.div`
   background-color: #262626;
   position: absolute;
-  bottom:10px;
+  bottom: 0 ;
+  margin-bottom: 10px;
   transform: translateX(5%);
-  display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: 490px){
+    transform: translateX(0%);
+  }
 
   a{
     text-decoration: none;
@@ -79,12 +101,21 @@ export const WrapperButton = styled.div`
       color: white;
     }
   }
+`
+
+export const ContainerButton = styled.div`
+  padding: 10px;
+
   button{
     width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    @media screen and (max-width: 490px){
+      width: 95vw;
+    }
     
     img{
       width: 25px;

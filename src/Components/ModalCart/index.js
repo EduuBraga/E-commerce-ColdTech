@@ -8,7 +8,7 @@ import { ButtonGlobal } from "../../Components/Button/styles"
 import ImgCloseURL from '../../assets/images/icons/close.png'
 import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png'
 
-import { Container, ContainerTop, ContainerNoItem, WrapperButton, ImgClose, ButtonNoItem } from "./styles"
+import { Container, ContainerTop, ContainerNoItem, WrapperButton, ImgClose, ButtonNoItem, ContainerButton } from "./styles"
 
 export function ModalCart({ setVisibleModal }) {
   const { productsCart, } = useContext(CartContext)
@@ -36,13 +36,17 @@ export function ModalCart({ setVisibleModal }) {
 
       {productsCart.length ? (
         <WrapperButton>
-          <Link to="/checkout">
-            <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
-          </Link>
+          <ContainerButton>
+            <Link to="/checkout">
+              <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
+            </Link>
+          </ContainerButton>
         </WrapperButton>
       ) : (
         <WrapperButton>
-          <ButtonNoItem><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o checkout</ButtonNoItem>
+          <ContainerButton>
+            <ButtonNoItem><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkout</ButtonNoItem>
+          </ContainerButton>
         </WrapperButton>
       )}
     </Container>
