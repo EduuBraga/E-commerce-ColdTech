@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Tittle = styled.div`
   text-align: center;
   margin: 15px 0px;
+
   h2{
     font-weight: 400;
     font-size: 38px;
   }
+
 `
 
 export const Breadcrumb = styled.div`
@@ -56,17 +58,23 @@ export const ContainerHelp = styled.div`
   top: 0px;
   background-color: white;
 
+
+
+  div{
+    @media screen and (max-width: 768px){
+      font-size: 15px;
+    }
+    @media screen and (max-width: 490px){
+      font-size: 14px;
+    }
+  }
+
   a{
-    color: black;
     text-decoration: none;
     font-weight: 500;
 
-    &:active, &:focus{
+    &:active, &:focus,&:hover{
       color: black;
-    }
-    &:hover{
-      color: var(--color-secondary);
-      background-color: #f3f4f6;
     }
   }
 
@@ -75,12 +83,39 @@ export const ContainerHelp = styled.div`
     border-bottom: ${(props) => props.visibleContent === false ? '2px solid var(--color-secondary)' : 'none'} ;
     font-size: 18px;
     padding: 25px 20px;
+
+    @media screen and (max-width: 768px){
+      text-align: center;
+      padding: 5px 10px;
+    }
+    @media screen and (max-width: 490px){
+      padding: 5px 10px;
+    }
+
+    :hover{
+      color: var(--color-secondary);      
+      background-color: #f3f4f6;
+    }
   }
+
   a:nth-child(2){
     color: ${(props) => props.visibleContent === true ? 'var(--color-secondary)' : 'black'};
     border-bottom: ${(props) => props.visibleContent === true ? '2px solid var(--color-secondary)' : 'none'} ;
     font-size: 18px;
     padding: 25px 20px;
+
+    @media screen and (max-width: 768px){
+      text-align: center;
+      padding: 5px 10px;
+    }
+    @media screen and (max-width: 490px){
+      padding: 5px 10px;
+    }
+
+    :hover{
+      color: var(--color-secondary);      
+      background-color: #f3f4f6;
+    }
   }
 `
 
@@ -96,6 +131,10 @@ export const ContainerContent = styled.main`
     font-weight: 400;
     margin-top: 60px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px){
+      text-align: center;
+    }
   }
 `
 
@@ -103,6 +142,11 @@ export const CardContent = styled.div`
   display: flex;
   justify-content: center;
   gap: 40px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    gap: 10px;
+  }
 
   div{
     width: 300px;
