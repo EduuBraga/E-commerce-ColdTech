@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import { CartContext } from "../../Provider/ProductsCartProvider"
 
 import ImgCloseURL from '../../assets/images/icons/close.png'

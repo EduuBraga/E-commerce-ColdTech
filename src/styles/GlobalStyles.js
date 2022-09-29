@@ -25,13 +25,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-track {
-    background: #525252;
+    background: #404040;
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 20px;
-    border: 2px solid #525252;
+    background-color: #777777;
+
+    :hover{
+      background: #686868;
+    }
   }
 
 `
