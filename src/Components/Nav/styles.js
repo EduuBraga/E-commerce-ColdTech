@@ -14,13 +14,17 @@ export const Container = styled.header`
 export const ContainerLogo = styled.div`
   margin-left: 25px;
 
+  @media screen and (max-width: 425px){
+    margin-left: 10px;
+  }
+
   img{
     width: 50px;
   }
   a{
     display: flex;
     justify-content: center;
-    gap: 1px;
+    gap: 0px;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
@@ -28,7 +32,11 @@ export const ContainerLogo = styled.div`
     font-weight: 600;
 
     span{
-      transform: translateY(6px);
+      transform: translateY(10px);
+      
+      @media screen and (max-width: 425px){
+        display: none;
+      }
     }
 
     &:active, &:focus, &:hover{
@@ -58,7 +66,7 @@ export const NavBar = styled.nav`
   }
 
   div:nth-child(2){
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 490px){
       display: none;
     }
   }
@@ -107,5 +115,25 @@ export const NavBar = styled.nav`
     &:hover{
       text-decoration: underline;
     }
+  }
+`
+
+export const FixedContactImg = styled.div`
+  display: none;
+  color: black;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  @media screen and (max-width: 490px){
+    display: inline-block;
+  }
+
+  img{
+    box-sizing: content-box;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #262626;
+    width: 26px;
   }
 `

@@ -11,7 +11,7 @@ import logoImgURL from '../../assets/images/icons/logo.png'
 
 import { ModalCart } from "../ModalCart"
 
-import { Container, NavBar, ContainerLogo, } from "./styles"
+import { Container, NavBar, ContainerLogo, FixedContactImg } from "./styles"
 
 export function Nav() {
   const [visibleModal, setVisibleModal] = useState(false)
@@ -80,6 +80,7 @@ export function Nav() {
       </NavBar>
 
       {visibleModal && <ModalCart setVisibleModal={setVisibleModal} />}
+      <FixedContactImg><Link to='/contact'><img src={contactImgURL} alt="Entre em contato conosco" /></Link></FixedContactImg>
     </Container>
   )
 }
