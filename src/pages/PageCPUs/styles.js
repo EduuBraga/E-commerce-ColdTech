@@ -15,9 +15,6 @@ export const Container = styled.main`
   @media screen and (max-width: 767px){
     grid-template: auto / auto  ;
   }
-  @media screen and (max-width: 490px){
-
-  }
 `
   
 
