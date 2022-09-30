@@ -21,25 +21,25 @@ export function PageExplorar() {
       </Breadcrumb>
       <Container>
 
-        <Link to='/explorar/notebooks'>
+        <Link to='/notebooks'>
           <ContainerNotebook>
             <h2>Notebooks</h2>
           </ContainerNotebook>
         </Link>
 
-        <Link to='/explorar/cpus'>
+        <Link to='/cpus'>
           <ContainerCPU>
             <h2>Computadores</h2>
           </ContainerCPU>
         </Link>
 
-        <Link to='/explorar/accessories'>
+        <Link to='/accessories'>
           <ContainerAcessorios>
             <h2>Acessórios</h2>
           </ContainerAcessorios >
         </Link>
 
-        <Link to='/explorar/monitores'>
+        <Link to='/monitores'>
           <ContainerMonitores>
             <h2>Monitores</h2>
           </ContainerMonitores>
