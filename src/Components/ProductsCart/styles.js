@@ -9,8 +9,11 @@ const AnimationBlur = keyframes`
 `
 
 export const Container = styled.section`
+  border: 1px solid #404040;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 95%;
   overflow: auto;
-  height: 75vh;
 
   ::-webkit-scrollbar {
     width: 12px;
@@ -32,8 +35,9 @@ export const Container = styled.section`
 export const CartItem = styled.div`
   animation: ${AnimationBlur} 0.8s ease;
   margin: 10px 0px;
+  padding: 0px 8px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 10px;
 `
 
@@ -71,17 +75,6 @@ export const WrapperProduct = styled.div`
   img{
     width:100px;
   }
-`
-
-export const ContainerTotal = styled.div`
-  animation: ${AnimationBlur} 1s ease;
-  background-color: #262626;
-  position: absolute;
-  bottom: 45px;
-  text-align: left;
-  font-weight: 500;
-  margin-left: 20px;
-  transform: translateY(-15px);
 `
 
 export const ContainerDeleteItem = styled.div`

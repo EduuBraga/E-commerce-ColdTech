@@ -1,5 +1,13 @@
 import styled, { keyframes } from "styled-components"
 
+const AnimationBlur = keyframes`
+  0%{
+    opacity: 0.1;
+  }100%{
+    opacity: 1;
+  }
+`
+
 const Scale = keyframes`
   0%{
     width: 0px;
@@ -20,8 +28,15 @@ const ScalePhone = keyframes`
 `
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border:1.5px solid #404040;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 440px;
@@ -31,26 +46,23 @@ export const Container = styled.div`
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   animation: ${Scale} 0.5s ease-in;
+  color: white;
 
   @media screen and (max-width: 490px){
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    border: none;
     position: fixed;
     top: 0;
     right: 0;
     width: 100vw;
     animation: ${ScalePhone} 0.5s ease-in;
   }
-
-  *{
-    color: white;
-  }
 `
 
 export const ContainerTop = styled.div`
-  position: relative;
   text-align: center;
-  padding: 15px 0px 15px 0px;
+  padding: 20px 0px 0px 0px;
 
   div{
     display: flex;
@@ -74,26 +86,19 @@ export const ImgClose = styled.img`
 
 
 export const ContainerNoItem = styled.div`
-  margin-top: 28vh;
-
-  h3{
-    margin-bottom: 8px;
-  }
-  p{
+  *{
     margin-bottom: 8px;
   }
 `
 
-export const WrapperButton = styled.div`
-  background-color: #262626;
-  position: absolute;
-  bottom: 0 ;
-  margin-bottom: 10px;
-  transform: translateX(5%);
+export const ContainerButton = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
 
-  @media screen and (max-width: 490px){
-    transform: translateX(0%);
-  }
+  padding: 10px;
+  background-color: #262626;
 
   a{
     text-decoration: none;
@@ -101,10 +106,6 @@ export const WrapperButton = styled.div`
       color: white;
     }
   }
-`
-
-export const ContainerButton = styled.div`
-  padding: 10px;
 
   button{
     width: 400px;
@@ -123,6 +124,14 @@ export const ContainerButton = styled.div`
   }
 `
 
+export const ContainerTotal = styled.div`
+  animation: ${AnimationBlur} 1s ease;
+  background-color: #262626;
+  text-align: left;
+  font-weight: 500;
+  align-self: flex-start;
+`
+
 export const ButtonNoItem = styled.button`
   cursor: not-allowed;
   border: none;
@@ -135,6 +144,6 @@ export const ButtonNoItem = styled.button`
   transition: all 0.2s;
 
   &:hover{
-    background-color: var(--text-secondary);
+    background-color: rgba(255, 0,0, 255);
   }
 `
