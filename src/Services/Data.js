@@ -1,19 +1,19 @@
 // === Imagens dos Notebooks ===
-import ImgNotebook1URL from '../assets/images/PageNotebook/Notebook1.png'
-import ImgNotebook2URL from '../assets/images/PageNotebook/Notebook2.png'
+import ImgNotebook1URL from '../../src/assets/images/PageNotebook/Notebook1.png'
+import ImgNotebook2URL from '../../src/assets/images/PageNotebook/Notebook2.png'
 
 // === Imagens dos CPUS
-import ImgCPU1URL from '../assets/images/PageCPU/CPU1.png'
-import ImgCPU2URL from '../assets/images/PageCPU/CPU2.png'
+import ImgCPU1URL from '../../src/assets/images/PageCPU/CPU1.png'
+import ImgCPU2URL from '../../src/assets/images/PageCPU/CPU2.png'
 
 // === Imagens dos Monitores === 
-import ImgMonitor1URL from '../assets/images/PageMonitores/Monitor1.png'
-import ImgMonitor2URL from '../assets/images/PageMonitores/Monitor2.png'
+import ImgMonitor1URL from '../../src/assets/images/PageMonitores/Monitor1.png'
+import ImgMonitor2URL from '../../src/assets/images/PageMonitores/Monitor2.png'
 
 // === Imagens dos acessórios ===
-import ImgHeadsetURL from '../assets/images/PageAccessories/headset.png'
-import ImgKeyboardURL from '../assets/images/PageAccessories/keyboard-gamer.png'
-import ImgMouseURL from '../assets/images/PageAccessories/mouse-gamer.png'
+import ImgHeadsetURL from '../../src/assets/images/PageAccessories/headset.png'
+import ImgKeyboardURL from '../../src/assets/images/PageAccessories/keyboard-gamer.png'
+import ImgMouseURL from '../../src/assets/images/PageAccessories/mouse-gamer.png'
 
 export const Data = [
   {
