@@ -26,7 +26,7 @@ root.render(
         <Route path='/explorar' element={<PageExplorar />} />
         <Route path='/contact' element={<PageContact />} />
         <Route path='/checkout' element={<PageCheckout />} />
-        <Route path='/explorar/notebooks' element={<PageNotebook />} />
+        <Route path='/notebooks' element={<PageNotebook />} />
         <Route path='/explorar/cpus' element={<PageCPUs />} />
         <Route path='/explorar/accessories' element={<PageAccessories />} />
         <Route path='/explorar/monitores' element={<PageMonitores />} />
