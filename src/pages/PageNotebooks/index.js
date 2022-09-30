@@ -33,7 +33,7 @@ export function PageNotebook() {
         {Notebooks.map((notebook) =>
           <CardNotebook key={notebook.id}>
             <h4>{notebook.name}</h4>
-            <img src={notebook.src} />
+            <img src={notebook.src} alt="Notebooks da cold tech"/>
             <h4>{notebook.description.msg}</h4>
             <p>A partir de R$ {brokenNumber(notebook.valor)}</p>
 
