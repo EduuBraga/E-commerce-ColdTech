@@ -60,6 +60,11 @@ export function ProductsCartProvider({ children }) {
   }
 
   function RemoveAllProducts() {
+    const CopyProducts = [...productsCart]
+
+    CopyProducts.map((product)=> product.qty = 1)
+
+    setProductsCart([CopyProducts])
     setProductsCart([])
   }
 
