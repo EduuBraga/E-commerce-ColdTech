@@ -43,8 +43,9 @@ export const Breadchumb = styled.div`
 
 export const CartItem = styled.div`
   margin: 10px 10px;
+  padding: 0px 8px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 10px;
   background-color: #f3f5f6;
   border-radius: 10px;
@@ -101,6 +102,7 @@ export const WrapperRemoveItem = styled.div`
 `
 
 export const ContainerBottom = styled.div`
+  margin: 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
