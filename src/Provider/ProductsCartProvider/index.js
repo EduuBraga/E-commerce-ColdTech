@@ -59,25 +59,40 @@ export function ProductsCartProvider({ children }) {
     return number.toLocaleString('pt-BR')
   }
 
-  function RemoveAllProducts(){
+  function RemoveAllProducts() {
     setProductsCart([])
   }
 
+  useEffect(() => {
+    let ProductsSaves = JSON.parse(localStorage.getItem('products'))
+
+    if (ProductsSaves) {
+      setProductsCart(ProductsSaves)
+    }
+  }, [])
+
   useEffect(()=>{
-    //Total de produtos no carrinho
+    console.log(allPrice)
+    // === Salvando produtos na memória ===
+    localStorage.setItem('products', JSON.stringify(productsCart))
+  }, [productsCart])
+
+  useEffect(() => {
+    // === Total de produtos no carrinho ===
     function getTotalProducts(total, product) {
-      return total + product.qty  
+      return total + product.qty
     }
     const TotalProducts = productsCart.reduce(getTotalProducts, 0)
 
     setTotalProductsCart(TotalProducts)
 
-    //Total dos preços
+
+    // === Total dos preços ===
     function getTotalPrice(total, product) {
-      return total + (product.qty  * product.valor)
+      return total + (product.qty * product.valor)
     }
     const totalAllPrices = productsCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
-    
+
     setAllPrice(totalAllPrices)
   }, [productsCart])
 
