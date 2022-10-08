@@ -135,6 +135,9 @@ export const ContainerContent = styled.main`
     @media screen and (max-width: 768px){
       text-align: center;
     }
+    @media screen and (max-width: 425px){
+      font-size: 30px;
+    }
   }
 `
 
@@ -161,7 +164,8 @@ export const CardContent = styled.div`
   h3{
     font-weight: 400;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 0px 10px 15px 10px;
+
   }
 
   p{

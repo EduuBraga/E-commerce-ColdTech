@@ -16,7 +16,7 @@ export function Footer() {
           <ContainerCards>
             <CardColdTech>
               <div>
-                <img src={logo} ></img>
+                <img src={logo} alt="Logo da ColdTech"></img>
                 <h4>ColdTech</h4>
               </div>
               <a href="mailto:ColdTech@gamil.com">ColdTech@gmail.com</a>
