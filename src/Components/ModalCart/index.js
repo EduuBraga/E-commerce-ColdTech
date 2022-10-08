@@ -10,11 +10,11 @@ import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png'
 
 import { Container, ContainerTop, ContainerNoItem, ImgClose, ContainerTotal, ButtonNoItem, ContainerButton } from "./styles"
 
-export function ModalCart({ setVisibleModal }) {
+export function ModalCart({ setVisibleModal, visibleModal }) {
   const { productsCart, allPrice } = useContext(CartContext)
 
   return (
-    <Container>
+    <Container modalItIsVisible={visibleModal}>
 
       <ContainerTop>
         <ImgClose onClick={() => { setVisibleModal(false) }} src={ImgCloseURL} alt="Fechar carrinho" />

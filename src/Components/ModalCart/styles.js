@@ -8,15 +8,6 @@ const AnimationBlur = keyframes`
   }
 `
 
-const Scale = keyframes`
-  0%{
-    width: 0px;
-    height: 0vh;
-  }100%{
-    width: 400px;
-    height: 100vh;
-  }
-`
 const ScalePhone = keyframes`
   0%{
     width: 0px;
@@ -38,14 +29,14 @@ export const Container = styled.div`
   text-align: center;
   position: fixed;
   top: 0;
-  right: 0;
+  right: ${({ modalItIsVisible }) => modalItIsVisible === true ? "0" : "-450px"};
+  transition: all 0.5s ease;
   width: 440px;
   height: 100vh; 
   background-color: #262626;
   z-index: 100;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  animation: ${Scale} 0.5s ease-in;
   color: white;
 
   @media screen and (max-width: 490px){
@@ -54,7 +45,7 @@ export const Container = styled.div`
     border: none;
     position: fixed;
     top: 0;
-    right: 0;
+    right: ${({ modalItIsVisible }) => modalItIsVisible === true ? "0" : "-450px"};
     width: 100vw;
     animation: ${ScalePhone} 0.5s ease-in;
   }

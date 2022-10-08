@@ -79,7 +79,7 @@ export function Nav() {
         </div>
       </NavBar>
 
-      {visibleModal && <ModalCart setVisibleModal={setVisibleModal} />}
+      <ModalCart setVisibleModal={setVisibleModal} visibleModal={visibleModal}/>
       <FixedContactImg><Link to='/contact'><img src={contactImgURL} alt="Entre em contato conosco" /></Link></FixedContactImg>
     </Container>
   )
