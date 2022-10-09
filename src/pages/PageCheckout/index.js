@@ -23,7 +23,7 @@ export function PageCheckout() {
     if (productsCart.length === 0) {
       navigate('/explorar')
     }
-  }, [productsCart])
+  })
 
   return (
     <>

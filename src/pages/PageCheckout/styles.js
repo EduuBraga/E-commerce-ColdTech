@@ -79,6 +79,10 @@ export const WrapperProduct = styled.div`
         border: none;
         background-color: #f3f4f6;
         padding: 2px 6px;
+
+        &:active{
+          transform:scale(0.90);
+        }
       }
     }
   }
@@ -98,6 +102,10 @@ export const WrapperRemoveItem = styled.div`
   img{
     width: 20px;
     cursor: pointer;
+
+    &:active{
+      transform:scale(0.90);
+    }
   }
 `
 

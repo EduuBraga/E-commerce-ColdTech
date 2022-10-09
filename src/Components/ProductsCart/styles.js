@@ -68,6 +68,10 @@ export const WrapperProduct = styled.div`
         font-size: 18px;
         border: none;
         background-color: #262626;
+
+        &:active{
+          transform:scale(0.90);
+        }
       }
     }
   }
@@ -83,5 +87,9 @@ export const ContainerDeleteItem = styled.div`
   img{
     width: 20px;
     cursor: pointer;
+
+    &:active{
+      transform:scale(0.90);
+    }
   }
 `

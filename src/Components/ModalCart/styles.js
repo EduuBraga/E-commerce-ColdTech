@@ -73,6 +73,10 @@ export const ImgClose = styled.img`
   top: 10px;
   cursor: pointer;
   width: 18px;
+
+  &:active{
+    transform:scale(0.90);
+  }
 `
 
 

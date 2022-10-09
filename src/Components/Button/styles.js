@@ -14,6 +14,9 @@ export const ButtonGlobal = styled.button`
   &:hover{
     background-color: var(--color-secondary);
   }
+  &:active{
+    transform:scale(0.95);
+  }
 `
 
 export const ButtonGlobalNoBG = styled.button`
@@ -28,5 +31,8 @@ export const ButtonGlobalNoBG = styled.button`
 
   &:hover{
     background-color: #f3f4f6;
+  }
+  &:active{
+    transform:scale(0.95);
   }
 `

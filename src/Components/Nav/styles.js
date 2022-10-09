@@ -54,6 +54,10 @@ export const NavBar = styled.nav`
   div:nth-last-child(1){
     cursor: pointer;
 
+    &:active{
+      transform:scale(0.95);
+    }
+
     span{
       :hover{
         text-decoration: none;
