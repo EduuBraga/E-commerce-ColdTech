@@ -4,10 +4,17 @@ import axios from 'axios';
 import cartURLImg from '../../assets/images/icons/cart-white.png';
 
 import { ButtonGlobal } from '../../Components/Button/styles';
-import { CardProduct, MiddleContent } from './style.js';
+
+import {
+  CardProduct,
+  MiddleContent,
+  ContainerLoader,
+  Loader
+} from './style.js';
 
 export const LoadProducts = ({ product }) => {
   const [products, setProducts] = useState([]);
+  const [loaderIsVisible, setLoaderIsVisible] = useState(true);
 
   const getProduct = async () => {
     const URL_PRODUCT = `https://api-coldtech.up.railway.app/${product}`;
@@ -15,7 +22,7 @@ export const LoadProducts = ({ product }) => {
     const dataProducts = await axios.get(URL_PRODUCT)
       .then(res => res.data);
 
-    console.log(dataProducts)
+    setLoaderIsVisible(false)
     setProducts([...dataProducts]);
   };
 
@@ -45,6 +52,15 @@ export const LoadProducts = ({ product }) => {
             Pôr no Carrinho
           </ButtonGlobal>
         </CardProduct>
+      )}
+
+      {loaderIsVisible && (
+        <>
+          <div />
+          <ContainerLoader>
+            <Loader />
+          </ContainerLoader>
+        </>
       )}
     </>
   )

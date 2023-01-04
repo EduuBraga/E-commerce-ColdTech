@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const isRotating = keyframes`
+  to{
+    transform: rotate(1turn);
+  }
+`
 
 export const CardProduct = styled.div`
   display: flex;
@@ -53,4 +59,21 @@ export const MiddleContent = styled.div`
     font-size: 14px;
     font-weight: 500;
   }
+`
+
+export const ContainerLoader = styled.div`
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const Loader = styled.div`
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #242424;
+  border-radius: 50%;
+  animation: ${isRotating} 1s infinite;
 `
