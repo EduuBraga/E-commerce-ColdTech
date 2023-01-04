@@ -1,23 +1,16 @@
-import React, { useContext } from "react"
-import { CartContext } from "../../Provider/ProductsCartProvider"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Data } from "../../Services/Data"
+import { Nav } from "../../Components/Nav";
+import { LoadProducts } from "../../Components/loadProducts";
+import { Footer } from "../../Components/Footer";
 
-import { Nav } from "../../Components/Nav"
-import { ButtonGlobal } from "../../Components/Button/styles"
-import { Footer } from "../../Components/Footer"
+import HomeURLImg from '../../assets/images/icons/home.png';
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png';
 
-import HomeURLImg from '../../assets/images/icons/home.png'
-import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
-import cartURLImg from '../../assets/images/icons/cart-white.png'
+import { Container, Breadcrumb } from "./styles";
 
-import { CardCPU, Container, Breadcrumb } from "./styles"
-
-export function PageCPUs() {
-  const cpus = Data.filter((product) => product.tittle === 'cpus')
-  const { AddProductCart, brokenNumber } = useContext(CartContext)
-
+export const PageCPUs = () => {
   return (
     <>
       <Nav />
@@ -29,26 +22,12 @@ export function PageCPUs() {
         <img src={ArrowURLImg} alt="Seta" />
         <p>Computadores</p>
       </Breadcrumb>
-      <Container>
-        {cpus.map(cpu =>
-          <CardCPU key={cpu.id}>
-            <h4>{cpu.name}</h4>
-            <img src={cpu.src} alt='CPU gamer' />
-            <h4>{cpu.description.msg}</h4>
-            <p>A partir de R$ {brokenNumber(cpu.valor)}</p>
 
-            <div key={cpu.id}>
-              <li>{cpu.description.nota1}</li>
-              <li>{cpu.description.nota2}</li>
-              <li>{cpu.description.nota3}</li>
-              <li>{cpu.description.nota4}</li>
-            </div>
-            <ButtonGlobal onClick={() => { AddProductCart(cpu.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
-          </CardCPU>
-        )}
+      <Container>
+        <LoadProducts product='computers'></LoadProducts>
       </Container>
 
       <Footer />
     </>
-  )
-}
+  );
+};
