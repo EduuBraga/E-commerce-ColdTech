@@ -1,22 +1,36 @@
-import React, { useContext } from "react"
-import { CartContext } from "../../Provider/ProductsCartProvider"
-import { Link } from "react-router-dom"
+import React, { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../Provider/ProductsCartProvider";
+import { Link } from "react-router-dom";
 
-import { Data } from "../../Services/Data"
+import { Data } from "../../Services/Data";
 
-import { Nav } from "../../Components/Nav"
-import { ButtonGlobal } from "../../Components/Button/styles"
-import { Footer } from "../../Components/Footer"
+import { Nav } from "../../Components/Nav";
+import { ButtonGlobal } from "../../Components/Button/styles";
+import { Footer } from "../../Components/Footer";
 
-import HomeURLImg from '../../assets/images/icons/home.png'
-import cartURLImg from '../../assets/images/icons/cart-white.png'
-import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+import HomeURLImg from '../../assets/images/icons/home.png';
+import cartURLImg from '../../assets/images/icons/cart-white.png';
+import ArrowURLImg from '../../assets/images/icons/arrow-right.png';
 
-import { Breadcrumb, Container, CardAccessories } from "./styles"
+import { Breadcrumb, Container, CardAccessories } from "./styles";
 
 export function PageAccessories() {
-  const acessories = Data.filter((product) => product.tittle === 'acessorios')
-  const { AddProductCart, brokenNumber } = useContext(CartContext)
+  const { AddProductCart, brokenNumber, getProduct } = useContext(CartContext)
+  const [accessories, setAccessories] = useState([])
+  const acessories = Data.filter(product => product.tittle === 'acessorios');
+
+  useEffect(() => {
+    const getAccessories = async () => {
+      const ProductsAccessories = await getProduct('accessories')
+      setAccessories([ProductsAccessories])
+    }
+
+    getAccessories()
+  }, [])
+
+  useEffect(() => {
+    console.log(accessories)
+  }, [accessories])
 
   return (
     <>
@@ -30,20 +44,10 @@ export function PageAccessories() {
         <p>Acessórios</p>
       </Breadcrumb>
       <Container>
-        {acessories.map(accessory =>
-          <CardAccessories key={accessory.id}>
-            <h4>{accessory.name}</h4>
-            <img src={accessory.src} alt="HeadSet" />
-            <h4>{accessory.description.msg}</h4>
-            <p>A partir de R$ {brokenNumber(accessory.valor)}</p>
-
-            <div key={accessory.id}>
-              <li>{accessory.description.nota1}</li>
-              <li>{accessory.description.nota2}</li>
-              <li>{accessory.description.nota3}</li>
-            </div>
-            <ButtonGlobal onClick={() => { AddProductCart(accessory.id) }}><img src={cartURLImg} alt="Carrinho" /> Pôr no Carrinho</ButtonGlobal>
-          </CardAccessories>
+        {accessories.length > 1 ? (accessories.map(accessory =>
+          <h1 key={accessory.key}>{accessory.description.message}</h1>
+        )) : (
+          <h1>Olá pessoas</h1>
         )}
 
       </Container>

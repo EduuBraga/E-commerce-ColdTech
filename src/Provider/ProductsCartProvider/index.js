@@ -1,36 +1,9 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import { createContext, useState, useEffect } from "react"
 import { Data } from "../../Services/Data"
 
 export const CartContext = createContext()
 
-const useFirebase = () => {
-  const firebaseConfig = {
-    apiKey: "AIzaSyDdA7eQkbuBTk1ezvBgw-gdk2dTic1Azlk",
-    authDomain: "coldtech-7130c.firebaseapp.com",
-    projectId: "coldtech-7130c",
-    storageBucket: "coldtech-7130c.appspot.com",
-    messagingSenderId: "33353951083",
-    appId: "1:33353951083:web:296be0804927263b6a8e2e",
-    measurementId: "G-P2FJQ4NCM6"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app)
-
-  const getProduct = async (product) => {
-    const productCol = collection(db, product)
-    const productSnapshot = await getDocs(productCol)
-    const products = productSnapshot.docs.map(doc => doc.data())
-    return products
-  }
-
-  return { getProduct }
-}
-
 export function ProductsCartProvider({ children }) {
-  const { getProduct} = useFirebase()
   const [productsCart, setProductsCart] = useState([])
   const [allPrice, setAllPrice] = useState(0)
   const [totalProductsCart, setTotalProductsCart] = useState(0)
@@ -101,13 +74,6 @@ export function ProductsCartProvider({ children }) {
     if (ProductsSaves) {
       setProductsCart(ProductsSaves)
     }
-
-    const logProduct = async () => {
-      const notebooks = await getProduct('notebooks')
-      console.log(notebooks)
-    }
-    
-    logProduct()
   }, [])
 
   useEffect(() => {
