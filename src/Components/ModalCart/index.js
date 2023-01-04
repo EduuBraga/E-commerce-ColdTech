@@ -11,7 +11,7 @@ import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png'
 import { Container, ContainerTop, ContainerNoItem, ImgClose, ContainerTotal, ButtonNoItem, ContainerButton } from "./styles"
 
 export function ModalCart({ setVisibleModal, visibleModal }) {
-  const { productsCart, allPrice } = useContext(CartContext)
+  const { productsInCart, allPrice } = useContext(CartContext)
 
   return (
     <Container modalItIsVisible={visibleModal}>
@@ -24,7 +24,7 @@ export function ModalCart({ setVisibleModal, visibleModal }) {
         </div>
       </ContainerTop>
 
-      {productsCart.length ? (
+      {productsInCart.length ? (
         <ProductsCart />
       ) : (
         <ContainerNoItem>
@@ -34,7 +34,7 @@ export function ModalCart({ setVisibleModal, visibleModal }) {
         </ContainerNoItem>
       )}
 
-      {productsCart.length ? (
+      {productsInCart.length ? (
         <ContainerButton>
           <ContainerTotal>
             <span>Total: R$ {allPrice}</span>

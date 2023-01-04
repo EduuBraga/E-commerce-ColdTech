@@ -1,15 +1,26 @@
-import { createContext, useState, useEffect } from "react"
+import { createContext, useState, useEffect } from "react";
+import axios from 'axios';
 import { Data } from "../../Services/Data"
 
-export const CartContext = createContext()
+export const CartContext = createContext();
 
 export function ProductsCartProvider({ children }) {
-  const [productsCart, setProductsCart] = useState([])
-  const [allPrice, setAllPrice] = useState(0)
-  const [totalProductsCart, setTotalProductsCart] = useState(0)
+  const [allProducts, setAllProducts] = useState([])
+  const [productsInCart, setProductsInCart] = useState([]);
+  const [allPrice, setAllPrice] = useState(0);
+  const [totalProductsCart, setTotalProductsCart] = useState(0);
+
+  const getAllProducts = async () => {
+    const URL = 'https://api-coldtech.up.railway.app/allProducts';
+
+    const dataAllProducts = await axios.get(URL)
+      .then(res => res.data);
+
+    setAllProducts([...dataAllProducts]);
+  };
 
   function AddAProductToCart(id) {
-    const copyProductsCart = [...productsCart]
+    const copyProductsCart = [...productsInCart]
 
     const item = copyProductsCart.find(product => product.id === id)
 
@@ -19,40 +30,40 @@ export function ProductsCartProvider({ children }) {
       item.qty = item.qty + 1
     }
 
-    setProductsCart(copyProductsCart)
+    setProductsInCart(copyProductsCart)
   }
 
   function removeAProductToCart(id) {
-    const copyProductsCart = [...productsCart]
+    const copyProductsCart = [...productsInCart]
 
     const item = copyProductsCart.find(product => product.id === id)
 
     if (item.qty > 1) {
       item.qty = item.qty - 1
-      setProductsCart(copyProductsCart)
+      setProductsInCart(copyProductsCart)
     } else {
       const arrayFiltered = copyProductsCart.filter((product) => product.id !== id)
-      setProductsCart(arrayFiltered)
+      setProductsInCart(arrayFiltered)
     }
   }
 
-  function AddProductCart(id) {
-    const Product = Data.find((product) => product.id === id)
-    const ProductInCart = productsCart.find(product => product.id === id)
+  const addProductCart = idParam => {
+    const productClicked = allProducts.find(({ _id }) => _id === idParam);
+    // const ProductInCart = productsInCart.find(product => product.id === id)
 
-    if (ProductInCart) {
-      AddAProductToCart(ProductInCart.id)
-    } else {
-      setProductsCart([...productsCart, Product])
-    }
+    // if (ProductInCart) {
+    //   AddAProductToCart(ProductInCart.id)
+    // } else {
+    //   setProductsInCart([...productsInCart, Product])
+    // }
   }
 
   function removeProductCart(id) {
-    const arrayFiltered = productsCart.filter((product) => product.id !== id)
-    const itemRemoved = productsCart.find((product) => product.id === id)
+    const arrayFiltered = productsInCart.filter((product) => product.id !== id)
+    const itemRemoved = productsInCart.find((product) => product.id === id)
 
     itemRemoved.qty = 1
-    setProductsCart(arrayFiltered)
+    setProductsInCart(arrayFiltered)
   }
 
   function brokenNumber(number) {
@@ -60,34 +71,35 @@ export function ProductsCartProvider({ children }) {
   }
 
   function RemoveAllProducts() {
-    const CopyProducts = [...productsCart]
+    const CopyProducts = [...productsInCart]
 
     CopyProducts.map((product) => product.qty = 1)
 
-    setProductsCart([CopyProducts])
-    setProductsCart([])
+    setProductsInCart([CopyProducts])
+    setProductsInCart([])
   }
 
   useEffect(() => {
     let ProductsSaves = JSON.parse(localStorage.getItem('products'))
 
     if (ProductsSaves) {
-      setProductsCart(ProductsSaves)
+      setProductsInCart(ProductsSaves)
     }
+
+    getAllProducts();
   }, [])
 
   useEffect(() => {
-    console.log(allPrice)
     // === Salvando produtos na memória ===
-    localStorage.setItem('products', JSON.stringify(productsCart))
-  }, [productsCart])
+    localStorage.setItem('products', JSON.stringify(productsInCart))
+  }, [productsInCart])
 
   useEffect(() => {
     // === Total de produtos no carrinho ===
     function getTotalProducts(total, product) {
       return total + product.qty
     }
-    const TotalProducts = productsCart.reduce(getTotalProducts, 0)
+    const TotalProducts = productsInCart.reduce(getTotalProducts, 0)
 
     setTotalProductsCart(TotalProducts)
 
@@ -96,21 +108,21 @@ export function ProductsCartProvider({ children }) {
     function getTotalPrice(total, product) {
       return total + (product.qty * product.valor)
     }
-    const totalAllPrices = productsCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
+    const totalAllPrices = productsInCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
 
     setAllPrice(totalAllPrices)
-  }, [productsCart])
+  }, [productsInCart])
 
   return (
     <CartContext.Provider value={{
       allPrice,
       setAllPrice,
-      productsCart,
-      setProductsCart,
+      productsInCart,
+      setProductsInCart,
       AddAProductToCart,
       removeAProductToCart,
       removeProductCart,
-      AddProductCart,
+      addProductCart,
       brokenNumber,
       RemoveAllProducts,
       totalProductsCart,
