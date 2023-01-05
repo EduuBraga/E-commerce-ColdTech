@@ -9,7 +9,7 @@ import { Footer } from "../../Components/Footer/index"
 
 import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores, WrapperPage } from "./styles"
 
-export function PageExplorar() {
+export function PageExplore() {
   return (
     <WrapperPage>
       <Nav />
