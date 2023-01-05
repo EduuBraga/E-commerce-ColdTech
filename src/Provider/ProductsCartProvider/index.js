@@ -9,18 +9,10 @@ export function ProductsCartProvider({ children }) {
   const [allPrice, setAllPrice] = useState(0);
   const [totalProductsCart, setTotalProductsCart] = useState(0);
 
-  function AddAProductToCart(id) {
-    const copyProductsCart = [...productsInCart]
+  const IncQtyProductInCart = product => {
+    const notQtyProductCart = !product.qty;
 
-    const item = copyProductsCart.find(product => product.id === id)
-
-    if (!item.qty) {
-      item.qty = 1
-    } else {
-      item.qty = item.qty + 1
-    }
-
-    setProductsInCart(copyProductsCart)
+    notQtyProductCart ? product.qty = 1 : product.qty = product.qty + 1;
   }
 
   function removeAProductToCart(id) {
@@ -38,19 +30,19 @@ export function ProductsCartProvider({ children }) {
   }
 
   const addProductCart = async (id, type) => {
-    const url_product = `https://api-coldtech.up.railway.app/${type}/${id}`
+    const url_product = `https://api-coldtech.up.railway.app/${type}/${id}`;
+    const productInTheCart = productsInCart.find(({ _id }) => _id === id);
+
+    if (productInTheCart) {
+      IncQtyProductInCart(productInTheCart);
+      return;
+    }
 
     const productClicked = await axios.get(url_product)
       .then(res => res.data);
 
-    const productInTheCart = productsInCart.find(({_id}) => _id === id)
-
-    if (productInTheCart) {
-      // AddAProductToCart(productInTheCart._id)
-    } else {
-      productClicked.qty = 1
-      setProductsInCart([...productsInCart, productClicked])
-    }
+    IncQtyProductInCart(productClicked);
+    setProductsInCart([...productsInCart, productClicked]);
   }
 
   function removeProductCart(id) {
@@ -74,7 +66,7 @@ export function ProductsCartProvider({ children }) {
     setProductsInCart([])
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(productsInCart)
   }, [productsInCart])
 
@@ -116,7 +108,7 @@ export function ProductsCartProvider({ children }) {
       setAllPrice,
       productsInCart,
       setProductsInCart,
-      AddAProductToCart,
+      IncQtyProductInCart,
       removeAProductToCart,
       removeProductCart,
       addProductCart,
