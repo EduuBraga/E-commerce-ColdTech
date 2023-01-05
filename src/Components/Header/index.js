@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
-import { useLocation, Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../Provider/ProductsCartProvider";
 
 import profileImgURL from '../../assets/images/icons/profile-white.png';
@@ -9,53 +9,20 @@ import cartImgURL from '../../assets/images/icons/cart-white.png';
 import logoImgURL from '../../assets/images/icons/logo.png';
 
 import { ModalCart } from "../ModalCart";
+import { ToggleTitle } from "../ToggleTitle";
 
 import { Container, NavBar, ContainerLogo, FixedContactImg } from "./styles";
 
 export const Header = () => {
   const [visibleModal, setVisibleModal] = useState(false);
   const [display, setDisplay] = useState(false);
-  const { pathname } = useLocation();
 
   const { totalProductsCart } = useContext(CartContext);
 
-  useEffect(() => {
-    if (pathname.includes('/contact')) {
-      document.title = 'ColdTech | Fale Conosco';
-      setDisplay(true);
-    }
-    else if (pathname.includes('/notebooks')) {
-      document.title = 'ColdTech | Explorar - Notebooks';
-      setDisplay(false);
-    }
-    else if (pathname.includes('/computers')) {
-      document.title = 'ColdTech | Explorar - CPUs';
-      setDisplay(false);
-    }
-    else if (pathname.includes('/monitors')) {
-      document.title = 'ColdTech | Explorar - Monitores';
-      setDisplay(false);
-    }
-    else if (pathname.includes('/accessories')) {
-      document.title = 'ColdTech | Explorar - Acessórios';
-      setDisplay(false);
-    }
-    else if (pathname.includes('/explore')) {
-      document.title = 'ColdTech | Explorar';
-      setDisplay(false);
-    }
-    else if (pathname.includes('/checkout')) {
-      document.title = 'ColdTech | Checkout';
-      setDisplay(false);
-    }
-    else {
-      document.title = 'ColdTech';
-      setDisplay(true);
-    };
-  }, [pathname])
-
   return (
     <Container >
+      <ToggleTitle setDisplay={setDisplay} />
+
       <ContainerLogo>
         <Link to='/'>
           <img src={logoImgURL} alt="Logo da cold tech" />
