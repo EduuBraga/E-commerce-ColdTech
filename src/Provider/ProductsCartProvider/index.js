@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 import axios from 'axios';
-import { Data } from "../../Services/Data"
 
 export const CartContext = createContext();
 
@@ -54,58 +53,46 @@ export function ProductsCartProvider({ children }) {
 
     productClicked.qty = 0;
     setProductsInCart(productsFiltered);
-  }
+  };
 
   const formatNumber = number => number.toLocaleString('pt-BR', {
     style: 'currency',
-    currency: 'BRL', 
+    currency: 'BRL',
     minimumFractionDigits: 2
   });
 
-  function RemoveAllProducts() {
-    const CopyProducts = [...productsInCart]
+  const RemoveAllProducts = () => {
+    const CopyProducts = [...productsInCart];
+    CopyProducts.map(({ qty }) => qty = 0);
 
-    CopyProducts.map((product) => product.qty = 1)
-
-    setProductsInCart([CopyProducts])
-    setProductsInCart([])
+    setProductsInCart([CopyProducts]);
+    setProductsInCart([]);
   }
 
   useEffect(() => {
-    console.log(productsInCart)
+    // === Resgatando produtos no carrinho salvos na memória ===
+    let productsSaves = JSON.parse(localStorage.getItem('products'));
+
+    productsSaves ? setProductsInCart(productsSaves) : null
+  }, []);
+
+  useEffect(() => {
+    // === Salvando produtos no carrinho na memória ===
+    localStorage.setItem('products', JSON.stringify(productsInCart))
+
+    // === Total de produtos no carrinho ===
+    const TotalProducts = productsInCart
+      .reduce((total, { qty }) => total + qty, 0);
+
+    setTotalProductsCart(TotalProducts)
+
+    // === Total dos preços ===
+    const totalAllPrices = productsInCart
+      .reduce((total, {qty, value}) => total + (qty * value), 0)
+
+    const formatTotalPrices = formatNumber(totalAllPrices)
+    setAllPrice(formatTotalPrices)
   }, [productsInCart])
-
-  // useEffect(() => {
-  //   let ProductsSaves = JSON.parse(localStorage.getItem('products'))
-
-  //   if (ProductsSaves) {
-  //     setProductsInCart(ProductsSaves)
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   // === Salvando produtos na memória ===
-  //   localStorage.setItem('products', JSON.stringify(productsInCart))
-  // }, [productsInCart])
-
-  // useEffect(() => {
-  //   // === Total de produtos no carrinho ===
-  //   function getTotalProducts(total, product) {
-  //     return total + product.qty
-  //   }
-  //   const TotalProducts = productsInCart.reduce(getTotalProducts, 0)
-
-  //   setTotalProductsCart(TotalProducts)
-
-
-  //   // === Total dos preços ===
-  //   function getTotalPrice(total, product) {
-  //     return total + (product.qty * product.valor)
-  //   }
-  //   const totalAllPrices = productsInCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
-
-  //   setAllPrice(totalAllPrices)
-  // }, [productsInCart])
 
   return (
     <CartContext.Provider value={{
