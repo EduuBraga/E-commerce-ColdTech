@@ -73,43 +73,40 @@ export function ProductsCartProvider({ children }) {
     // === Resgatando produtos no carrinho salvos na memória ===
     let productsSaves = JSON.parse(localStorage.getItem('products'));
 
-    productsSaves ? setProductsInCart(productsSaves) : null
+    if (productsSaves) { setProductsInCart(productsSaves); }
   }, []);
 
   useEffect(() => {
     // === Salvando produtos no carrinho na memória ===
-    localStorage.setItem('products', JSON.stringify(productsInCart))
+    localStorage.setItem('products', JSON.stringify(productsInCart));
 
     // === Total de produtos no carrinho ===
     const TotalProducts = productsInCart
       .reduce((total, { qty }) => total + qty, 0);
 
-    setTotalProductsCart(TotalProducts)
+    setTotalProductsCart(TotalProducts);
 
     // === Total dos preços ===
     const totalAllPrices = productsInCart
-      .reduce((total, {qty, value}) => total + (qty * value), 0)
+      .reduce((total, { qty, value }) => total + (qty * value), 0);
 
-    const formatTotalPrices = formatNumber(totalAllPrices)
-    setAllPrice(formatTotalPrices)
-  }, [productsInCart])
+    const formatTotalPrices = formatNumber(totalAllPrices);
+    setAllPrice(formatTotalPrices);
+  }, [productsInCart]);
 
   return (
     <CartContext.Provider value={{
       allPrice,
-      setAllPrice,
       productsInCart,
-      setProductsInCart,
       IncQtyProductInCart,
       DecQtyProductInCart,
       removeProductCart,
       addProductCart,
       formatNumber,
       RemoveAllProducts,
-      totalProductsCart,
-      setTotalProductsCart
+      totalProductsCart
     }} >
       {children}
     </CartContext.Provider >
-  )
-}
+  );
+};
