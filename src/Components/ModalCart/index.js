@@ -37,7 +37,7 @@ export function ModalCart({ setVisibleModal, visibleModal }) {
       {productsInCart.length ? (
         <ContainerButton>
           <ContainerTotal>
-            <span>Total: R$ {allPrice}</span>
+            <span>Total: {allPrice}</span>
           </ContainerTotal>
           <Link to="/checkout">
             <ButtonGlobal><img src={ImgCartWhiteURL} alt="Carrinho" /> Ir para o Checkuot</ButtonGlobal>
