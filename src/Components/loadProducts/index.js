@@ -18,7 +18,7 @@ export const LoadProducts = ({ product: type }) => {
   const [products, setProducts] = useState([]);
   const [loaderIsVisible, setLoaderIsVisible] = useState(true);
 
-  const { addProductCart } = useContext(CartContext);
+  const { addProductCart, formatNumber } = useContext(CartContext);
 
   const getProduct = async () => {
     const URL_PRODUCT = `https://api-coldtech.up.railway.app/${type}`;
@@ -41,8 +41,7 @@ export const LoadProducts = ({ product: type }) => {
           <h4>{product.name}</h4>
           <img src={`data:image/png;base64,${product.imgBase64}`} alt="HeadSet" />
           <h4>{product.description.msg}</h4>
-          <p>A partir de R$ {product.value}</p>
-          {/* <p>A partir de R$ {brokenNumber(product.value)}</p> */}
+          <p>A partir de {formatNumber(product.value)}</p>
 
           <MiddleContent key={product._id}>
             <li>{product.description.note1}</li>

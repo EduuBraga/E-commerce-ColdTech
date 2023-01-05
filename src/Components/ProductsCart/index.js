@@ -8,10 +8,10 @@ import { CartItem, Container, ContainerDeleteItem, WrapperProduct } from "./styl
 export function ProductsCart() {
   const {
     productsInCart,
-    AddAProductToCart,
-    removeAProductToCart,
+    IncQtyProductInCart,
+    DecQtyProductInCart,
     removeProductCart,
-    brokenNumber
+    formatNumber
   } = useContext(CartContext)
 
   return (
@@ -28,19 +28,18 @@ export function ProductsCart() {
 
             <div>
               <h4>{product.name}</h4>
-              <p>R$ {product.value} </p>
-              {/* <p>R$ {brokenNumber(product.valor)} </p> */}
+              <p>{formatNumber(product.value)}</p>
               <div>
                 <button
                   title="Remover uma unidade do produto"
-                  onClick={_ => removeAProductToCart(product._id) }
+                  onClick={_ => DecQtyProductInCart(product._id) }
                 > - </button>
 
                 {product.qty}
 
                 <button
                   title="Adicionar uma unidade do produto"
-                  onClick={_ => AddAProductToCart(product._id) }
+                  onClick={_ => IncQtyProductInCart(product._id) }
                 > + </button>
               </div>
             </div>

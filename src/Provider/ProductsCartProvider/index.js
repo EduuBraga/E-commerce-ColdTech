@@ -56,9 +56,11 @@ export function ProductsCartProvider({ children }) {
     setProductsInCart(productsFiltered);
   }
 
-  function brokenNumber(number) {
-    return number.toLocaleString('pt-BR')
-  }
+  const formatNumber = number => number.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL', 
+    minimumFractionDigits: 2
+  });
 
   function RemoveAllProducts() {
     const CopyProducts = [...productsInCart]
@@ -115,7 +117,7 @@ export function ProductsCartProvider({ children }) {
       DecQtyProductInCart,
       removeProductCart,
       addProductCart,
-      brokenNumber,
+      formatNumber,
       RemoveAllProducts,
       totalProductsCart,
       setTotalProductsCart
