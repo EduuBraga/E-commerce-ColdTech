@@ -32,10 +32,6 @@ export const SectionOne = styled.section`
       @media screen and (max-width: 768px){
         width: 250px;
       }
-
-      @media screen and (max-width: 425px){
-        /* width: 20px; */
-      }
     }
   }
 `

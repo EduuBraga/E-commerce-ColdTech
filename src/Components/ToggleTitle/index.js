@@ -7,21 +7,21 @@ export const ToggleTitle = ({ children, setDisplay }) => {
   useEffect(() => {
     const matchs = [
       '/contact',
-      '/explore',
       '/notebooks',
       '/computers',
       '/monitors',
       '/accessories',
+      '/explore',
       '/checkout'
     ];
 
     const titles = [
       'ColdTech | Fale Conosco',
-      'ColdTech | Explorar',
       'ColdTech | Explorar - Notebooks',
       'ColdTech | Explorar - Computadores',
       'ColdTech | Explorar - Monitores',
       'ColdTech | Explorar - Acessórios',
+      'ColdTech | Explorar',
       'ColdTech | Checkout'
     ];
 
@@ -33,20 +33,20 @@ export const ToggleTitle = ({ children, setDisplay }) => {
       '/accessories',
     ];
 
-    matchs.forEach((match, index) => {
-      const lastIndexMatch = matchs.length + 1 === index
-
+    for (let i = 0; i < matchs.length; i++) {
+      const match = matchs[i];
+      
       if (pathname.includes(match)) {
-        document.title = titles[index];
+        document.title = titles[i];
 
         matchsHiddenExploreOfNav.includes(match) ?
           setDisplay(false) : setDisplay(true);
+        break;
+      } else {
+        document.title = 'ColdTech';
+        setDisplay(true);
       }
-
-      if(lastIndexMatch && !pathname.includes(match)){
-        document.title = 'ColdTech'
-      }
-    });
+    }
   }, [pathname]);
 
   return (
