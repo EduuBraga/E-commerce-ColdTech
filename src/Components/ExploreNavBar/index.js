@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Compute from '../../assets/images/icons/Compute.png'
-import Notebook from '../../assets/images/icons/notebook.png'
-import Accessories from '../../assets/images/icons/keyboard-mouse.png'
-import Screen from '../../assets/images/icons/screen.png'
+import Compute from '../../assets/images/icons/Compute.png';
+import Notebook from '../../assets/images/icons/notebook.png';
+import Accessories from '../../assets/images/icons/keyboard-mouse.png';
+import Screen from '../../assets/images/icons/screen.png';
 
-import { Container, Product, Products } from './styles'
+import { Container, Product, Content } from './styles';
 
-export function ExplorarNavBar() {
+export function ExploreNavBar() {
   return (
     <Container>
-      <Products>
+      <Content>
         <Link to='/explore/notebooks'>
           <Product>
             <img src={Notebook} alt="Notebook gamer" />
@@ -39,7 +39,7 @@ export function ExplorarNavBar() {
             <h3>Acessórios</h3>
           </Product>
         </Link>
-      </Products>
+      </Content>
     </Container>
   )
 }

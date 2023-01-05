@@ -4,15 +4,15 @@ import { Link } from "react-router-dom"
 import HomeURLImg from '../../assets/images/icons/home.png'
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
 
-import { Nav } from "../../Components/Nav/index"
-import { Footer } from "../../Components/Footer/index"
+import { Header } from "../../Components/Header"
+import { Footer } from "../../Components/Footer"
 
 import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores, WrapperPage } from "./styles"
 
 export function PageExplore() {
   return (
     <WrapperPage>
-      <Nav />
+      <Header />
 
       <Breadcrumb>
         <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>

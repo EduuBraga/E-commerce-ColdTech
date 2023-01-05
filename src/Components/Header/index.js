@@ -1,33 +1,102 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { useLocation, Link } from "react-router-dom";
+import { CartContext } from "../../Provider/ProductsCartProvider";
 
-import { Nav } from '../Nav/index'
-import { ExplorarNavBar } from "../ExplorarNavBar/index"
-import { ButtonGlobal } from "../Button/styles"
+import profileImgURL from '../../assets/images/icons/profile-white.png';
+import exploreImgURL from '../../assets/images/icons/explore-white.png';
+import contactImgURL from '../../assets/images/icons/contact-white.png';
+import cartImgURL from '../../assets/images/icons/cart-white.png';
+import logoImgURL from '../../assets/images/icons/logo.png';
 
-import pcGamer from '../../assets/images/pc-gamer.png'
+import { ModalCart } from "../ModalCart";
 
-import { ContainerHeader, Description } from "./styles"
+import { Container, NavBar, ContainerLogo, FixedContactImg } from "./styles";
 
-export function Header() {
+export const Header = () => {
+  const [visibleModal, setVisibleModal] = useState(false);
+  const [display, setDisplay] = useState(false);
+  const { pathname } = useLocation();
+
+  const { totalProductsCart } = useContext(CartContext);
+
+  useEffect(() => {
+    if (pathname.includes('/contact')) {
+      document.title = 'ColdTech | Fale Conosco';
+      setDisplay(true);
+    }
+    else if (pathname.includes('/notebooks')) {
+      document.title = 'ColdTech | Explorar - Notebooks';
+      setDisplay(false);
+    }
+    else if (pathname.includes('/computers')) {
+      document.title = 'ColdTech | Explorar - CPUs';
+      setDisplay(false);
+    }
+    else if (pathname.includes('/monitors')) {
+      document.title = 'ColdTech | Explorar - Monitores';
+      setDisplay(false);
+    }
+    else if (pathname.includes('/accessories')) {
+      document.title = 'ColdTech | Explorar - Acessórios';
+      setDisplay(false);
+    }
+    else if (pathname.includes('/explore')) {
+      document.title = 'ColdTech | Explorar';
+      setDisplay(false);
+    }
+    else if (pathname.includes('/checkout')) {
+      document.title = 'ColdTech | Checkout';
+      setDisplay(false);
+    }
+    else {
+      document.title = 'ColdTech';
+      setDisplay(true);
+    };
+  }, [pathname])
+
   return (
-    <>
-      <Nav />
-      <ExplorarNavBar />
-      <header>
-        <ContainerHeader>
-          <Description>
-            <strong>Ofertas todos os dias</strong>
-            <h1>Os melhores produtos do mundo tech é aqui!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nam fugit quod ex nostrum velit?</p>
-            <Link to='/explore' ><ButtonGlobal>Veja Mais</ButtonGlobal></Link>
-          </Description>
+    <Container >
+      <ContainerLogo>
+        <Link to='/'>
+          <img src={logoImgURL} alt="Logo da cold tech" />
+          <span>ColdTech</span>
+        </Link>
+      </ContainerLogo>
 
-          <div>
-            <img src={pcGamer} alt="PC gamer e acessórios" />
-          </div>
-        </ContainerHeader>
-      </header>
-    </>
+      <NavBar displayIsOn={display}>
+        <div>
+          <Link to='/explore'>
+            <img src={exploreImgURL} alt="Shop" />
+            Explorar
+          </Link>
+        </div>
+        <div>
+          <Link to='/contact'>
+            <img src={contactImgURL} alt="Contato" />
+            <p>Fale Conosco</p>
+          </Link>
+        </div>
+        <div>
+          <img src={profileImgURL} alt="Search" />
+          <p>
+            <span>Entrar</span> ou <br />
+            se <span>Cadastrar</span>
+          </p>
+        </div>
+
+        <div onClick={() => { setVisibleModal(true) }}>
+          <img src={cartImgURL} alt="Search" />
+          <span>{totalProductsCart}</span>
+        </div>
+      </NavBar>
+
+      <ModalCart setVisibleModal={setVisibleModal} visibleModal={visibleModal} />
+
+      <FixedContactImg>
+        <Link to='/contact'>
+          <img src={contactImgURL} alt="Entre em contato conosco" />
+        </Link>
+      </FixedContactImg>
+    </Container>
   )
 }

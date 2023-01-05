@@ -8,7 +8,7 @@ import HomeURLImg from '../../assets/images/icons/home.png';
 import checkURLImg from '../../assets/images/icons/check.png';
 import { ButtonGlobal } from '../../Components/Button/styles';
 import { ModalCheckout } from "../../Components/ModalCheckout";
-import { Nav as NavBar } from "../../Components/Nav";
+import { Header } from "../../Components/Header";
 
 import {
   Breadchumb,
@@ -40,7 +40,7 @@ export function PageCheckout() {
 
   return (
     <>
-      <NavBar />
+      <Header />
 
       <Container>
         <Breadchumb>

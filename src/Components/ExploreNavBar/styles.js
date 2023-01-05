@@ -7,7 +7,7 @@ export const Container = styled.section`
   z-index: 10;
 `
 
-export const Products = styled.div`
+export const Content = styled.div`
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -70,8 +70,3 @@ export const Product = styled.div`
       background-color: #f1f1f1;
   }
 `
-
-
-
-
-

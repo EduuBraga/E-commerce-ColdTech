@@ -3,7 +3,7 @@ import { ButtonGlobalNoBG } from "../../Components/Button/styles"
 import { Link } from "react-router-dom";
 
 import { Footer } from "../../Components/Footer"
-import { Nav } from "../../Components/Nav"
+import { Header } from "../../Components/Header/index.js"
 
 import ImgChatURL from '../../assets/images/icons/chat.png'
 import ImgCartShoppingURL from '../../assets/images/icons/cart-shopping.png'
@@ -31,7 +31,7 @@ export function PageContact() {
 
   return (
     <>
-      <Nav />
+      <Header />
 
       <Breadcrumb>
         <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
