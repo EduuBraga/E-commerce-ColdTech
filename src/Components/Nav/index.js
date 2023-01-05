@@ -63,7 +63,7 @@ export function Nav() {
 
       <NavBar displayIsOn={display}>
         <div>
-          <Link to='/explorar'><img src={exploreImgURL} alt="Shop" />Explorar</Link>
+          <Link to='/explore'><img src={exploreImgURL} alt="Shop" />Explorar</Link>
         </div>
         <div>
           <Link to='/contact'><img src={contactImgURL} alt="Contato" /><p>Fale Conosco</p></Link>

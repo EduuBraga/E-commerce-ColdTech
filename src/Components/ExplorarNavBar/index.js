@@ -12,28 +12,28 @@ export function ExplorarNavBar() {
   return (
     <Container>
       <Products>
-        <Link to='/notebooks'>
+        <Link to='/explore/notebooks'>
           <Product>
             <img src={Notebook} alt="Notebook gamer" />
             <h3>Notebooks</h3>
           </Product>
         </Link>
 
-        <Link to='/cpus'>
+        <Link to='/explore/computers'>
           <Product>
             <img src={Compute} alt="CPUs games" />
             <h3>Computadores</h3>
           </Product>
         </Link>
 
-        <Link to='/monitores'>
+        <Link to='/explore/monitors'>
           <Product>
             <img src={Screen} alt="Monitores games" />
             <h3>Monitores</h3>
           </Product>
         </Link>
 
-        <Link to='/accessories'>
+        <Link to='/explore/accessories'>
           <Product>
             <img src={Accessories} alt="Acessórios games" />
             <h3>Acessórios</h3>
