@@ -9,48 +9,51 @@ export function ProductsCartProvider({ children }) {
   const [allPrice, setAllPrice] = useState(0);
   const [totalProductsCart, setTotalProductsCart] = useState(0);
 
-  const IncQtyProductInCart = product => {
-    const notQtyProductCart = !product.qty;
+  const IncQtyProductInCart = id => {
+    const copyProductsInCart = [...productsInCart];
+    const product = copyProductsInCart.find(({ _id }) => _id === id);
 
-    notQtyProductCart ? product.qty = 1 : product.qty = product.qty + 1;
-  }
-
-  function removeAProductToCart(id) {
-    const copyProductsCart = [...productsInCart]
-
-    const item = copyProductsCart.find(product => product.id === id)
-
-    if (item.qty > 1) {
-      item.qty = item.qty - 1
-      setProductsInCart(copyProductsCart)
-    } else {
-      const arrayFiltered = copyProductsCart.filter((product) => product.id !== id)
-      setProductsInCart(arrayFiltered)
-    }
-  }
+    product.qty += 1;
+    setProductsInCart(copyProductsInCart);
+  };
 
   const addProductCart = async (id, type) => {
     const url_product = `https://api-coldtech.up.railway.app/${type}/${id}`;
     const productInTheCart = productsInCart.find(({ _id }) => _id === id);
 
     if (productInTheCart) {
-      IncQtyProductInCart(productInTheCart);
+      IncQtyProductInCart(productInTheCart._id);
       return;
     }
 
     const productClicked = await axios.get(url_product)
       .then(res => res.data);
 
-    IncQtyProductInCart(productClicked);
+    productClicked.qty = 1;
     setProductsInCart([...productsInCart, productClicked]);
-  }
+  };
 
-  function removeProductCart(id) {
-    const arrayFiltered = productsInCart.filter((product) => product.id !== id)
-    const itemRemoved = productsInCart.find((product) => product.id === id)
+  const DecQtyProductInCart = id => {
+    const copyProductsInCart = [...productsInCart];
+    const product = copyProductsInCart.find(({ _id }) => _id === id);
 
-    itemRemoved.qty = 1
-    setProductsInCart(arrayFiltered)
+    if (product.qty > 1) {
+      product.qty -= 1;
+      setProductsInCart(copyProductsInCart);
+    } else {
+      const productsFiltered = copyProductsInCart
+        .filter(({ _id }) => _id !== id);
+
+      setProductsInCart(productsFiltered);
+    }
+  };
+
+  const removeProductCart = id => {
+    const productsFiltered = productsInCart.filter(({ _id }) => _id !== id);
+    const productClicked = productsInCart.find(({ _id }) => _id === id);
+
+    productClicked.qty = 0;
+    setProductsInCart(productsFiltered);
   }
 
   function brokenNumber(number) {
@@ -109,7 +112,7 @@ export function ProductsCartProvider({ children }) {
       productsInCart,
       setProductsInCart,
       IncQtyProductInCart,
-      removeAProductToCart,
+      DecQtyProductInCart,
       removeProductCart,
       addProductCart,
       brokenNumber,
