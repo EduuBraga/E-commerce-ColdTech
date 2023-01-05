@@ -12,7 +12,7 @@ export const Container = styled.section`
   border: 1px solid #404040;
   margin-left: 10px;
   margin-right: 10px;
-  width: 95%;
+  width: 91%;
   overflow: auto;
 
   ::-webkit-scrollbar {
@@ -32,52 +32,55 @@ export const Container = styled.section`
   }
 `
 
-export const CartItem = styled.div`
-  animation: ${AnimationBlur} 0.8s ease;
-  margin: 10px 0px;
-  padding: 0px 8px;
+export const CardProduct = styled.div`
+  animation: ${AnimationBlur} 0.5s ease;
+  padding: 12px 16px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  border-bottom: 1px solid #404040;
 `
 
-export const WrapperProduct = styled.div`
+export const ContentProduct = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 
-  div:nth-child(2){
-    text-align: left;
-
-    h4{
-      font-size: 15px;
-      padding-bottom: 5px;
-    }
-    p{
-      padding-bottom: 5px;
-    }
-
-    div{
-      display: flex;
-      gap: 10px;
-
-      button{
-        cursor: pointer;
-        color: var(--color-secondary);
-        font-weight: 600;
-        font-size: 18px;
-        border: none;
-        background-color: #262626;
-
-        &:active{
-          transform:scale(0.90);
-        }
-      }
-    }
-  }
-
   img{
-    width:100px;
+    width:90px;
+    padding: 4px;
+    filter: drop-shadow(#404040 0px 0px 8px);
+  }
+`
+
+export const ContainerDescriptionProduct = styled.div`
+  text-align: left;
+
+  h4{
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  p{
+    padding-bottom: 5px;
+  }
+`
+
+export const ContainerIncAndDec = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid #404040;
+  width: 70px;
+
+  button{
+    cursor: pointer;
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    background-color: #262626;
+    padding: 0px 4px;
   }
 `
 

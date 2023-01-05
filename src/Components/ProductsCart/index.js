@@ -1,24 +1,31 @@
-import React, { useContext } from "react"
-import { CartContext } from "../../Provider/ProductsCartProvider"
+import React, { useContext } from "react";
+import { CartContext } from "../../Provider/ProductsCartProvider";
 
-import ImgCloseURL from '../../assets/images/icons/close.png'
+import ImgCloseURL from '../../assets/images/icons/close.png';
 
-import { CartItem, Container, ContainerDeleteItem, WrapperProduct } from "./styles"
+import {
+  CardProduct,
+  Container,
+  ContainerDeleteItem,
+  ContentProduct,
+  ContainerDescriptionProduct,
+  ContainerIncAndDec
+} from "./styles";
 
-export function ProductsCart() {
+export const ProductsCart = () => {
   const {
     productsInCart,
     IncQtyProductInCart,
     DecQtyProductInCart,
     removeProductCart,
     formatNumber
-  } = useContext(CartContext)
+  } = useContext(CartContext);
 
   return (
     <Container>
       {productsInCart.map((product, key) =>
-        <CartItem key={key}>
-          <WrapperProduct>
+        <CardProduct key={key}>
+          <ContentProduct>
             <div>
               <img
                 src={`data:image/png;base64,${product.imgBase64}`}
@@ -26,33 +33,36 @@ export function ProductsCart() {
               />
             </div>
 
-            <div>
+            <ContainerDescriptionProduct>
               <h4>{product.name}</h4>
               <p>{formatNumber(product.value)}</p>
-              <div>
+
+              <ContainerIncAndDec>
                 <button
                   title="Remover uma unidade do produto"
-                  onClick={_ => DecQtyProductInCart(product._id) }
-                > - </button>
+                  onClick={_ => DecQtyProductInCart(product._id)}
+                > -
+                </button>
 
                 {product.qty}
 
                 <button
                   title="Adicionar uma unidade do produto"
-                  onClick={_ => IncQtyProductInCart(product._id) }
-                > + </button>
-              </div>
-            </div>
-          </WrapperProduct>
+                  onClick={_ => IncQtyProductInCart(product._id)}
+                > +
+                </button>
+              </ContainerIncAndDec>
+            </ContainerDescriptionProduct>
+          </ContentProduct>
           <ContainerDeleteItem>
             <img
               title="Remover produto do carrinho"
-              onClick={_ => removeProductCart(product._id) }
+              onClick={_ => removeProductCart(product._id)}
               src={ImgCloseURL}
               alt="Remover produto"
             />
           </ContainerDeleteItem>
-        </CartItem>
+        </CardProduct>
       )}
     </Container>
   )
