@@ -8,23 +8,12 @@ const AnimationBlur = keyframes`
   }
 `
 
-const ScalePhone = keyframes`
-  0%{
-    width: 0px;
-    height: 0vh;
-  }100%{
-    width: 280px;
-    height: 100vh;
-  }
-`
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-
+  gap: 12px;
   border:1.5px solid #404040;
   text-align: center;
   position: fixed;
@@ -43,11 +32,8 @@ export const Container = styled.div`
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border: none;
-    position: fixed;
-    top: 0;
     right: ${({ modalItIsVisible }) => modalItIsVisible === true ? "0" : "-450px"};
     width: 100vw;
-    animation: ${ScalePhone} 0.5s ease-in;
   }
 `
 
@@ -79,7 +65,6 @@ export const ImgClose = styled.img`
   }
 `
 
-
 export const ContainerNoItem = styled.div`
   *{
     margin-bottom: 8px;
@@ -89,10 +74,10 @@ export const ContainerNoItem = styled.div`
 export const ContainerButton = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   flex-direction: column;
 
-  padding: 10px;
+  padding: 16px;
   background-color: #262626;
 
   a{
@@ -125,6 +110,7 @@ export const ContainerTotal = styled.div`
   text-align: left;
   font-weight: 500;
   align-self: flex-start;
+  font-size: 16px;
 `
 
 export const ButtonNoItem = styled.button`
