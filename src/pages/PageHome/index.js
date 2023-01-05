@@ -13,10 +13,16 @@ import { Header } from '../../Components/Header';
 import { ExploreNavBar } from '../../Components/ExploreNavBar';
 
 import { SuporteCold } from '../../Components/SupportCold/index';
-import { Offers1, Offers2, Offers3, Offers4 } from '../../Components/Offers/index';
 import { Footer } from '../../Components/Footer/index';
 
-import { Container, WrapperPage, SectionOne, Description } from './styles';
+import {
+  Container, 
+  WrapperPage, 
+  SectionOne, 
+  Description,
+  Section, 
+  SectionReverse
+} from './styles';
 
 export function PageHome() {
   return (
@@ -29,7 +35,10 @@ export function PageHome() {
           <Description>
             <strong>Ofertas todos os dias</strong>
             <h1>Os melhores produtos do mundo tech é aqui!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nam fugit quod ex nostrum velit?</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+              nam fugit quod ex nostrum velit?
+            </p>
             <Link to='/explore' ><ButtonGlobal>Veja Mais</ButtonGlobal></Link>
           </Description>
 
@@ -38,34 +47,70 @@ export function PageHome() {
           </div>
         </SectionOne>
 
-        <Offers1
-          tittle='Notebooks de alta qualidade'
-          subTittle='Notebooks'
-          msg='Os melhores notebooks do mercado com ofertas exclusivas'
-          src={notebookURL}
-        />
-        <Offers2
-          tittle='Essencial para Pro PLayers'
-          subTittle='CPU para gamers'
-          msg='Alcance todo o seu potencial com essa máquina feita para você ganhar todas'
-          src={cpuURL}
-        />
+        <Section>
+          <div>
+            <img src={notebookURL} alt="Notebook gamer" />
+          </div>
+
+          <div>
+            <p>Notebooks</p>
+            <h2> Notebooks de alta qualidade</h2>
+            <p>Os melhores notebooks do mercado com ofertas exclusivas</p>
+            <Link to='/explore/notebooks'>Confira agora</Link>
+          </div>
+        </Section>
+
+        <SectionReverse>
+          <div>
+            <p>CPU para gamers</p>
+            <h2>Essencial para Pro PLayers</h2>
+            <p>
+              Alcance todo o seu potencial com essa máquina feita para você
+              ganhar todas
+            </p>
+            <Link to='/explore/computers'>Confira agora</Link>
+          </div>
+
+          <div>
+            <img src={cpuURL} alt="CPU" />
+          </div>
+        </SectionReverse>
 
         <SuporteCold />
 
-        <Offers3
-          tittle="Dê um upgrade no seu espaço"
-          subTittle='Acessórios'
-          msg="Deixe seu setup mais bonito e aumente sua produtividade com acessórios incríveis"
-          src={AcessoriosURL}
-        />
-        <Offers4
-          tittle='Os melhores dos mercado'
-          subTittle='Monitores'
-          msg='Aprecie cores vibrantes e detalhes impressionantes com monitores feitos para você'
-          src={monitorURL}
-        />
+        <SectionReverse>
+          <div>
+            <p>Acessórios</p>
+            <h2> Dê um upgrade no seu espaço</h2>
+            <p>
+              Deixe seu setup mais bonito e aumente sua produtividade com
+              acessórios incríveis
+            </p>
+            <Link to='/explore/accessories'>Confira agora</Link>
+          </div>
+
+          <div>
+            <img src={AcessoriosURL} alt="Acéssorios" />
+          </div>
+        </SectionReverse>
+
+        <Section>
+          <div>
+            <img src={monitorURL} alt="Monitor" />
+          </div>
+
+          <div>
+            <p>Monitores</p>
+            <h2>Os melhores dos mercado</h2>
+            <p>
+              Aprecie cores vibrantes e detalhes impressionantes com monitores
+              feitos para você
+            </p>
+            <Link to='/explore/monitors'>Confira agora</Link>
+          </div>
+        </Section>
       </Container>
+
       <Footer />
     </WrapperPage>
   );
