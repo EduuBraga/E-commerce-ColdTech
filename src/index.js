@@ -15,12 +15,14 @@ import { PageAccessories } from './pages/PageAccessories'
 import { PageMonitores } from './pages/PageMonitores'
 import { PageError } from './pages/PageError'
 import { PageCheckout } from './pages/PageCheckout'
+import { PageProducts } from './pages/PageProducts'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <ProductsCartProvider>
     <Router>
       <ScrollToTop />
+
       <Routes>
         <Route path='/' element={<PageHome />} />
         <Route path='/explorar' element={<PageExplorar />} />
@@ -30,8 +32,10 @@ root.render(
         <Route path='/cpus' element={<PageCPUs />} />
         <Route path='/accessories' element={<PageAccessories />} />
         <Route path='/monitores' element={<PageMonitores />} />
+        <Route path='/explorar/:title' element={ <PageProducts />}/>
         <Route path='*' element={<PageError />} />
       </Routes>
+
       <GlobalStyles />
     </Router>
   </ProductsCartProvider>
