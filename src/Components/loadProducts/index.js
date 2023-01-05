@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
-import { CartContext } from "../../Provider/ProductsCartProvider"
+import { CartContext } from "../../Provider/ProductsCartProvider";
 
 import cartURLImg from '../../assets/images/icons/cart-white.png';
 
@@ -14,19 +14,19 @@ import {
   Loader
 } from './style.js';
 
-export const LoadProducts = ({ product }) => {
+export const LoadProducts = ({ product: type }) => {
   const [products, setProducts] = useState([]);
   const [loaderIsVisible, setLoaderIsVisible] = useState(true);
 
   const { addProductCart } = useContext(CartContext);
 
   const getProduct = async () => {
-    const URL_PRODUCT = `https://api-coldtech.up.railway.app/${product}`;
+    const URL_PRODUCT = `https://api-coldtech.up.railway.app/${type}`;
 
     const dataProducts = await axios.get(URL_PRODUCT)
       .then(res => res.data);
 
-    setLoaderIsVisible(false)
+    setLoaderIsVisible(false);
     setProducts([...dataProducts]);
   };
 
@@ -50,7 +50,7 @@ export const LoadProducts = ({ product }) => {
             <li>{product.description.note3}</li>
           </MiddleContent>
 
-          <ButtonGlobal onClick={_ => addProductCart(product._id)}>
+          <ButtonGlobal onClick={_ => addProductCart(product._id, type)}>
             <img src={cartURLImg} alt="Carrinho" />
             Pôr no Carrinho
           </ButtonGlobal>
@@ -66,5 +66,5 @@ export const LoadProducts = ({ product }) => {
         </>
       )}
     </>
-  )
-}
+  );
+};

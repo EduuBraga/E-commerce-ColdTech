@@ -5,19 +5,9 @@ import { Data } from "../../Services/Data"
 export const CartContext = createContext();
 
 export function ProductsCartProvider({ children }) {
-  const [allProducts, setAllProducts] = useState([])
   const [productsInCart, setProductsInCart] = useState([]);
   const [allPrice, setAllPrice] = useState(0);
   const [totalProductsCart, setTotalProductsCart] = useState(0);
-
-  const getAllProducts = async () => {
-    const URL = 'https://api-coldtech.up.railway.app/allProducts';
-
-    const dataAllProducts = await axios.get(URL)
-      .then(res => res.data);
-
-    setAllProducts([...dataAllProducts]);
-  };
 
   function AddAProductToCart(id) {
     const copyProductsCart = [...productsInCart]
@@ -47,15 +37,20 @@ export function ProductsCartProvider({ children }) {
     }
   }
 
-  const addProductCart = idParam => {
-    const productClicked = allProducts.find(({ _id }) => _id === idParam);
-    // const ProductInCart = productsInCart.find(product => product.id === id)
+  const addProductCart = async (id, type) => {
+    const url_product = `https://api-coldtech.up.railway.app/${type}/${id}`
 
-    // if (ProductInCart) {
-    //   AddAProductToCart(ProductInCart.id)
-    // } else {
-    //   setProductsInCart([...productsInCart, Product])
-    // }
+    const productClicked = await axios.get(url_product)
+      .then(res => res.data);
+
+    const productInTheCart = productsInCart.find(({_id}) => _id === id)
+
+    if (productInTheCart) {
+      // AddAProductToCart(productInTheCart._id)
+    } else {
+      productClicked.qty = 1
+      setProductsInCart([...productsInCart, productClicked])
+    }
   }
 
   function removeProductCart(id) {
@@ -79,39 +74,41 @@ export function ProductsCartProvider({ children }) {
     setProductsInCart([])
   }
 
-  useEffect(() => {
-    let ProductsSaves = JSON.parse(localStorage.getItem('products'))
-
-    if (ProductsSaves) {
-      setProductsInCart(ProductsSaves)
-    }
-
-    getAllProducts();
-  }, [])
-
-  useEffect(() => {
-    // === Salvando produtos na memória ===
-    localStorage.setItem('products', JSON.stringify(productsInCart))
+  useEffect(()=>{
+    console.log(productsInCart)
   }, [productsInCart])
 
-  useEffect(() => {
-    // === Total de produtos no carrinho ===
-    function getTotalProducts(total, product) {
-      return total + product.qty
-    }
-    const TotalProducts = productsInCart.reduce(getTotalProducts, 0)
+  // useEffect(() => {
+  //   let ProductsSaves = JSON.parse(localStorage.getItem('products'))
 
-    setTotalProductsCart(TotalProducts)
+  //   if (ProductsSaves) {
+  //     setProductsInCart(ProductsSaves)
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   // === Salvando produtos na memória ===
+  //   localStorage.setItem('products', JSON.stringify(productsInCart))
+  // }, [productsInCart])
+
+  // useEffect(() => {
+  //   // === Total de produtos no carrinho ===
+  //   function getTotalProducts(total, product) {
+  //     return total + product.qty
+  //   }
+  //   const TotalProducts = productsInCart.reduce(getTotalProducts, 0)
+
+  //   setTotalProductsCart(TotalProducts)
 
 
-    // === Total dos preços ===
-    function getTotalPrice(total, product) {
-      return total + (product.qty * product.valor)
-    }
-    const totalAllPrices = productsInCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
+  //   // === Total dos preços ===
+  //   function getTotalPrice(total, product) {
+  //     return total + (product.qty * product.valor)
+  //   }
+  //   const totalAllPrices = productsInCart.reduce(getTotalPrice, 0).toLocaleString('pt-BR')
 
-    setAllPrice(totalAllPrices)
-  }, [productsInCart])
+  //   setAllPrice(totalAllPrices)
+  // }, [productsInCart])
 
   return (
     <CartContext.Provider value={{
