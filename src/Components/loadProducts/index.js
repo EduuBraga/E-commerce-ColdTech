@@ -11,7 +11,10 @@ import {
   CardProduct,
   MiddleContent,
   ContainerLoader,
-  Loader
+  Loader,
+  Title,
+  ImgProduct,
+  LinkMoreSpecs
 } from './style.js';
 
 export const LoadProducts = ({ product: type }) => {
@@ -38,8 +41,11 @@ export const LoadProducts = ({ product: type }) => {
     <>
       {products.map(product =>
         <CardProduct key={product._id}>
-          <h4>{product.name}</h4>
-          <img src={`data:image/png;base64,${product.imgBase64}`} alt="HeadSet" />
+          <Title>{product.name}</Title>
+          <ImgProduct
+            src={`data:image/png;base64,${product.imgBase64}`}
+            alt={product.name}
+          />
           <h4>{product.description.msg}</h4>
           <p>A partir de {formatNumber(product.value)}</p>
 
@@ -47,7 +53,10 @@ export const LoadProducts = ({ product: type }) => {
             <li>{product.description.note1}</li>
             <li>{product.description.note2}</li>
             <li>{product.description.note3}</li>
+            {product.description.note4 && <li>{product.description.note4}</li>}
           </MiddleContent>
+
+          <LinkMoreSpecs>Mais especificações</LinkMoreSpecs>
 
           <ButtonGlobal onClick={_ => addProductCart(product._id, type)}>
             <img src={cartURLImg} alt="Carrinho" />

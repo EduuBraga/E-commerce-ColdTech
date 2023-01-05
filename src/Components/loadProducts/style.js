@@ -10,10 +10,10 @@ export const CardProduct = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  padding: 10px;
-  width: 250px;
-  gap: 15px;
-  background-color: #f3f4f6;
+  padding: 24px 20px;
+  width: 300px;
+  gap: 12px;
+  background-color: #f2f2f2;
 
   @media screen and (max-width: 1024px){
     width: 300px;
@@ -24,21 +24,6 @@ export const CardProduct = styled.div`
   }
   @media screen and (max-width: 425px){
     max-width: 270px;
-  }
-
-  img{
-    width: 180px;
-    align-self: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
-
-    :hover{
-      transform: scale(1.05);
-    }
-  }
-
-  h4:first-child{
-    text-align: center;
   }
 
   button{
@@ -53,12 +38,36 @@ export const CardProduct = styled.div`
   }
 `
 
+export const Title = styled.h3`
+  text-align: center;
+  font-size: 18px;
+`
+
+export const ImgProduct = styled.img`
+  width: 180px;
+  align-self: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(3px 8px 6px #202020);
+  padding: 8px 4px;
+
+  :hover{
+    transform: scale(1.03);
+  }
+`
+
 export const MiddleContent = styled.div`
   li{
     padding-bottom: 8px;
     font-size: 14px;
-    font-weight: 500;
   }
+`
+
+export const LinkMoreSpecs = styled.a`
+  color: #1363DF;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
 `
 
 export const ContainerLoader = styled.div`
