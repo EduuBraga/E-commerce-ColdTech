@@ -39,6 +39,7 @@ export const CardProduct = styled.div`
   justify-content: space-between;
   gap: 10px;
   border-bottom: 1px solid #404040;
+  height: 110px;
 `
 
 export const ContentProduct = styled.div`
