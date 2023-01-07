@@ -1,26 +1,25 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import HomeURLImg from '../../assets/images/icons/home.png'
-import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
-
 import { Header } from "../../Components/Header"
+import { Breadchumb } from "../../Components/Breadchumb";
 import { Footer } from "../../Components/Footer"
 
-import { Container, Breadcrumb, ContainerNotebook, ContainerAcessorios, ContainerCPU, ContainerMonitores, WrapperPage } from "./styles"
+import {
+  Container,
+  ContainerNotebook,
+  ContainerAcessorios,
+  ContainerCPU,
+  ContainerMonitores,
+  WrapperPage
+} from "./styles"
 
 export function PageExplore() {
   return (
     <WrapperPage>
       <Header />
+      <Breadchumb paths={['Explorar']} links={['']} />
 
-      <Breadcrumb>
-        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
-        <Link to="/">Home</Link>
-        <img src={ArrowURLImg} alt="Seta" />
-        <p>Explorar</p>
-      </Breadcrumb>
-      
       <Container>
         <Link to='/explore/notebooks'>
           <ContainerNotebook>
@@ -49,5 +48,5 @@ export function PageExplore() {
       </Container>
       <Footer />
     </WrapperPage>
-  )
-}
+  );
+};

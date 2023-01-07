@@ -1,17 +1,15 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../../Provider/ProductsCartProvider";
-import { Link, useNavigate } from "react-router-dom";
 
-import CloseURLImg from '../../assets/images/icons/close-black.png';
-import ArrowURLImg from '../../assets/images/icons/arrow-right.png';
-import HomeURLImg from '../../assets/images/icons/home.png';
-import checkURLImg from '../../assets/images/icons/check.png';
+import { Header } from "../../Components/Header";
+import { Breadchumb } from "../../Components/Breadchumb";
 import { ButtonGlobal } from '../../Components/Button/styles';
 import { ModalCheckout } from "../../Components/ModalCheckout";
-import { Header } from "../../Components/Header";
+
+import CloseURLImg from '../../assets/images/icons/close-black.png';
+import checkURLImg from '../../assets/images/icons/check.png';
 
 import {
-  Breadchumb,
   Container,
   CartItem,
   WrapperRemoveItem,
@@ -30,27 +28,16 @@ export function PageCheckout() {
   } = useContext(CartContext);
 
   const [visibleModalCheckout, setVisibleModalCheckout] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (productsInCart.length === 0) {
-      navigate('/explorar');
-    }
-  });
 
   return (
     <>
       <Header />
 
       <Container>
-        <Breadchumb>
-          <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
-          <Link to="/">Home</Link>
-          <img src={ArrowURLImg} alt="Seta" />
-          <Link to="/explorar">Explorar</Link>
-          <img src={ArrowURLImg} alt="Seta" />
-          <p>Checkout</p>
-        </Breadchumb>
+        <Breadchumb
+          paths={['Explorar', 'Checkout']}
+          links={['/explore', '']}
+        />
 
         {productsInCart.map((product, key) =>
           <CartItem key={key}>

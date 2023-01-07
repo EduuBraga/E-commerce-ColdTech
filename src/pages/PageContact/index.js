@@ -1,48 +1,42 @@
-import React, {  useState } from "react";
-import { ButtonGlobalNoBG } from "../../Components/Button/styles"
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { ButtonGlobalNoBG } from "../../Components/Button/styles";
 
-import { Footer } from "../../Components/Footer"
-import { Header } from "../../Components/Header/index.js"
+import { Header } from "../../Components/Header/index.js";
+import { Breadchumb } from "../../Components/Breadchumb";
+import { Footer } from "../../Components/Footer";
 
-import ImgChatURL from '../../assets/images/icons/chat.png'
-import ImgCartShoppingURL from '../../assets/images/icons/cart-shopping.png'
-import ImgToolURL from '../../assets/images/icons/tool.png'
-import ImgSmartphoneURL from '../../assets/images/icons/smartphone.png'
-import HomeURLImg from '../../assets/images/icons/home.png'
-import ArrowURLImg from '../../assets/images/icons/arrow-right.png'
+import ImgChatURL from '../../assets/images/icons/chat.png';
+import ImgCartShoppingURL from '../../assets/images/icons/cart-shopping.png';
+import ImgToolURL from '../../assets/images/icons/tool.png';
+import ImgSmartphoneURL from '../../assets/images/icons/smartphone.png';
 
-import { ContainerHelp, Tittle, ContainerContent, CardContent, WrapperButtons, Breadcrumb } from "./styles";
+import {
+  ContainerHelp,
+  Title,
+  ContainerContent,
+  CardContent,
+  WrapperButtons,
+} from "./styles";
 
 export function PageContact() {
-  const [visibleHelp, setVisibleHeap] = useState(false)
+  const [visibleHelp, setVisibleHeap] = useState(false);
 
   const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop
-    if (scrolled > 360){
-      setVisibleHeap(true)
-    } 
-    else if (scrolled <= 360){
-      setVisibleHeap(false)
-    }
+    const scrolled = document.documentElement.scrollTop;
+
+    scrolled > 360 ? setVisibleHeap(true) : setVisibleHeap(false);
   }
 
-  window.addEventListener('scroll', toggleVisible)
+  window.addEventListener('scroll', toggleVisible);
 
   return (
     <>
       <Header />
+      <Breadchumb paths={['Contanto']} links={['']} />
 
-      <Breadcrumb>
-        <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
-        <Link to="/">Home</Link>
-        <img src={ArrowURLImg} alt="Seta" />
-        <p>Contato</p>
-      </Breadcrumb>
-
-      <Tittle>
+      <Title>
         <h2>Fale conosco</h2>
-      </Tittle>
+      </Title>
 
       <ContainerHelp visibleContent={visibleHelp}>
         <a href="#ajuda">
@@ -107,5 +101,5 @@ export function PageContact() {
 
       <Footer />
     </>
-  )
-}
+  );
+};
