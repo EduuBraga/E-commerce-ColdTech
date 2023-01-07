@@ -12,6 +12,9 @@ import checkURLImg from '../../assets/images/icons/check.png';
 import {
   Container,
   CartItem,
+  WrapperImgProduct,
+  ContentProduct,
+  ContainerIncAndDecQty,
   WrapperRemoveItem,
   WrapperProduct,
   ContainerBottom
@@ -32,27 +35,24 @@ export function PageCheckout() {
   return (
     <>
       <Header />
+      <Breadchumb paths={['Explorar', 'Checkout']} links={['/explore', '']} />
 
       <Container>
-        <Breadchumb
-          paths={['Explorar', 'Checkout']}
-          links={['/explore', '']}
-        />
-
         {productsInCart.map((product, key) =>
           <CartItem key={key}>
             <WrapperProduct>
-              <div>
+              <WrapperImgProduct>
                 <img
                   src={`data:image/png;base64,${product.imgBase64}`}
                   alt="Produto no carrinho"
                 />
-              </div>
+              </WrapperImgProduct>
 
-              <div>
+              <ContentProduct>
                 <h4>{product.name}</h4>
                 <p>R$ {formatNumber(product.value)} </p>
-                <div>
+
+                <ContainerIncAndDecQty>
                   <button
                     title="Remover uma unidade do produto"
                     onClick={_ => DecQtyProductInCart(product._id)}
@@ -64,9 +64,10 @@ export function PageCheckout() {
                     title="adicionar uma unidade do produto"
                     onClick={_ => IncQtyProductInCart(product._id)}
                   > + </button>
-                </div>
-              </div>
+                </ContainerIncAndDecQty>
+              </ContentProduct>
             </WrapperProduct>
+
             <WrapperRemoveItem>
               <img
                 title="Remover produto do carrinho"

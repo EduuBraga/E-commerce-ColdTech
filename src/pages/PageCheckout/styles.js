@@ -6,56 +6,62 @@ export const Container = styled.section`
 `
 
 export const CartItem = styled.div`
-  margin: 10px 10px;
-  padding: 0px 8px;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  background-color: #f3f5f6;
-  border-radius: 10px;
+  gap: 16px;
+
+  margin: 16px 24px;
+  padding: 16px 24px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  height: 160px;
 `
 
 export const WrapperProduct = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+`
 
-  div:nth-child(2){
-    text-align: left;
-
-    h4{
-      font-size: 15px;
-      padding-bottom: 5px;
-    }
-    p{
-      padding-bottom: 5px;
-    }
-
-    div{
-      display: flex;
-      gap: 10px;
-
-      button{
-        cursor: pointer;
-        color: var(--color-secondary);
-        font-weight: 600;
-        font-size: 18px;
-        border: none;
-        background-color: #f3f4f6;
-        padding: 2px 6px;
-
-        &:active{
-          transform:scale(0.90);
-        }
-      }
-    }
-  }
-
+export const WrapperImgProduct = styled.div`
   img{
-    width:150px;
+    width:140px;
+    filter: drop-shadow(3px 8px 6px #202020);
 
     @media screen and (max-width: 490px){
-      width: 100px;
+      width: 90px;
+    }
+  }
+`
+
+export const ContentProduct = styled.div`
+  h4{
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+  p{
+    padding-bottom: 4px;
+  }
+`
+
+export const ContainerIncAndDecQty = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 150px;
+
+  button{
+    cursor: pointer;
+    color: var(--color-secondary);
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    padding: 2px 6px;
+
+    &:active{
+      transform:scale(0.90);
     }
   }
 `
@@ -64,7 +70,7 @@ export const WrapperRemoveItem = styled.div`
   align-self: center;
 
   img{
-    width: 20px;
+    width: 26px;
     cursor: pointer;
 
     &:active{
@@ -74,15 +80,17 @@ export const WrapperRemoveItem = styled.div`
 `
 
 export const ContainerBottom = styled.div`
-  margin: 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #f3f4f6;
+
+  margin: 10px 10px;
+  background-color: #f2f2f2;
   border-radius: 10px;
   font-weight: 500;
   padding: 10px;
+  margin: 16px 24px 50px 24px;
 
   span{
     font-weight: 600;
