@@ -4,19 +4,21 @@ import { Link } from "react-router-dom";
 import ArrowURLImg from '../../assets/images/icons/arrow-right.png';
 import HomeURLImg from '../../assets/images/icons/home.png';
 
-import { Container } from './style';
+import { Container, ImgArrow, ImgHome } from './style';
 
 export const Breadchumb = ({ paths, links }) => {
   return (
     <Container>
-      <Link to="/"><img src={HomeURLImg} alt="Voltar para a home" /></Link>
-      <Link to="/">Home</Link>
+      <Link>
+        <ImgHome src={HomeURLImg} alt="Voltar para a home" />
+        <p>Home</p>
+    </Link>
 
       {paths.map((path, index) =>
-        <>
-          <img key={index} src={ArrowURLImg} alt="Seta" />
-          <Link key={index} to={links[index]} >{path}</Link>
-        </>
+        <Link key={index} to={links[index]}>
+          <ImgArrow key={path.toString()} src={ArrowURLImg} alt="Seta" />
+          <p>{path}</p>
+        </Link>
       )}
     </Container>
   );

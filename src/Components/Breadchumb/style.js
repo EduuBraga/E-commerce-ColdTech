@@ -10,19 +10,13 @@ export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;  
   
-  img:nth-child(1){
-    width: 25px;
-    margin-right: 5px;
-    transform: translateY(-2px);
-  }
-
-  img{
-    width: 15px;
-  }
-
   a{
     color:black;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 
     :active, :focus{
       text-decoration: none;
@@ -33,7 +27,13 @@ export const Container = styled.div`
       text-decoration: underline;
     }
   }
-  p{
-    cursor: default;
-  }
+`
+
+export const ImgArrow = styled.img`
+  width: 12px;
+`
+
+export const ImgHome = styled.img`
+  width: 25px;
+  transform: translateY(-2px);
 `
