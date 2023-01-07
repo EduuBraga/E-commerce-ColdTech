@@ -7,6 +7,8 @@ export const Container = styled.div`
   gap: 5px;
   align-items: center;
   padding: 20px 10px;
+  max-width: 1024px;
+  margin: 0 auto;  
   
   img:nth-child(1){
     width: 25px;
