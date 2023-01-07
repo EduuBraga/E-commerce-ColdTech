@@ -3,8 +3,6 @@ import axios from 'axios';
 
 import { CartContext } from "../../Provider/ProductsCartProvider";
 
-import cartURLImg from '../../assets/images/icons/cart-white.png';
-
 import { ButtonGlobal } from '../../Components/Button/styles';
 
 import {
@@ -59,7 +57,7 @@ export const LoadProducts = ({ product: type }) => {
           <LinkMoreSpecs>Mais especificações</LinkMoreSpecs>
 
           <ButtonGlobal onClick={_ => addProductCart(product._id, type)}>
-            <img src={cartURLImg} alt="Carrinho" />
+            <img src='/assets/images/icons/cart-white.png' alt="Carrinho" />
             Pôr no Carrinho
           </ButtonGlobal>
         </CardProduct>

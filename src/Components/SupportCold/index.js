@@ -1,11 +1,7 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-import telefoneImgUrl from '../../assets/images/icons/telephone.png'
-import contatoImgUrl from '../../assets/images/icons/contato.png'
-import garantiaImgUrl from '../../assets/images/icons/garantia.png'
-
-import { Container, Suportes, Tittle } from './styles'
+import { Container, Suportes, Tittle } from './styles';
 
 export function SuporteCold() {
   return (
@@ -19,7 +15,7 @@ export function SuporteCold() {
         <Suportes>
           <Link to="/contact">
             <div>
-              <img src={garantiaImgUrl} alt="Garantia" />
+              <img src='/assets/images/icons/garantia.png' alt="Garantia" />
             </div>
             <div>
               <h3>Garantia</h3>
@@ -31,7 +27,7 @@ export function SuporteCold() {
         <Suportes>
           <Link to="/contact">
             <div>
-              <img src={contatoImgUrl} alt="Contato" />
+              <img src='/assets/images/icons/contato.png' alt="Contato" />
             </div>
             <div>
               <h3>Entre em contato</h3>
@@ -43,7 +39,7 @@ export function SuporteCold() {
         <Suportes>
           <Link to='/contact'>
             <div>
-              <img src={telefoneImgUrl} alt="Telefone" />
+              <img src='/assets/images/icons/telephone.png' alt="Telefone" />
             </div>
             <div>
               <h3>Suporte a pedidos</h3>
@@ -53,5 +49,5 @@ export function SuporteCold() {
         </Suportes>
       </div>
     </Container>
-  )
-}
+  );
+};

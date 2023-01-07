@@ -1,26 +1,18 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import notebookURL from '../../assets/images/NotebookGamerOffers.png';
-import cpuURL from '../../assets/images/CPUOffers.png';
-import AcessoriosURL from '../../assets/images/AcessoriosOffers.png';
-import monitorURL from '../../assets/images/MonitorOffers.png';
-import pcGamer from '../../assets/images/pc-gamer.png';
-
 import { ButtonGlobal } from "../../Components/Button/styles";
-
 import { Header } from '../../Components/Header';
 import { ExploreNavBar } from '../../Components/ExploreNavBar';
-
 import { SuporteCold } from '../../Components/SupportCold/index';
 import { Footer } from '../../Components/Footer/index';
 
 import {
-  Container, 
-  WrapperPage, 
-  SectionOne, 
+  Container,
+  WrapperPage,
+  SectionOne,
   Description,
-  Section, 
+  Section,
   SectionReverse
 } from './styles';
 
@@ -43,13 +35,19 @@ export function PageHome() {
           </Description>
 
           <div>
-            <img src={pcGamer} alt="PC gamer e acessórios" />
+            <img
+              src='/assets/images/pc-gamer.png'
+              alt="PC gamer e acessórios"
+            />
           </div>
         </SectionOne>
 
         <Section>
           <div>
-            <img src={notebookURL} alt="Notebook gamer" />
+            <img
+              src='/assets/images/NotebookGamerOffers.png'
+              alt="Notebook gamer"
+            />
           </div>
 
           <div>
@@ -72,7 +70,7 @@ export function PageHome() {
           </div>
 
           <div>
-            <img src={cpuURL} alt="CPU" />
+            <img src='/assets/images/CPUOffers.png' alt="CPU" />
           </div>
         </SectionReverse>
 
@@ -90,13 +88,13 @@ export function PageHome() {
           </div>
 
           <div>
-            <img src={AcessoriosURL} alt="Acéssorios" />
+            <img src='/assets/images/AcessoriosOffers.png' alt="Acéssorios" />
           </div>
         </SectionReverse>
 
         <Section>
           <div>
-            <img src={monitorURL} alt="Monitor" />
+            <img src='/assets/images/MonitorOffers.png' alt="Monitor" />
           </div>
 
           <div>

@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 import { ProductsCart } from "../ProductsCart";
 import { ButtonGlobal } from "../../Components/Button/styles";
 
-import ImgCloseURL from '../../assets/images/icons/close.png';
-import ImgCartWhiteURL from '../../assets/images/icons/cart-white.png';
-
 import { 
   Container, 
   ContainerTop, 
@@ -26,10 +23,10 @@ export function ModalCart({ setVisibleModal, visibleModal }) {
       <ContainerTop>
         <ImgClose
           onClick={_ => setVisibleModal(false)}
-          src={ImgCloseURL} alt="Fechar carrinho"
+          src='/assets/images/icons/close.png' alt="Fechar carrinho"
         />
         <div>
-          <img src={ImgCartWhiteURL} alt='Carrinho' />
+          <img src='/assets/images/icons/cart-white.png' alt='Carrinho' />
           <h2>  Carrinho</h2>
         </div>
       </ContainerTop>
@@ -57,14 +54,14 @@ export function ModalCart({ setVisibleModal, visibleModal }) {
             </ContainerTotal>
             <Link to="/checkout">
               <ButtonGlobal>
-                <img src={ImgCartWhiteURL} alt="Carrinho" />
+                <img src='/assets/images/icons/cart-white.png' alt="Carrinho" />
                 Ir para o Checkuot
               </ButtonGlobal>
             </Link>
           </>
         ) : (
           <ButtonNoItem>
-            <img src={ImgCartWhiteURL} alt="Carrinho" />
+            <img src='/assets/images/icons/cart-white.png' alt="Carrinho" />
             Ir para o Checkout
           </ButtonNoItem>
         )}

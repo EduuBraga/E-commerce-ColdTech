@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../Provider/ProductsCartProvider";
 
-import ImgCloseURL from '../../assets/images/icons/close.png';
-
 import {
   CardProduct,
   Container,
@@ -58,7 +56,7 @@ export const ProductsCart = () => {
             <img
               title="Remover produto do carrinho"
               onClick={_ => removeProductCart(product._id)}
-              src={ImgCloseURL}
+              src='/assets/images/icons/close.png'
               alt="Remover produto"
             />
           </ContainerDeleteItem>

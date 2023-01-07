@@ -5,11 +5,6 @@ import { Header } from "../../Components/Header/index.js";
 import { Breadchumb } from "../../Components/Breadchumb";
 import { Footer } from "../../Components/Footer";
 
-import ImgChatURL from '../../assets/images/icons/chat.png';
-import ImgCartShoppingURL from '../../assets/images/icons/cart-shopping.png';
-import ImgToolURL from '../../assets/images/icons/tool.png';
-import ImgSmartphoneURL from '../../assets/images/icons/smartphone.png';
-
 import {
   ContainerHelp,
   Title,
@@ -57,7 +52,10 @@ export function PageContact() {
         <CardContent>
           <div>
             <div>
-              <img src={ImgCartShoppingURL} alt="Carrinho de pedidos" />
+              <img
+                src='/assets/images/icons/cart-shopping.png'
+                alt="Carrinho de pedidos"
+              />
             </div>
             <h3>Verifique Seus Pedidos</h3>
             <p>Visualize o status de seu pedido e suas notas fiscais</p>
@@ -66,7 +64,10 @@ export function PageContact() {
 
           <div>
             <div>
-              <img src={ImgToolURL} alt="Ferramenta de suporte técnico" />
+              <img
+                src='/assets/images/icons/tool.png'
+                alt="Ferramenta de suporte técnico"
+              />
             </div>
             <h3>Receba Suporte Técnico</h3>
             <p>Peça ajuda para os seus equipamentos</p>
@@ -78,7 +79,10 @@ export function PageContact() {
         <CardContent>
           <div>
             <div>
-              <img src={ImgChatURL} alt="Ferramenta de suporte técnico" />
+              <img
+                src='/assets/images/icons/chat.png'
+                alt="Ferramenta de suporte técnico"
+              />
             </div>
             <h3>Entre no Chat de Vendas</h3>
             <p>Peça ajuda para os seus equipamentos</p>
@@ -86,7 +90,10 @@ export function PageContact() {
           </div>
           <div>
             <div>
-              <img src={ImgSmartphoneURL} alt="Ferramenta de suporte técnico" />
+              <img
+                src='/assets/images/icons/smartphone.png'
+                alt="Ferramenta de suporte técnico"
+              />
             </div>
             <h3>Nos Chame no Telefone</h3>
             <p>Fale diretamente conosco:</p>

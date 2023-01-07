@@ -1,19 +1,18 @@
-import React,{ useContext }from "react"
-import {Link} from 'react-router-dom'
-import { CartContext } from "../../Provider/ProductsCartProvider"
+import React, { useContext } from "react";
+import { Link } from 'react-router-dom';
+import { CartContext } from "../../Provider/ProductsCartProvider";
 
-import homeImgURL from '../../assets/images/icons/home-white.png'
-import { ButtonGlobal } from "../Button/styles"
+import { ButtonGlobal } from "../Button/styles";
 
-import { Container, CardModal, WrapperButton } from "./styles"
+import { Container, CardModal, WrapperButton } from "./styles";
 
-export function ModalCheckout({setVisibleModalCheckout}) {
-  const {RemoveAllProducts} = useContext(CartContext)
+export function ModalCheckout({ setVisibleModalCheckout }) {
+  const { RemoveAllProducts } = useContext(CartContext);
 
-  function handleClick(){
-    setVisibleModalCheckout(false)
-    RemoveAllProducts()
-  }
+  function handleClick() {
+    setVisibleModalCheckout(false);
+    RemoveAllProducts();
+  };
 
   return (
     <Container>
@@ -22,10 +21,13 @@ export function ModalCheckout({setVisibleModalCheckout}) {
 
         <WrapperButton>
           <Link to='/'>
-            <ButtonGlobal onClick={handleClick}><img src={homeImgURL} alt="Home" /> Voltar a home</ButtonGlobal>
+            <ButtonGlobal onClick={handleClick}>
+              <img src='/assets/images/icons/home-white.png' alt="Home" />
+              Voltar a home
+            </ButtonGlobal>
           </Link>
         </WrapperButton>
       </CardModal>
     </Container>
-  )
-}
+  );
+};

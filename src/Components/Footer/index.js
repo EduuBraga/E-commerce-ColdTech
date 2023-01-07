@@ -1,12 +1,14 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/images/icons/logo.png'
-import facebook from '../../assets/images/icons/facebook.png'
-import twitter from '../../assets/images/icons/twitter.png'
-import instagram from '../../assets/images/icons/instagram.png'
-
-import { Container, CardColdTech, CardLinks, Media, Copyright, ContainerCards } from "./styles"
+import {
+  Container,
+  CardColdTech,
+  CardLinks,
+  Media,
+  Copyright,
+  ContainerCards
+} from "./styles";
 
 export function Footer() {
   return (
@@ -16,15 +18,15 @@ export function Footer() {
           <ContainerCards>
             <CardColdTech>
               <div>
-                <img src={logo} alt="Logo da ColdTech"></img>
+                <img src='/assets/images/icons/logo.png' alt="Logo da ColdTech"></img>
                 <h4>ColdTech</h4>
               </div>
               <a href="mailto:ColdTech@gamil.com">ColdTech@gmail.com</a>
               <a>+55 85 99999 9999</a>
               <Media>
-                <img src={facebook} alt="Conta ColdTech facebook" />
-                <img src={instagram} alt="Conta ColdTech instagram" />
-                <img src={twitter} alt="Conta ColdTech twitter" />
+                <img src='/assets/images/icons/facebook.png' alt="Conta ColdTech facebook" />
+                <img src='/assets/images/icons/instagram.png' alt="Conta ColdTech instagram" />
+                <img src='/assets/images/icons/twitter.png' alt="Conta ColdTech twitter" />
               </Media>
             </CardColdTech>
             <CardLinks>
@@ -39,5 +41,5 @@ export function Footer() {
 
       </footer>
     </>
-  )
-}
+  );
+};

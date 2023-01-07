@@ -1,9 +1,4 @@
-import styled from 'styled-components'
-
-import NotebookImgURL from '../../assets/images/PageNotebook/Notebook1.png'
-import CPUImgURL from '../../assets/images/PageCPU/CPU2.png'
-import MonitorImgURL from '../../assets/images/PageMonitores/Monitor1.png'
-import AcessoriosImgURL from '../../assets/images/PageAccessories/keyboard-gamer.png'
+import styled from 'styled-components';
 
 export const WrapperPage = styled.section`
   position: relative;
@@ -18,7 +13,6 @@ export const WrapperPage = styled.section`
     }
   }
 `
-
 
 export const Container = styled.section`
   margin: 0 auto;
@@ -118,7 +112,7 @@ export const ContainerNotebook = styled.div`
     height: 100%; 
     z-index: 1;
     opacity: 0.7;
-    background-image: url(${NotebookImgURL});
+    background-image: url('/assets/images/PageNotebook/Notebook1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -158,7 +152,7 @@ export const ContainerCPU = styled.div`
     height: 100%;
     z-index: 1;
     opacity: 0.7;
-    background-image: url(${CPUImgURL});
+    background-image: url('/assets/images/PageCPU/CPU2.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -198,7 +192,7 @@ export const ContainerAcessorios = styled.div`
     height: 100%;
     z-index: 1;
     opacity: 0.7;
-    background-image: url(${AcessoriosImgURL});
+    background-image: url('/assets/images/PageAccessories/keyboard-gamer.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -239,7 +233,7 @@ export const ContainerMonitores = styled.div`
     height: 100%;
     z-index: 1;
     opacity: 0.7;
-    background-image: url(${MonitorImgURL});
+    background-image: url('/assets/images/PageMonitores/Monitor1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
